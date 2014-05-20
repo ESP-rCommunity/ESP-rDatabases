@@ -3535,7 +3535,7 @@ Type :   0    Init suppl dat :   0    Tot suppl dat :   0    No. of conns :   0
     Variable type    :  20,
 
  Miscellaneous Data
-    Adata items   :   9    Bdata items   :   0    Cdata items   :   0
+    Adata items   :  10    Bdata items   :   0    Cdata items   :   0
  ADATA variables:
     1 Number of circuits (integer)
       Value =    1.0000        Range (Min Max):     1.0000        99.000
@@ -3555,6 +3555,8 @@ Type :   0    Init suppl dat :   0    Tot suppl dat :   0    No. of conns :   0
       Value =    6.0000        Range (Min Max):     1.0000        99.000
     9 Injection node number (integer)
       Value =    7.0000        Range (Min Max):     1.0000        99.000
+   10 Insulation layer (integer)
+      Value =    0.0000        Range (Min Max):     1.0000        99.000
 
  Number of additional output parameters:     5
  Additional output variables:
