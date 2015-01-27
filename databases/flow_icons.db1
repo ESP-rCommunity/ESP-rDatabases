@@ -1,11 +1,5 @@
 *Icons 1.2
-# Vector icon database January 2004.
-# Patched 12 May by Jon Hand for height of components.
-# Patched 23 May by Jon Hand for 5 attribute tags (was 3).
-# Patched 17 June by Jon Hand for global attributes.
-# Patched 24 June by Jon Hand for external pressure attributes.
-# Patched 5 December by Jon Hand for external surface attributes.
-# Patched 20 Jan 2004 by Jon Hand for smaller icons for components.
+# Vector icon database August 2014.
 #  
 # All user defined tags are 12 characters, menu 
 # entries are 32 characters. Up to 60 lines of text
@@ -18,9 +12,12 @@
 #  Each category has a tag and a menu entry (bracketed by
 #  *Category and *End_category) and contains one or more icons.
 # 
-# Icons have a tag, menu entry, text, attribute,
+#  For flow domain, category tag `inodes` & `bnodes` should not
+#  be edited as they are used for identification.
+# 
+# Icons have a tag (unique), menu entry, text, attribute,
 #  vertices, edges, circles, arcs, filled polygons and
-#  text (bracketed by *Item and *End_item).
+#  text (bracketed by *Item and *End_item) with no blank lines.
 # Vertices (*Vertex within range 0.0 to 1.0) are used by:
 #  edges (*Edge start vert & end vert & colour name & line style),
 #  circles (*Circle centre vert and radius vert),
@@ -33,14 +30,17 @@
 #  by comma separated text or numbers (must fit on one line).
 #
 # ----Domain------
-*Domain,FLODB  # domain of icons
+*Domain,FLODB    # domain of icons
 *Attribute_cnn   # attributes and data
 *location,real,-,-,0.0,-99.0,99.0,user,height diff node & flow comp
 *flow,real,-,-,0.0,-9.0,9.0,user,supplimentary data 1
-*flow,real,-,-,0.0,-9.0,9.0,user,supplimentary data 2  
 *End_cnn_attribute
 *Attribute_global   # attributes and data
 *flow,real,-,-,1.0,0.0,10.0,user,wind pressure reduction factor  
+*flow,intg,-,-,1,1,2,user,stack pressure 1=sending 2=average 
+*flow,intg,-,-,2,1,2,user,solution 1=Gaussian 2=LU decomp 
+*flow,intg,-,-,-1,-1,4,user,trace -1=off 1=iter 2=worst 3=all
+*flow,intg,-,-,1,0,1,user,timing 0=once per hr 1=per zone ts
 *End_global_attribute
 # ----Category------
 *Category,inodes,internal nodes   # category tag and menu entry
@@ -49,7 +49,7 @@
 *Attribute   # attributes and data
 *flow,intg,-,-,0,0,3,static,flow node type
 *flow,intg,-,-,1,0,2,user,fluid type
-*flow,text,-,-,20.0,user,temperature or node name
+*flow,text,-,-,20.0,user,set inital temp or node name
 *flow,real,external,*Zones,10.0,0.0,10000.0,user,volume
 *location,real,external,*Zones,4.55,-10.0,99.0,user,height
 *location,text,external,*Zones,nozone,user,linked zone name
@@ -57,48 +57,16 @@
 *Text
 This is an zone air flow node of unknown variable pressure
 *End_Text
-*Vertex,0.05,0.25   
-*Vertex,0.21,0.08   
-*Vertex,0.4,0.24   
-*Vertex,0.58,0.08   
-*Vertex,0.92,0.36   
-*Vertex,0.92,0.70   
-*Vertex,0.44,0.92   
-*Vertex,0.05,0.64   
-*Vertex,0.21,0.5   
-*Vertex,0.4,0.62   
-*Vertex,0.58,0.48   
-*Vertex,0.64,0.28   
-*Vertex,0.8,0.38   
-*Vertex,0.8,0.54   
-*Vertex,0.64,0.44   
-*Vertex,0.72,0.00   
-*Vertex,0.5,0.0   
-*Vertex,1.1,0.5   
-*Vertex,0.5,1.0   
-*Vertex,-0.1,0.5   
-*Edge,1,2,black,solid
-*Edge,2,3,black,solid
-*Edge,3,4,black,solid
-*Edge,4,5,black,solid
-*Edge,5,6,black,solid
-*Edge,6,7,black,solid
-*Edge,7,8,black,solid
-*Edge,8,9,black,solid
-*Edge,9,10,black,solid
-*Edge,10,11,black,solid
-*Edge,11,6,black,solid
-*Edge,1,8,black,solid
-*Edge,2,9,grey50,solid
-*Edge,3,10,grey50,solid
-*Edge,4,11,grey50,solid
-*Edge,12,13,black,solid
-*Edge,13,14,black,solid
-*Edge,14,15,black,solid
-*Edge,12,15,black,solid
-*Label,16,black,?Pa
-*Attach,18,1
-*Attach,20,1
+*Vertex,0.5,0.5
+*Vertex,0.65,0.5
+*Vertex,0.7,0.2
+*Vertex,0.8,0.5
+*Vertex,0.74,0.5
+*Vertex,0.75,0.5
+*Arc,1,2,0,360,black,fill
+*Arc,1,5,0,360,black,nofill
+*Arc,1,6,0,360,black,nofill
+*Attach,1,1
 *End_item
 # ----Item------
 *Item,node_P_fix,known fixed pressure     # icon tag and menu entry
@@ -107,55 +75,21 @@ This is an zone air flow node of unknown variable pressure
 *flow,intg,-,-,1,0,2,user,fluid type
 *flow,text,-,-,20.0,user,temperature or node name
 *flow,real,-,-,1.0,0.0,100.0,user,pressure
-*flow,real,-,-,10.0,0.0,10000.0,user,volume
-*location,real,-,-,1.00,-10.0,99.0,user,height
-*location,text,-,-,nozone,user,linked zone name
+*flow,real,external,*Zones,10.0,0.0,10000.0,user,volume
+*location,real,external,*Zones,1.00,-10.0,99.0,user,height
+*location,text,external,*Zones,nozone,user,linked zone name
 *End_attribute
 *Text
 This is an internal air flow node of known pressure
 *End_Text
-*Vertex,0.05,0.25   
-*Vertex,0.21,0.08   
-*Vertex,0.4,0.24   
-*Vertex,0.58,0.08   
-*Vertex,0.92,0.36   
-*Vertex,0.92,0.70   
-*Vertex,0.44,0.92   
-*Vertex,0.05,0.64   
-*Vertex,0.21,0.5   
-*Vertex,0.4,0.62   
-*Vertex,0.58,0.48   
-*Vertex,0.64,0.28   
-*Vertex,0.8,0.38   
-*Vertex,0.8,0.54   
-*Vertex,0.64,0.44   
-*Vertex,0.75,0.04   
-*Vertex,0.5,0.0   
-*Vertex,1.1,0.5   
-*Vertex,0.5,1.0   
-*Vertex,-0.1,0.5   
-*Edge,1,2,black,solid
-*Edge,2,3,black,solid
-*Edge,3,4,black,solid
-*Edge,4,5,black,solid
-*Edge,5,6,black,solid
-*Edge,6,7,black,solid
-*Edge,7,8,black,solid
-*Edge,8,9,black,solid
-*Edge,9,10,black,solid
-*Edge,10,11,black,solid
-*Edge,11,6,black,solid
-*Edge,1,8,black,solid
-*Edge,2,9,grey50,solid
-*Edge,3,10,grey50,solid
-*Edge,4,11,grey50,solid
-*Edge,12,13,black,solid
-*Edge,13,14,black,solid
-*Edge,14,15,black,solid
-*Edge,12,15,black,solid
-*Label,16,black,Pa
-*Attach,18,1
-*Attach,20,1
+*Vertex,0.5,0.5
+*Vertex,0.75,0.5
+*Vertex,0.7,0.1
+*Vertex,0.5,0.5
+*Vertex,0.7,0.5
+*Arc,1,2,0,360,black,nofill
+*Arc,1,5,0,360,black,nofill
+*Attach,1,1
 *End_item
 *End_category
 # ----Category------
@@ -165,45 +99,37 @@ This is an internal air flow node of known pressure
 *Attribute   # attributes and data
 *flow,intg,-,-,2,0,3,static,flow node type
 *flow,intg,-,-,1,0,2,user,fluid type
-*flow,real,external,*Pressures,1.0,0.0,10.0,user,pressure coef index
+*flow,real,-,-,1.0,0.0,100.0,user,fixed pressure
 *flow,text,-,-,20.0,user,temperature or node name
-*location,real,-,-,1.00,-10.0,99.0,user,height
-*location,text,-,-,nozone,user,linked zone name
-*location,text,-,-,nosurf,user,linked surface name
+*location,real,external,*Surfaces,1.00,-10.0,99.0,user,height
+*location,text,external,*Surfaces,nozone,user,linked zone name
+*location,text,external,*Surfaces,nosurf,user,linked surface name
 *End_attribute
 *Text
 This is an boundary air flow node of known pressure
 Its attributes include:
 a) fluid type which is always air (value=1)
-b) a pressure index matching the current models pressure
-   coeffients database
+b) a pressure Pa
 c) either a temperature (deg C) or the name of a flow
    node to match temperatures with.
 d) height (in model coordinates)
-e) optional the name of the associate zone and surface
-   where wind pressure applies within the model.
+e) optional the name of the associate zone and surface.
 *End_Text
-*Vertex,0.1,0.5   
-*Vertex,0.25,0.5
-*Vertex,0.5,0.5
-*Vertex,0.75,0.5
-*Vertex,0.9,0.5
-*Vertex,0.7,0.1
-*Vertex,0.5,0.1
-*Vertex,0.5,0.25
-*Vertex,0.5,0.75
-*Vertex,0.5,0.9
-*Vertex,0.5,0.5
-*Vertex,1.0 0.5
-*Vertex,0.5 0.0
-*Vertex,0.5 1.05
+*Vertex,0.2,0.2
+*Vertex,0.8,0.2
+*Vertex,0.5,0.8
+*Vertex,0.26,0.25
+*Vertex,0.74,0.25
+*Vertex,0.5,0.72
+*Vertex,0.6,0.8
+*Vertex,0.5,0.40
 *Edge,1,2,black,solid
+*Edge,2,3,black,solid
+*Edge,3,1,black,solid
 *Edge,4,5,black,solid
-*Edge,7,8,black,solid
-*Edge,9,10,black,solid
-*Arc,3,4,0,360,black,nofill
-*Label,6,black,bndr
-*Attach,11,1
+*Edge,5,6,black,solid
+*Edge,6,4,black,solid
+*Attach,8,1
 *End_item
 # ----Item------
 *Item,node_windbP,wind induced pressure    # icon tag and menu entry
@@ -213,8 +139,8 @@ e) optional the name of the associate zone and surface
 *flow,real,external,*Pressures,1.0,0.0,100.0,user,pressure coef index
 *flow,real,external,*Surfaces,0.0,0.0,360.0,user,azimuth
 *location,real,external,*Surfaces,1.00,-10.0,99.0,user,height
-*location,text,-,-,nozone,user,linked zone name
-*location,text,-,-,nosurf,user,linked surface name
+*location,text,external,*Surfaces,nozone,user,linked zone name
+*location,text,external,*Surfaces,nosurf,user,linked surface name
 *End_attribute
 *Text
 This is an boundary wind pressure node. 
@@ -229,40 +155,37 @@ d) height (with reference to the point on the surface
 e) you may also type in the name of the associated zone
    and surface (this information is not yet used). 
 *End_Text
-*Vertex,0.1,0.5   
-*Vertex,0.25,0.5
-*Vertex,0.5,0.5
-*Vertex,0.75,0.5
-*Vertex,0.9,0.5
-*Vertex,0.7,0.1
-*Vertex,0.5,0.1
-*Vertex,0.5,0.25
-*Vertex,0.5,0.75
-*Vertex,0.5,0.9
-*Vertex,0.5 0.5
-*Vertex,1.0 0.5
-*Vertex,0.5 0.0
-*Vertex,0.5 1.05
+*Vertex,0.2,0.2
+*Vertex,0.8,0.2
+*Vertex,0.5,0.8
+*Vertex,0.26,0.25
+*Vertex,0.74,0.25
+*Vertex,0.5,0.72
+*Vertex,0.6,0.8
+*Vertex,0.5,0.40
+*Vertex,0.5,0.43
+*Vertex,0.62,0.43
+*Vertex,0.5,0.40
 *Edge,1,2,black,solid
+*Edge,2,3,black,solid
+*Edge,3,1,black,solid
 *Edge,4,5,black,solid
-*Edge,7,8,black,solid
-*Edge,9,10,black,solid
-*Arc,3,4,0,360,black,nofill
-*Label,6,black,wind
+*Edge,5,6,black,solid
+*Edge,6,4,black,solid
+*Arc,9,10,0,360,black,fill
 *Attach,11,1
 *End_item
 *End_category
 # ----Category------
 *Category,basic,basic flow components  # category and associated icons
 # ----Item------
-*Item,mf010,power law volume flow (MF10)    # icon tag and menu entry
+*Item,mf010,power law volume flow MF10    # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,10,0,500,static,flow component index
 *flow,intg,-,-,1,0,2,user,fluid type
 *flow,real,-,-,0.20,0.0,1000.0,user,flow coef a
 *flow,real,-,-,0.50,0.0,1000.0,user,flow coef b
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control
 *End_attribute
 *Text
 Power law volume flow resistance (MF10) component.
@@ -272,31 +195,29 @@ Power law volume flow resistance (MF10) component.
  - flow coef a (-)
  - flow coef b (-)
 *End_Text
-*Vertex,0.25,0.3  
-*Vertex,0.80,0.3 
-*Vertex,0.80,0.70 
-*Vertex,0.25,0.70
-*Vertex,0.1 0.5
-*Vertex,0.95 0.5
+*Vertex,0.2,0.25  
+*Vertex,0.9,0.25 
+*Vertex,0.9,0.75 
+*Vertex,0.2,0.75
+*Vertex,0.5 0.5
+*Vertex,1.1 0.5
 *Vertex,0.6,0.04
 *Vertex,0.5,0.45
 *Edge,1 2,black,solid
 *Edge,2 3,grey50,solid
 *Edge,3 4,black,solid
 *Edge,4 1,grey50,solid
-*Label,8,black,v
+*Label,7,black,10
 *Attach,5,1
-*Attach,6,1
 *End_item
 # ----Item------
-*Item,mf015,power law mass flow (MF15)    # icon tag and menu entry
+*Item,mf015,power law mass flow MF15    # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,15,0,500,static,flow component index
 *flow,intg,-,-,1,0,2,user,fluid type
 *flow,real,-,-,0.20,0.0,1000.0,user,flow coef a
 *flow,real,-,-,0.50,0.0,1000.0,user,flow coef b
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control
 *End_attribute
 *Text
 Power law mass flow resistance (MF15) component.
@@ -310,31 +231,29 @@ a = SQRT((2 x rho x x-section)/k)
 b = 0.5
 where k is value from table c4.35
 *End_Text
-*Vertex,0.25,0.3  
-*Vertex,0.80,0.3 
-*Vertex,0.80,0.70 
-*Vertex,0.25,0.70
-*Vertex,0.1 0.5
-*Vertex,0.95 0.5
+*Vertex,0.2,0.25  
+*Vertex,0.9,0.25 
+*Vertex,0.9,0.75 
+*Vertex,0.2,0.75
+*Vertex,0.5 0.5
+*Vertex,1.1 0.5
 *Vertex,0.6,0.04
 *Vertex,0.5,0.45
 *Edge,1 2,black,solid
 *Edge,2 3,grey50,solid
 *Edge,3 4,black,solid
 *Edge,4 1,grey50,solid
-*Label,8,black,m
+*Label,7,black,15
 *Attach,5,1
-*Attach,6,1
 *End_item
 # ----Item------
-*Item,mf017,power law mass flow (MF17)    # icon tag and menu entry
+*Item,mf017,power law mass flow MF17    # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,17,0,500,static,flow component index
 *flow,intg,-,-,1,0,2,user,fluid type
 *flow,real,-,-,0.20,0.0,1000.0,user,flow coef a
 *flow,real,-,-,0.50,0.0,1000.0,user,flow coef b
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control
 *End_attribute
 *Text
 Power law mass flow resistance (MF17) component.
@@ -344,31 +263,29 @@ Power law mass flow resistance (MF17) component.
  - flow coef a (-)
  - flow coef b (-)
 *End_Text
-*Vertex,0.25,0.3  
-*Vertex,0.80,0.3 
-*Vertex,0.80,0.70 
-*Vertex,0.25,0.70
-*Vertex,0.1 0.5
-*Vertex,0.95 0.5
+*Vertex,0.2,0.25  
+*Vertex,0.9,0.25 
+*Vertex,0.9,0.75 
+*Vertex,0.2,0.75
+*Vertex,0.5 0.5
+*Vertex,1.1 0.5
 *Vertex,0.6,0.04
 *Vertex,0.5,0.45
 *Edge,1 2,black,solid
 *Edge,2 3,grey50,solid
 *Edge,3 4,black,solid
 *Edge,4 1,grey50,solid
-*Label,8,black,m
+*Label,7,black,17
 *Attach,5,1
-*Attach,6,1
 *End_item
 # ----Item------
-*Item,mf020,quadratic volume flow (MF20)    # icon tag and menu entry
+*Item,mf020,quadratic volume flow MF20    # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,20,0,500,static,flow component index
 *flow,intg,-,-,1,0,2,user,fluid type
 *flow,real,-,-,0.20,0.0,1000.0,user,flow coef a (Pa.s/m^3)
 *flow,real,-,-,0.50,0.0,1000.0,user,flow coef b (Pa.(s/m^3)^2)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control
 *End_attribute
 *Text
 Quadratic law volume flow resistance (MF20) component.
@@ -382,31 +299,29 @@ Quadratic law volume flow resistance (MF20) component.
  the laminar and turbulent flow. Type 20 is more commonly
  encountered in the literature than type 25.
 *End_Text
-*Vertex,0.25,0.3  
-*Vertex,0.80,0.3 
-*Vertex,0.80,0.70 
-*Vertex,0.25,0.70
-*Vertex,0.1 0.5
-*Vertex,0.95 0.5
+*Vertex,0.2,0.25  
+*Vertex,0.9,0.25 
+*Vertex,0.9,0.75 
+*Vertex,0.2,0.75
+*Vertex,0.5 0.5
+*Vertex,1.1 0.5
 *Vertex,0.6,0.04
 *Vertex,0.5,0.45
 *Edge,1 2,black,solid
 *Edge,2 3,grey50,solid
 *Edge,3 4,black,solid
 *Edge,4 1,grey50,solid
-*Label,8,black,v
+*Label,7,black,20
 *Attach,5,1
-*Attach,6,1
 *End_item
 # ----Item------
-*Item,mf025,quadratic mass flow (MF25)    # icon tag and menu entry
+*Item,mf025,quadratic mass flow MF25    # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,25,0,500,static,flow component index
 *flow,intg,-,-,1,0,2,user,fluid type
 *flow,real,-,-,0.20,0.0,1000.0,user,flow coef a (Pa.s/m^3)
 *flow,real,-,-,0.50,0.0,1000.0,user,flow coef b (Pa.(s/m^3)^2)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control
 *End_attribute
 *Text
 Quadratic law mass flow resistance (MF25) component.
@@ -416,30 +331,28 @@ Quadratic law mass flow resistance (MF25) component.
  - flow coef a (Pa.s/kg)
  - flow coef b (Pa.(s/kg)^2)
 *End_Text
-*Vertex,0.25,0.3  
-*Vertex,0.80,0.3 
-*Vertex,0.80,0.70
-*Vertex,0.25,0.70
-*Vertex,0.1 0.5
-*Vertex,0.95 0.5
+*Vertex,0.2,0.25  
+*Vertex,0.8,0.25 
+*Vertex,0.8,0.75 
+*Vertex,0.2,0.75
+*Vertex,0.5 0.5
+*Vertex,1.0 0.5
 *Vertex,0.6,0.04
 *Vertex,0.5,0.45
 *Edge,1 2,black,solid
 *Edge,2 3,grey50,solid
 *Edge,3 4,black,solid
 *Edge,4 1,grey50,solid
-*Label,8,black,m
+*Label,7,black,25
 *Attach,5,1
-*Attach,6,1
 *End_item
 # ----Item------
-*Item,mf30,constant volume flow (MF030)      # icon tag and menu entry
+*Item,mf30,constant volume flow MF030      # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,30,0,500,static,flow component index
 *flow,intg,-,-,1,0,2,user,fluid type
 *flow,real,-,-,0.20,0.0,100.0,user,flow rate (m^3/s)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Type 30 is a constant volume flow rate component
@@ -459,25 +372,23 @@ The flow rate can be modified via a flow control loop.
 *Vertex,0.7,0.04
 *Vertex,0.375,0.284
 *Vertex,0.375,0.716
-*Vertex,0.0 0.5
-*Vertex,1.0 0.5
+*Vertex,0.5 0.5
 *Edge,1,2,black,solid
 *Edge,4,5,black,solid
 *Edge,7,4,black,solid
 *Edge,4,8,black,solid
 *Edge,8,7,black,solid
 *Arc,3,4,0,360,black,nofill
+*Label,6,black,30
 *Attach,9,1
-*Attach,10,1
 *End_item
 # ----Item------
-*Item,mf35,constant mass flow (MF035)      # icon tag and menu entry
+*Item,mf35,constant mass flow MF035      # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,35,0,500,static,flow component index
 *flow,intg,-,-,1,0,2,user,fluid type
 *flow,real,-,-,0.20,0.0,100.0,user,flow rate (kg/s)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Type 35 is a constant mass flow rate component
@@ -498,7 +409,7 @@ The flow rate can be modified via a flow control loop.
 *Vertex,0.375,0.284
 *Vertex,0.375,0.716
 *Vertex,0.0 0.5
-*Vertex,1.0 0.5
+*Vertex,0.5 0.5
 *Edge,1,2,black,solid
 *Edge,4,5,black,solid
 *Edge,7,4,black,solid
@@ -506,18 +417,16 @@ The flow rate can be modified via a flow control loop.
 *Edge,8,7,black,solid
 *Arc,3,4,0,360,black,nofill
 *Label,6,black,35
-*Attach,9,1
 *Attach,10,1
 *End_item
 # ----Item------
-*Item,mf040,common orifice (MF40)    # icon tag and menu entry
+*Item,mf040,common orifice MF40    # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,40,0,500,static,flow component index
 *flow,intg,-,-,1,0,2,user,fluid type
 *flow,real,-,-,0.20,0.0,1000.0,user,opening area (m)
 *flow,real,-,-,0.60,0.0,1000.0,user,discharge coef (-)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control
 *End_attribute
 *Text
 Type 40 is a common orifice flow component which is a
@@ -531,17 +440,17 @@ Supplemental data:
 The opening area can be modified by the use of a flow
 control law.
 *End_Text
-*Vertex,0.25,0.15  
-*Vertex,0.65,0.4 
-*Vertex,0.65,0.85 
+*Vertex,0.25,0.05  
+*Vertex,0.75,0.3 
+*Vertex,0.75,0.85 
 *Vertex,0.25,0.60
-*Vertex,0.15,0.25  
+*Vertex,0.15,0.15  
 *Vertex,0.15,0.70
-*Vertex,0.55,0.95 
-*Vertex,0.55,0.5 
-*Vertex,0.1 0.5
-*Vertex,0.85 0.5
-*Vertex,0.55,0.01
+*Vertex,0.65,0.95 
+*Vertex,0.65,0.4 
+*Vertex,0.0 0.5
+*Vertex,1.0 0.5
+*Vertex,0.7,0.01
 *Edge,1 2,black,solid
 *Edge,2 3,black,solid
 *Edge,3 4,black,solid
@@ -555,14 +464,13 @@ control law.
 *Attach,10,1
 *End_item
 # ----Item------
-*Item,mf50,laminar pipe/duct (MF50)     # icon tag and menu entry
+*Item,mf50,laminar pipe/duct MF50     # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,50,0,500,static,flow component index
 *flow,intg,-,-,1,0,2,user,fluid type
 *flow,real,-,-,2.0,0.0,100.0,user,path length (m)
 *flow,real,-,-,0.20,0.0,100.0,user,opening radius (m)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Laminar flow pipe/duct (MF50) component.
@@ -572,17 +480,17 @@ Laminar flow pipe/duct (MF50) component.
  - path length (m)
  - opening radius (m)
 *End_Text
-*Vertex,0.15,0.3  
-*Vertex,0.8,0.3 
-*Vertex,0.15,0.36  
-*Vertex,0.8,0.36 
-*Vertex,0.8,0.7 
-*Vertex,0.15,0.7
-*Vertex,0.8,0.75 
-*Vertex,0.15,0.75
-*Vertex,0.0 0.5
-*Vertex,0.95 0.5
-*Vertex,0.55,0.01
+*Vertex,0.1,0.3  
+*Vertex,0.9,0.3 
+*Vertex,0.1,0.36  
+*Vertex,0.9,0.36 
+*Vertex,0.9,0.7 
+*Vertex,0.1,0.7
+*Vertex,0.9,0.75 
+*Vertex,0.1,0.75
+*Vertex,-0.1 0.5
+*Vertex,1.1 0.5
+*Vertex,0.6,0.01
 *Edge,1 2,black,solid
 *Edge,3 4,black,solid
 *Edge,2 7,grey50,solid
@@ -594,13 +502,12 @@ Laminar flow pipe/duct (MF50) component.
 *Attach,10,1
 *End_item
 # ----Item------
-*Item,mf110,specific air flow opening (MF110)    # icon tag and menu entry
+*Item,mf110,specific air flow opening MF110    # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,110,0,500,static,flow component index
 *flow,intg,-,-,1,0,1,static,fluid type
 *flow,real,-,-,0.20,0.0,1000.0,user,opening area (m)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control
 *End_attribute
 *Text
 Type 110 is an air flow opening (type 40) with the
@@ -612,18 +519,16 @@ The opening area can be modified by the use of a flow
 control law.
 *End_Text
 *Vertex,0.25,0.05  
-*Vertex,0.70,0.3 
-*Vertex,0.70,0.85 
+*Vertex,0.75,0.3 
+*Vertex,0.75,0.85 
 *Vertex,0.25,0.60
 *Vertex,0.15,0.15  
 *Vertex,0.15,0.70
-*Vertex,0.60,0.95 
-*Vertex,0.60,0.4 
-*Vertex,0.60,0.80 
-*Vertex,0.25,0.2  
-*Vertex,0.0 0.5
-*Vertex,0.9 0.5
-*Vertex,0.60,0.00
+*Vertex,0.65,0.95 
+*Vertex,0.65,0.4 
+*Vertex,0.5 0.5
+*Vertex,1.0 0.5
+*Vertex,0.7,0.01
 *Edge,1 2,black,solid
 *Edge,2 3,black,solid
 *Edge,3 4,black,solid
@@ -632,22 +537,17 @@ control law.
 *Edge,4 6,black,solid
 *Edge,3 7,black,solid
 *Edge,2 8,black,solid
-*Edge,5 6,grey50,solid
-*Edge,6 7,grey50,solid
-*Edge,9 8,grey50,solid
-*Edge,8 10,grey50,solid
-*Attach,11,1
-*Attach,12,1
+*Label,11,black,110
+*Attach,9,1
 *End_item
 # ----Item------
-*Item,crack,crack (width & length) (MF120)     # icon tag and menu entry
+*Item,crack,crack (width & length) MF120     # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,120,0,500,static,flow component index
 *flow,intg,-,-,1,0,1,static,fluid type
 *flow,real,-,-,0.005,0.0,0.10,user,crack width(m)
 *flow,real,-,-,2.00,0.0,100.0,user,crack length(m)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Type 120 is an air flow crack component.
@@ -657,25 +557,26 @@ Supplemental data:
  (2) crack width (m) NOTE unit!
  (3) crack length(m)
 *End_Text
-*Vertex,0.2 0.5  
-*Vertex,0.35 0.5
-*Vertex,0.42 0.7
+*Vertex,0.1 0.5  
+*Vertex,0.3 0.5
+*Vertex,0.4 0.7
 *Vertex,0.5 0.3
 *Vertex,0.6 0.5
 *Vertex,0.8 0.5
-*Vertex,0.6 0.2
-*Vertex,0.1 0.5
-*Vertex,0.85 0.5
+*Vertex,0.6 0.1
+*Vertex,0.0 0.5
+*Vertex,0.9 0.5
 *Edge,1,2,black,solid
 *Edge,2,3,black,solid
 *Edge,3,4,black,solid
 *Edge,4,5,black,solid
 *Edge,5,6,black,solid
+*Label,7,black,cr
 *Attach,8,1
 *Attach,9,1
 *End_item
 # ----Item------
-*Item,door,bidirectional flow (door) (MF130)    # icon tag and menu entry
+*Item,door,bidirectional flow (door) MF130    # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,130,0,500,static,flow component index
 *flow,intg,-,-,1,0,1,static,fluid type
@@ -684,7 +585,6 @@ Supplemental data:
 *flow,real,-,-,2.00,0.0,100.0,user,dist from base to air node(m)
 *flow,real,-,-,2.00,0.0,1.0,user,discharge coef. (-)
 *location,real,-,-,1.00,-10.0,99.0,user,height @base (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Door allowing two way flow.
@@ -717,8 +617,8 @@ Supplemental data:
 *Vertex,0.58 0.6  
 *Vertex,0.46 0.7  
 *Vertex,0.46 0.5  
-*Vertex,0.6 0.2  
-*Vertex,0.0 0.5  
+*Vertex,0.5 0.0  
+*Vertex,0.1 0.5  
 *Vertex,1.0 0.5  
 *Edge,1,2,black,solid
 *Edge,2,3,black,solid
@@ -737,7 +637,7 @@ Supplemental data:
 *Attach,17,1
 *End_item
 # ----Item------
-*Item,mf210,general flow conduit (MF210)     # icon tag and menu entry
+*Item,mf210,general flow conduit MF210     # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,210,0,500,static,flow component index
 *flow,intg,-,-,1,0,2,user,fluid type
@@ -747,7 +647,6 @@ Supplemental data:
 *flow,real,-,-,0.20,0.0,100.0,user,cross-sectional area (m^")
 *flow,real,-,-,0.20,0.0,100.0,user,local loss factor (-)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 General flow conduit (MF210) component.
@@ -777,11 +676,12 @@ General flow conduit (MF210) component.
 *Edge,5 6,black,solid
 *Edge,7 8,black,solid
 *Edge,8 1,grey50,solid
+*Label,11,black,210
 *Attach,9,1
 *Attach,10,1
 *End_item
 # ----Item------
-*Item,mf220,conduit with converg 3-leg (MF220)     # icon tag and menu entry
+*Item,mf220,conduit with converg 3-leg MF220     # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,220,0,500,static,flow component index
 *flow,intg,-,-,1,0,2,user,fluid type
@@ -798,7 +698,6 @@ General flow conduit (MF210) component.
 *flow,real,-,-,0.20,0.0,100.0,user,Ccp coef a4 (-)
 *flow,real,-,-,0.20,0.0,100.0,user,Ccp coef a5 (-)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Type 220 is a variant of a general flow conduit which
@@ -847,11 +746,12 @@ in the literature.  Supplemental data:
 *Edge,12 13,grey50,solid
 *Edge,12 14,grey50,solid
 *Dot,11,black,2
+*Label,17,black,220
 *Attach,15,1
 *Attach,16,1
 *End_item
 # ----Item------
-*Item,mf230,conduit with diverg 3-leg (MF230)     # icon tag and menu entry
+*Item,mf230,conduit with diverg 3-leg MF230     # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,230,0,500,static,flow component index
 *flow,intg,-,-,1,0,2,user,fluid type
@@ -868,7 +768,6 @@ in the literature.  Supplemental data:
 *flow,real,-,-,0.20,0.0,100.0,user,Ccp coef a4 (-)
 *flow,real,-,-,0.20,0.0,100.0,user,Ccp coef a5 (-)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Type 230 is a variant of a general flow conduit which
@@ -917,11 +816,12 @@ in the literature.  Supplemental data:
 *Edge,10 13,black,solid
 *Edge,10 14,black,solid
 *Dot,11,black,2
+*Label,17,black,230
 *Attach,15,1
 *Attach,16,1
 *End_item
 # ----Item------
-*Item,mf240,conduit with converg 4-leg (MF240)     # icon tag and menu entry
+*Item,mf240,conduit with converg 4-leg MF240     # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,240,0,500,static,flow component index
 *flow,intg,-,-,1,0,2,user,fluid type
@@ -942,7 +842,6 @@ in the literature.  Supplemental data:
 *flow,real,-,-,0.20,0.0,100.0,user,Ccp coef a8 (-)
 *flow,real,-,-,0.20,0.0,100.0,user,Ccp coef a9 (-)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Type 240 is a variant of a general flow conduit which
@@ -998,11 +897,12 @@ in the literature.  Supplemental data:
 *Edge,12 13,grey50,solid
 *Edge,12 14,grey50,solid
 *Dot,11,black,2
+*Label,20,black,240
 *Attach,18,1
 *Attach,19,1
 *End_item
 # ----Item------
-*Item,mf250,conduit with diverg 4-leg (MF250)     # icon tag and menu entry
+*Item,mf250,conduit with diverg 4-leg MF250     # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,250,0,500,static,flow component index
 *flow,intg,-,-,1,0,2,user,fluid type
@@ -1023,7 +923,6 @@ in the literature.  Supplemental data:
 *flow,real,-,-,0.20,0.0,100.0,user,Ccp coef a8 (-)
 *flow,real,-,-,0.20,0.0,100.0,user,Ccp coef a9 (-)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Type 250 is a variant of a general flow conduit which
@@ -1079,11 +978,12 @@ in the literature.  Supplemental data:
 *Edge,10 13,black,solid
 *Edge,10 14,black,solid
 *Dot,11,black,2
+*Label,20,black,250
 *Attach,18,1
 *Attach,19,1
 *End_item
 # ----Item------
-*Item,mf310,general flow inducer (MF310)      # icon tag and menu entry
+*Item,mf310,general flow inducer MF310      # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,310,0,500,static,flow component index
 *flow,intg,-,-,1,0,2,user,fluid type
@@ -1094,7 +994,6 @@ in the literature.  Supplemental data:
 *flow,real,-,-,0.20,0.0,100.0,user,flow coef a2 (Pa.(m^3/s)^2)
 *flow,real,-,-,0.20,0.0,100.0,user,flow coef a3 (Pa.(m^3/s)^3)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Type 310 is a general flow inducer which approximates
@@ -1119,7 +1018,7 @@ Supplemental data:'
 *Vertex,0.7,0.1
 *Vertex,0.375,0.284
 *Vertex,0.375,0.716
-*Vertex,0.0 0.5
+*Vertex,0.5 0.5
 *Vertex,1.0 0.5
 *Edge,1,2,black,solid
 *Edge,4,5,black,solid
@@ -1127,12 +1026,11 @@ Supplemental data:'
 *Edge,4,8,black,solid
 *Edge,8,7,black,solid
 *Arc,3,4,0,360,black,nofill
-*Label,6,black,35
+*Label,6,black,310
 *Attach,9,1
-*Attach,10,1
 *End_item
 # ----Item------
-*Item,damper,general flow corrector (MF410)    # icon tag and menu entry
+*Item,damper,general flow corrector MF410    # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,410,0,500,static,flow component index
 *flow,intg,-,-,1,0,2,static,fluid type
@@ -1143,7 +1041,6 @@ Supplemental data:'
 *flow,real,-,-,0.0,0.0,100.0,user,flow when closed, k,v0 (%)
 *flow,real,-,-,0.0,0.0,100.0,user,lower validity limit k,vr (%)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Type 410 is a general flow corrector or variable
@@ -1169,7 +1066,7 @@ Supplemental data:
 *Vertex,0.7 0.3
 *Vertex,0.48 0.48
 *Vertex,0.52 0.52
-*Vertex,0.0 0.5
+*Vertex,0.5 0.5
 *Vertex,1.0 0.5
 *Edge,1,2,black,solid
 *Edge,2,3,grey50,solid
@@ -1179,10 +1076,9 @@ Supplemental data:
 *Dot,7,black,1
 *Dot,8,black,1
 *Attach,9,1
-*Attach,10,1
 *End_item
 # ----Item------
-*Item,damper,flow corrector polynomial (MF420)    # icon tag and menu entry
+*Item,damper_fcp,flow corrector polynomial MF420    # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,420,0,500,static,flow component index
 *flow,intg,-,-,1,0,2,user,fluid type
@@ -1192,7 +1088,6 @@ Supplemental data:
 *flow,real,-,-,0.0,0.0,1000,user,polynomial coefficients a2 (-)
 *flow,real,-,-,0.0,0.0,1000,user,polynomial coefficients a3 (-)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Type 420 is a flow corrector or variable flow resis-
@@ -1219,7 +1114,7 @@ Supplemental data:
 *Vertex,0.7 0.3
 *Vertex,0.48 0.48
 *Vertex,0.52 0.52
-*Vertex,0.0 0.5
+*Vertex,0.5 0.5
 *Vertex,1.0 0.5
 *Edge,1,2,black,solid
 *Edge,2,3,grey50,solid
@@ -1229,20 +1124,18 @@ Supplemental data:
 *Dot,7,black,1
 *Dot,8,black,1
 *Attach,9,1
-*Attach,10,1
 *End_item
 *End_category
 # ----Category------
 *Category,duct,ducting  # category and associated icons
 # ----Item------
-*Item,mf50,duct with laminar flow     # icon tag and menu entry
+*Item,mf50_dlf,duct with laminar flow     # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,50,0,500,static,flow component index
 *flow,intg,-,-,1,0,1,static,fluid type
 *flow,real,-,-,2.0,0.0,100.0,user,path length (m)
 *flow,real,-,-,0.20,0.0,100.0,user,opening radius (m)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Laminar flow duct (MF50) component.
@@ -1252,23 +1145,24 @@ Laminar flow duct (MF50) component.
  - path length (m)
  - opening radius (m)
 *End_Text
-*Vertex,0.15,0.3  
-*Vertex,0.8,0.3 
-*Vertex,0.15,0.36  
-*Vertex,0.8,0.36 
-*Vertex,0.8,0.7 
-*Vertex,0.15,0.7
-*Vertex,0.8,0.75 
-*Vertex,0.15,0.75
-*Vertex,0.0 0.5
-*Vertex,0.95 0.5
-*Vertex,0.55,0.01
+*Vertex,0.1,0.3  
+*Vertex,0.9,0.3 
+*Vertex,0.1,0.36  
+*Vertex,0.9,0.36 
+*Vertex,0.9,0.7 
+*Vertex,0.1,0.7
+*Vertex,0.9,0.75 
+*Vertex,0.1,0.75
+*Vertex,-0.1 0.5
+*Vertex,1.1 0.5
+*Vertex,0.6,0.01
 *Edge,1 2,black,solid
 *Edge,3 4,black,solid
 *Edge,2 7,grey50,solid
 *Edge,5 6,black,solid
 *Edge,7 8,black,solid
 *Edge,8 1,grey50,solid
+*Label,11,black,50
 *Attach,9,1
 *Attach,10,1
 *End_item
@@ -1313,6 +1207,7 @@ general flow conduit (MF210) component.
 *Edge,5 6,black,solid
 *Edge,7 8,black,solid
 *Edge,8 1,grey50,solid
+*Label,11,black,210
 *Attach,9,1
 *Attach,10,1
 *End_item
@@ -1357,6 +1252,7 @@ general flow conduit (MF210) component.
 *Edge,5 6,black,solid
 *Edge,7 8,black,solid
 *Edge,8 1,grey50,solid
+*Label,11,black,210
 *Attach,9,1
 *Attach,10,1
 *End_item
@@ -1401,6 +1297,7 @@ general flow conduit (MF210) component.
 *Edge,5 6,black,solid
 *Edge,7 8,black,solid
 *Edge,8 1,grey50,solid
+*Label,11,black,210
 *Attach,9,1
 *Attach,10,1
 *End_item
@@ -1445,20 +1342,20 @@ general flow conduit (MF210) component.
 *Edge,5 6,black,solid
 *Edge,7 8,black,solid
 *Edge,8 1,grey50,solid
+*Label,11,black,210
 *Attach,9,1
 *Attach,10,1
 *End_item
 *End_category
 # ----Category------
 *Category,pipe,piping  # category and associated icons
-*Item,mf50,pipe with laminar flow      # icon tag and menu entry
+*Item,mf50_plf,pipe with laminar flow      # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,50,0,500,static,flow component index
 *flow,intg,-,-,2,0,2,static,fluid type
 *flow,real,-,-,2.0,0.0,100.0,user,path length (m)
 *flow,real,-,-,0.20,0.0,100.0,user,opening radius (m)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Laminar flow pipe (MF50) component.
@@ -1468,17 +1365,17 @@ Laminar flow pipe (MF50) component.
  - path length (m)
  - opening radius (m)
 *End_Text
-*Vertex,0.15,0.3  
-*Vertex,0.8,0.3 
-*Vertex,0.15,0.36  
-*Vertex,0.8,0.36 
-*Vertex,0.8,0.7 
-*Vertex,0.15,0.7
-*Vertex,0.8,0.75 
-*Vertex,0.15,0.75
-*Vertex,0.0 0.5
-*Vertex,0.95 0.5
-*Vertex,0.55,0.01
+*Vertex,0.1,0.3  
+*Vertex,0.9,0.3 
+*Vertex,0.1,0.36  
+*Vertex,0.9,0.36 
+*Vertex,0.9,0.7 
+*Vertex,0.1,0.7
+*Vertex,0.9,0.75 
+*Vertex,0.1,0.75
+*Vertex,-0.1 0.5
+*Vertex,1.1 0.5
+*Vertex,0.6,0.01
 *Edge,1 2,black,solid
 *Edge,3 4,black,solid
 *Edge,2 7,grey50,solid
@@ -1623,13 +1520,12 @@ general flow conduit (MF210) component.
 # ----Category------
 *Category,fans,fans  # category and associated icons
 # ----Item------
-*Item,mf30,basic constant volume flow      # icon tag and menu entry
+*Item,mf30_cvf,basic constant volume flow      # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,30,0,500,static,flow component index
 *flow,intg,-,-,1,0,1,static,fluid type
 *flow,real,-,-,0.20,0.0,100.0,user,flow rate (m^3/s)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Type 30 is a constant volume flow rate component
@@ -1649,7 +1545,7 @@ The flow rate can be modified via a flow control loop.
 *Vertex,0.7,0.04
 *Vertex,0.375,0.284
 *Vertex,0.375,0.716
-*Vertex,0.0 0.5
+*Vertex,0.5 0.5
 *Vertex,1.0 0.5
 *Edge,1,2,black,solid
 *Edge,4,5,black,solid
@@ -1657,17 +1553,16 @@ The flow rate can be modified via a flow control loop.
 *Edge,4,8,black,solid
 *Edge,8,7,black,solid
 *Arc,3,4,0,360,black,nofill
+*Label,6,black,30
 *Attach,9,1
-*Attach,10,1
 *End_item
 # ----Item------
-*Item,mf35,basic constant mass flow      # icon tag and menu entry
+*Item,mf35_cmf,basic constant mass flow      # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,35,0,500,static,flow component index
 *flow,intg,-,-,1,0,1,static,fluid type
 *flow,real,-,-,0.20,0.0,100.0,user,flow rate (kg/s)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Type 35 is a constant mass flow rate component
@@ -1687,7 +1582,7 @@ The flow rate can be modified via a flow control loop.
 *Vertex,0.7,0.1
 *Vertex,0.375,0.284
 *Vertex,0.375,0.716
-*Vertex,0.0 0.5
+*Vertex,0.5 0.5
 *Vertex,1.0 0.5
 *Edge,1,2,black,solid
 *Edge,4,5,black,solid
@@ -1696,16 +1591,14 @@ The flow rate can be modified via a flow control loop.
 *Edge,8,7,black,solid
 *Arc,3,4,0,360,black,nofill
 *Attach,9,1
-*Attach,10,1
 *End_item
 # ----Item------
-*Item,centr_fan,centrifugal     # icon tag and menu entry
+*Item,centr_fan,centrifugal fan     # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,30,0,500,static,flow component index
 *flow,intg,-,-,1,0,1,static,fluid type
 *flow,real,-,-,0.20,0.0,100.0,user,flow rate
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 A basic centrifugal fan.
@@ -1716,7 +1609,7 @@ A basic centrifugal fan.
 *Vertex,0.5,0.85
 *Vertex,0.9,0.85
 *Vertex,0.9,0.5
-*Vertex,0.0,0.5
+*Vertex,0.5,0.5
 *Vertex,1.0,0.65
 *Edge,4,5,black,solid
 *Edge,5,6,black,solid
@@ -1725,16 +1618,14 @@ A basic centrifugal fan.
 *Arc,1,2,0,360,black,nofill
 *Arc,1,3,90,270,black,nofill
 *Attach,7,1
-*Attach,8,1
 *End_item
 # ----Item------
-*Item,axi_fan,axial    # icon tag and menu entry
+*Item,axi_fan,axial fan    # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,30,0,500,static,flow component index
 *flow,intg,-,-,1,0,1,static,fluid type
 *flow,real,-,-,0.20,0.0,100.0,user,flow rate
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 A simple axial fan.
@@ -1751,7 +1642,7 @@ A simple axial fan.
 *Vertex,0.85,0.675
 *Vertex,0.35,0.675
 *Vertex,0.35,0.325
-*Vertex,0.0,0.5
+*Vertex,0.5,0.5
 *Vertex,1.0,0.5
 *Edge,1,2,black,solid
 *Edge,2,3,black,solid
@@ -1763,17 +1654,15 @@ A simple axial fan.
 *Arc,11,7,40,-80,black,nofill
 *Arc,12,8,40,-80,black,nofill
 *Attach,13,1
-*Attach,14,1
 *End_item
 *End_category
 # ----Item------
-*Item,prop_fan,propeller     # icon tag and menu entry
+*Item,prop_fan,propeller fan     # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,30,0,500,static,flow component index
 *flow,intg,-,-,1,0,1,static,fluid type
 *flow,real,-,-,0.20,0.0,100.0,user,flow rate
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 A simple axial fan.
@@ -1790,7 +1679,7 @@ A simple axial fan.
 *Vertex,0.85,0.675
 *Vertex,0.35,0.675
 *Vertex,0.35,0.325
-*Vertex,0.0,0.5
+*Vertex,0.5,0.5
 *Vertex,1.0,0.5
 *Edge,1,2,black,solid
 *Edge,2,3,black,solid
@@ -1802,19 +1691,17 @@ A simple axial fan.
 *Arc,11,7,40,-80,black,nofill
 *Arc,12,8,40,-80,black,nofill
 *Attach,13,1
-*Attach,14,1
 *End_item
 *End_category
 # ----Category------
 *Category,pumps,pumps   # category tag and menu entry
 # ----Item------
-*Item,mf_30,basic constant volume flow      # icon tag and menu entry
+*Item,mf30_cvf,basic constant volume flow      # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,30,0,500,static,flow component index
 *flow,intg,-,-,2,0,2,static,fluid type
 *flow,real,-,-,0.20,0.0,100.0,user,flow rate (m^3/s)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Type 30 is a constant flow rate component (simple pump)
@@ -1834,7 +1721,7 @@ The flow rate can be modified via a flow control loop.
 *Vertex,0.7,0.1
 *Vertex,0.375,0.284
 *Vertex,0.375,0.716
-*Vertex,0.0 0.5
+*Vertex,0.5 0.5
 *Vertex,1.0 0.5
 *Edge,1,2,black,solid
 *Edge,4,5,black,solid
@@ -1843,16 +1730,14 @@ The flow rate can be modified via a flow control loop.
 *Edge,8,7,black,solid
 *Arc,3,4,0,360,black,nofill
 *Attach,9,2
-*Attach,10,2
 *End_item
 # ----Item------
-*Item,pump_centr,centrifugal      # icon tag and menu entry
+*Item,pump_centr,centrifugal pump      # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,30,0,500,static,flow component index
 *flow,intg,-,-,2,0,2,static,fluid type
 *flow,real,-,-,0.20,0.0,100.0,user,flow rate (m^3/s)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Type 30 is a constant flow rate component (simple pump)
@@ -1872,7 +1757,7 @@ The flow rate can be modified via a flow control loop.
 *Vertex,0.7,0.1
 *Vertex,0.375,0.284
 *Vertex,0.375,0.716
-*Vertex,0.0 0.5
+*Vertex,0.5 0.5
 *Vertex,1.0 0.5
 *Edge,1,2,black,solid
 *Edge,4,5,black,solid
@@ -1881,16 +1766,14 @@ The flow rate can be modified via a flow control loop.
 *Edge,8,7,black,solid
 *Arc,3,4,0,360,black,nofill
 *Attach,9,2
-*Attach,10,2
 *End_item
 # ----Item------
-*Item,pump_axial,axial flow      # icon tag and menu entry
+*Item,pump_axial,axial flow pump      # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,30,0,500,static,flow component index
 *flow,intg,-,-,2,0,2,static,fluid type
 *flow,real,-,-,0.20,0.0,100.0,user,flow rate (m^3/s)
 *location,real-,-,,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Type 30 is a constant flow rate component (simple pump)
@@ -1910,7 +1793,7 @@ The flow rate can be modified via a flow control loop.
 *Vertex,0.7,0.1
 *Vertex,0.375,0.284
 *Vertex,0.375,0.716
-*Vertex,0.0 0.5
+*Vertex,0.5 0.5
 *Vertex,1.0 0.5
 *Edge,1,2,black,solid
 *Edge,4,5,black,solid
@@ -1919,16 +1802,14 @@ The flow rate can be modified via a flow control loop.
 *Edge,8,7,black,solid
 *Arc,3,4,0,360,black,nofill
 *Attach,9,2
-*Attach,10,2
 *End_item
 # ----Item------
-*Item,pump_mixed,mixed flow      # icon tag and menu entry
+*Item,pump_mixed,mixed flow pump      # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,30,0,500,static,flow component index
 *flow,intg,-,-,2,0,2,static,fluid type
 *flow,real,-,-,0.20,0.0,100.0,user,flow rate (m^3/s)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Type 30 is a constant flow rate component (simple pump)
@@ -1948,7 +1829,7 @@ The flow rate can be modified via a flow control loop.
 *Vertex,0.7,0.1
 *Vertex,0.375,0.284
 *Vertex,0.375,0.716
-*Vertex,0.0 0.5
+*Vertex,0.5 0.5
 *Vertex,1.0 0.5
 *Edge,1,2,black,solid
 *Edge,4,5,black,solid
@@ -1957,13 +1838,12 @@ The flow rate can be modified via a flow control loop.
 *Edge,8,7,black,solid
 *Arc,3,4,0,360,black,nofill
 *Attach,9,2
-*Attach,10,2
 *End_item
 *End_category
 # ----Category------
 *Category,damper,dampers  # category and associated icons
 # ----Item------
-*Item,damper,basic damper    # icon tag and menu entry
+*Item,damper_bas,basic damper    # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,410,0,500,static,flow component index
 *flow,intg,-,-,1,0,2,user,fluid type
@@ -1974,7 +1854,6 @@ The flow rate can be modified via a flow control loop.
 *flow,real,-,-,0.0,0.0,100.0,user,flow when closed, k,v0 (%)
 *flow,real,-,-,0.0,0.0,100.0,user,lower validity limit k,vr (%)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Type 410 is a general flow corrector or variable
@@ -2000,7 +1879,7 @@ Supplemental data:
 *Vertex,0.7 0.3
 *Vertex,0.48 0.48
 *Vertex,0.52 0.52
-*Vertex,0.0 0.5
+*Vertex,0.5 0.5
 *Vertex,1.0 0.5
 *Edge,1,2,black,solid
 *Edge,2,3,grey50,solid
@@ -2010,10 +1889,9 @@ Supplemental data:
 *Dot,7,black,1
 *Dot,8,black,1
 *Attach,9,1
-*Attach,10,1
 *End_item
 # ----Item------
-*Item,damper,basic linear/log characteristics    # icon tag and menu entry
+*Item,damper-ll,basic linear/log damper    # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,410,0,500,static,flow component index
 *flow,intg,-,-,2,0,2,static,fluid type
@@ -2024,7 +1902,6 @@ Supplemental data:
 *flow,real,-,-,0.0,0.0,100.0,user,flow when closed, k,v0 (%)
 *flow,real,-,-,0.0,0.0,100.0,user,lower validity limit k,vr (%)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Type 410 is a general flow corrector or variable
@@ -2050,7 +1927,7 @@ Supplemental data:
 *Vertex,0.7 0.3
 *Vertex,0.48 0.48
 *Vertex,0.52 0.52
-*Vertex,0.0 0.5
+*Vertex,0.5 0.5
 *Vertex,1.0 0.5
 *Edge,1,2,black,solid
 *Edge,2,3,grey50,solid
@@ -2060,10 +1937,9 @@ Supplemental data:
 *Dot,7,black,1
 *Dot,8,black,1
 *Attach,9,1
-*Attach,10,1
 *End_item
 # ----Item------
-*Item,damper,butterfly    # icon tag and menu entry
+*Item,damper-bf,butterfly damper   # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,410,0,500,static,flow component index
 *flow,intg,-,-,2,0,2,static,fluid type
@@ -2074,7 +1950,6 @@ Supplemental data:
 *flow,real,-,-,0.0,0.0,100.0,user,flow when closed, k,v0 (%)
 *flow,real,-,-,0.0,0.0,100.0,user,lower validity limit k,vr (%)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Type 410 is a general flow corrector or variable
@@ -2100,7 +1975,7 @@ Supplemental data:
 *Vertex,0.7 0.3
 *Vertex,0.48 0.48
 *Vertex,0.52 0.52
-*Vertex,0.0 0.5
+*Vertex,0.5 0.5
 *Vertex,1.0 0.5
 *Edge,1,2,black,solid
 *Edge,2,3,grey50,solid
@@ -2110,10 +1985,9 @@ Supplemental data:
 *Dot,7,black,1
 *Dot,8,black,1
 *Attach,9,1
-*Attach,10,1
 *End_item
 # ----Item------
-*Item,damper,parallel blade    # icon tag and menu entry
+*Item,damper-pb,parallel blade damper    # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,410,0,500,static,flow component index
 *flow,intg,-,-,2,0,2,static,fluid type
@@ -2124,7 +1998,6 @@ Supplemental data:
 *flow,real,-,-,0.0,0.0,100.0,user,flow when closed, k,v0 (%)
 *flow,real,-,-,0.0,0.0,100.0,user,lower validity limit k,vr (%)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Type 410 is a general flow corrector or variable
@@ -2150,7 +2023,7 @@ Supplemental data:
 *Vertex,0.7 0.3
 *Vertex,0.48 0.48
 *Vertex,0.52 0.52
-*Vertex,0.0 0.5
+*Vertex,0.5 0.5
 *Vertex,1.0 0.5
 *Edge,1,2,black,solid
 *Edge,2,3,grey50,solid
@@ -2160,13 +2033,12 @@ Supplemental data:
 *Dot,7,black,1
 *Dot,8,black,1
 *Attach,9,1
-*Attach,10,1
 *End_item
 *End_category
 # ----Category------
 *Category,valve,valves  # category and associated icons
 # ----Item------
-*Item,valve,basic linear/log characteristic    # icon tag and menu entry
+*Item,valve-ll,basic linear/log valve    # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,410,0,500,static,flow component index
 *flow,intg,-,-,2,0,2,static,fluid type
@@ -2177,7 +2049,6 @@ Supplemental data:
 *flow,real,-,-,0.0,0.0,100.0,user,flow when closed, k,v0 (%)
 *flow,real,-,-,0.0,0.0,100.0,user,lower validity limit k,vr (%)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Type 410 is a general flow corrector or variable
@@ -2203,7 +2074,7 @@ Supplemental data:
 *Vertex,0.7 0.3
 *Vertex,0.48 0.48
 *Vertex,0.52 0.52
-*Vertex,0.0 0.5
+*Vertex,0.5 0.5
 *Vertex,1.0 0.5
 *Edge,1,2,black,solid
 *Edge,2,3,grey50,solid
@@ -2213,10 +2084,9 @@ Supplemental data:
 *Dot,7,black,1
 *Dot,8,black,1
 *Attach,9,1
-*Attach,10,1
 *End_item
 # ----Item------
-*Item,valve,globe    # icon tag and menu entry
+*Item,valve-gl,globe valve    # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,410,0,500,static,flow component index
 *flow,intg,-,-,2,0,2,static,fluid type
@@ -2227,7 +2097,6 @@ Supplemental data:
 *flow,real,-,-,0.0,0.0,100.0,user,flow when closed, k,v0 (%)
 *flow,real,-,-,0.0,0.0,100.0,user,lower validity limit k,vr (%)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Type 410 is a general flow corrector or variable
@@ -2253,7 +2122,7 @@ Supplemental data:
 *Vertex,0.7 0.3
 *Vertex,0.48 0.48
 *Vertex,0.52 0.52
-*Vertex,0.0 0.5
+*Vertex,0.5 0.5
 *Vertex,1.0 0.5
 *Edge,1,2,black,solid
 *Edge,2,3,grey50,solid
@@ -2263,10 +2132,9 @@ Supplemental data:
 *Dot,7,black,1
 *Dot,8,black,1
 *Attach,9,1
-*Attach,10,1
 *End_item
 # ----Item------
-*Item,valve,ball    # icon tag and menu entry
+*Item,valve-ba,ball valve    # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,410,0,500,static,flow component index
 *flow,intg,-,-,2,0,2,static,fluid type
@@ -2277,7 +2145,6 @@ Supplemental data:
 *flow,real,-,-,0.0,0.0,100.0,user,flow when closed, k,v0 (%)
 *flow,real,-,-,0.0,0.0,100.0,user,lower validity limit k,vr (%)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Type 410 is a general flow corrector or variable
@@ -2303,7 +2170,7 @@ Supplemental data:
 *Vertex,0.7 0.3
 *Vertex,0.48 0.48
 *Vertex,0.52 0.52
-*Vertex,0.0 0.5
+*Vertex,0.5 0.5
 *Vertex,1.0 0.5
 *Edge,1,2,black,solid
 *Edge,2,3,grey50,solid
@@ -2313,10 +2180,9 @@ Supplemental data:
 *Dot,7,black,1
 *Dot,8,black,1
 *Attach,9,1
-*Attach,10,1
 *End_item
 # ----Item------
-*Item,valve,gate    # icon tag and menu entry
+*Item,valve-ga,gate valve   # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,410,0,500,static,flow component index
 *flow,intg,-,-,2,0,2,static,fluid type
@@ -2327,7 +2193,6 @@ Supplemental data:
 *flow,real,-,-,0.0,0.0,100.0,user,flow when closed, k,v0 (%)
 *flow,real,-,-,0.0,0.0,100.0,user,lower validity limit k,vr (%)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Type 410 is a general flow corrector or variable
@@ -2353,7 +2218,7 @@ Supplemental data:
 *Vertex,0.7 0.3
 *Vertex,0.48 0.48
 *Vertex,0.52 0.52
-*Vertex,0.0 0.5
+*Vertex,0.5 0.5
 *Vertex,1.0 0.5
 *Edge,1,2,black,solid
 *Edge,2,3,grey50,solid
@@ -2363,13 +2228,12 @@ Supplemental data:
 *Dot,7,black,1
 *Dot,8,black,1
 *Attach,9,1
-*Attach,10,1
 *End_item
 *End_category
 # ----Category------
 *Category,duct_fit,fittings (ducting)  # category and associated icons
 # ----Item------
-*Item,mf220,converging 3-leg junction     # icon tag and menu entry
+*Item,mf220_c3lj,converging 3-leg junction     # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,220,0,500,static,flow component index
 *flow,intg,-,-,1,0,2,user,fluid type
@@ -2386,7 +2250,6 @@ Supplemental data:
 *flow,real,-,-,0.20,0.0,100.0,user,Ccp coef a4 (-)
 *flow,real,-,-,0.20,0.0,100.0,user,Ccp coef a5 (-)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Type 220 is a variant of a general flow conduit which
@@ -2439,7 +2302,7 @@ in the literature.  Supplemental data:
 *Attach,16,1
 *End_item
 # ----Item------
-*Item,mf230,diverging 3-leg junction     # icon tag and menu entry
+*Item,mf230_d3lj,diverging 3-leg junction     # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,230,0,500,static,flow component index
 *flow,intg,-,-,1,0,2,user,fluid type
@@ -2456,7 +2319,6 @@ in the literature.  Supplemental data:
 *flow,real,-,-,0.20,0.0,100.0,user,Ccp coef a4 (-)
 *flow,real,-,-,0.20,0.0,100.0,user,Ccp coef a5 (-)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Type 230 is a variant of a general flow conduit which
@@ -2509,7 +2371,7 @@ in the literature.  Supplemental data:
 *Attach,16,1
 *End_item
 # ----Item------
-*Item,mf240,converging 4-leg junction     # icon tag and menu entry
+*Item,mf240_c4lj,converging 4-leg junction     # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,240,0,500,static,flow component index
 *flow,intg,-,-,1,0,2,user,fluid type
@@ -2530,7 +2392,6 @@ in the literature.  Supplemental data:
 *flow,real,-,-,0.20,0.0,100.0,user,Ccp coef a8 (-)
 *flow,real,-,-,0.20,0.0,100.0,user,Ccp coef a9 (-)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Type 240 is a variant of a general flow conduit which
@@ -2590,7 +2451,7 @@ in the literature.  Supplemental data:
 *Attach,19,1
 *End_item
 # ----Item------
-*Item,mf250,diverging 4-leg junction     # icon tag and menu entry
+*Item,mf250_d4lj,diverging 4-leg junction     # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,250,0,500,static,flow component index
 *flow,intg,-,-,1,0,2,user,fluid type
@@ -2611,7 +2472,6 @@ in the literature.  Supplemental data:
 *flow,real,-,-,0.20,0.0,100.0,user,Ccp coef a8 (-)
 *flow,real,-,-,0.20,0.0,100.0,user,Ccp coef a9 (-)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Type 250 is a variant of a general flow conduit which
@@ -2671,14 +2531,13 @@ in the literature.  Supplemental data:
 *Attach,19,1
 *End_item
 # ----Item------
-*Item,mf040,0.2m^2 orifice plate    # icon tag and menu entry
+*Item,mf040-0.2,0.2m^2 orifice plate    # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,40,0,500,static,flow component index
 *flow,intg,-,-,1,0,2,user,fluid type
 *flow,real,-,-,0.20,0.0,1000.0,user,opening area (m)
 *flow,real,-,-,0.60,0.0,1000.0,user,discharge coef (-)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control
 *End_attribute
 *Text
 Type 40 is a common orifice flow component which is a
@@ -2692,17 +2551,17 @@ Supplemental data:
 The opening area can be modified by the use of a flow
 control law.
 *End_Text
-*Vertex,0.25,0.15  
-*Vertex,0.65,0.4 
-*Vertex,0.65,0.85 
+*Vertex,0.25,0.05  
+*Vertex,0.75,0.3 
+*Vertex,0.75,0.85 
 *Vertex,0.25,0.60
-*Vertex,0.15,0.25  
+*Vertex,0.15,0.15  
 *Vertex,0.15,0.70
-*Vertex,0.55,0.95 
-*Vertex,0.55,0.5 
-*Vertex,0.1 0.5
-*Vertex,0.85 0.5
-*Vertex,0.55,0.01
+*Vertex,0.65,0.95 
+*Vertex,0.65,0.4 
+*Vertex,0.5 0.5
+*Vertex,1.0 0.5
+*Vertex,0.7,0.01
 *Edge,1 2,black,solid
 *Edge,2 3,black,solid
 *Edge,3 4,black,solid
@@ -2712,16 +2571,14 @@ control law.
 *Edge,3 7,black,solid
 *Edge,2 8,black,solid
 *Attach,9,1
-*Attach,10,1
 *End_item
 # ----Item------
-*Item,mf110,1m^2 opening    # icon tag and menu entry
+*Item,mf110-1.0,1m^2 opening    # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,110,0,500,static,flow component index
 *flow,intg,-,-,1,0,2,static,fluid type
 *flow,real,-,-,1.00,0.0,1000.0,user,opening area (m)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control
 *End_attribute
 *Text
 Type 110 is an air flow opening (type 40) with the
@@ -2733,18 +2590,16 @@ The opening area can be modified by the use of a flow
 control law.
 *End_Text
 *Vertex,0.25,0.05  
-*Vertex,0.70,0.3 
-*Vertex,0.70,0.85 
+*Vertex,0.75,0.3 
+*Vertex,0.75,0.85 
 *Vertex,0.25,0.60
 *Vertex,0.15,0.15  
 *Vertex,0.15,0.70
-*Vertex,0.60,0.95 
-*Vertex,0.60,0.4 
-*Vertex,0.60,0.80 
-*Vertex,0.25,0.2  
-*Vertex,0.0 0.5
-*Vertex,0.9 0.5
-*Vertex,0.60,0.00
+*Vertex,0.65,0.95 
+*Vertex,0.65,0.4 
+*Vertex,0.5 0.5
+*Vertex,1.0 0.5
+*Vertex,0.7,0.01
 *Edge,1 2,black,solid
 *Edge,2 3,black,solid
 *Edge,3 4,black,solid
@@ -2753,15 +2608,11 @@ control law.
 *Edge,4 6,black,solid
 *Edge,3 7,black,solid
 *Edge,2 8,black,solid
-*Edge,5 6,grey50,solid
-*Edge,6 7,grey50,solid
-*Edge,9 8,grey50,solid
-*Edge,8 10,grey50,solid
-*Attach,11,1
-*Attach,12,1
+*Label,11,black,110
+*Attach,9,1
 *End_item
 # ----Item------
-*Item,mf210,local loss (MF210)     # icon tag and menu entry
+*Item,mf210_ll,local loss (MF210)     # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,210,0,500,static,flow component index
 *flow,intg,-,-,1,0,2,static,fluid type
@@ -2771,7 +2622,6 @@ control law.
 *flow,real,-,-,0.20,0.0,100.0,user,cross-sectional area (m^")
 *flow,real,-,-,0.20,0.0,100.0,user,local loss factor (-)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 General flow conduit (MF210) component.
@@ -2784,17 +2634,17 @@ General flow conduit (MF210) component.
  - absolute wall roughness (m)
  - sum of local dynamic loss factors (-)
 *End_Text
-*Vertex,0.15,0.3  
-*Vertex,0.8,0.3 
-*Vertex,0.15,0.36  
-*Vertex,0.8,0.36 
-*Vertex,0.8,0.7 
-*Vertex,0.15,0.7
-*Vertex,0.8,0.75 
-*Vertex,0.15,0.75
-*Vertex,0.0 0.5
-*Vertex,0.95 0.5
-*Vertex,0.55,0.01
+*Vertex,0.1,0.3  
+*Vertex,0.9,0.3 
+*Vertex,0.1,0.36  
+*Vertex,0.9,0.36 
+*Vertex,0.9,0.7 
+*Vertex,0.1,0.7
+*Vertex,0.9,0.75 
+*Vertex,0.1,0.75
+*Vertex,0.5 0.5
+*Vertex,1.1 0.5
+*Vertex,0.6,0.01
 *Edge,1 2,black,solid
 *Edge,3 4,black,solid
 *Edge,2 7,grey50,solid
@@ -2802,16 +2652,14 @@ General flow conduit (MF210) component.
 *Edge,7 8,black,solid
 *Edge,8 1,grey50,solid
 *Attach,9,1
-*Attach,10,1
 *End_item
 # ----Item------
-*Item,exh_grill,exhaust grill     # icon tag and menu entry
+*Item,exh_grill,exhaust grill 0.2m^2     # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,110,0,500,user,flow component index (?)
 *flow,intg,-,-,1,0,2,static,fluid type
 *flow,real,-,-,0.20,0.0,100.0,user,area of opening
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Exhaust grille or register. (? which component type ?)
@@ -2828,7 +2676,7 @@ Exhaust grille or register. (? which component type ?)
 *Vertex,0.9 0.5
 *Vertex,0.4 0.6
 *Vertex,0.4 0.4
-*Vertex,0.0 0.5
+*Vertex,0.5 0.5
 *Vertex,1.0 0.5
 *Edge,1,2,black,solid
 *Edge,3,4,black,solid
@@ -2840,16 +2688,14 @@ Exhaust grille or register. (? which component type ?)
 *Edge,5,11,black,solid
 *Edge,5,12,black,solid
 *Attach,13,1
-*Attach,14,1
 *End_item
 # ----Item------
-*Item,sup_grill,supply grill     # icon tag and menu entry
+*Item,sup_grill,supply grill 0.2m^2    # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,110,0,500,static,flow component index (?)
 *flow,intg,-,-,1,0,2,static,fluid type
 *flow,real,-,-,0.20,0.0,100.0,user,area of opening
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Exhaust grille or register. (? which component type ?)
@@ -2862,7 +2708,7 @@ Exhaust grille or register. (? which component type ?)
 *Vertex,0.9 0.5
 *Vertex,0.8 0.6
 *Vertex,0.8 0.4
-*Vertex,0.0 0.5
+*Vertex,0.5 0.5
 *Vertex,1.0 0.5
 *Edge,1,2,black,solid
 *Edge,3,4,black,solid
@@ -2870,13 +2716,12 @@ Exhaust grille or register. (? which component type ?)
 *Edge,6,7,black,solid
 *Edge,6,8,black,solid
 *Attach,9,1
-*Attach,10,1
 *End_item
 *End_category
 # ----Category------
 *Category,pipe_fit,fittings (piping)  # category and associated icons
 # ----Item------
-*Item,mf210,general fitting loss (K value)    # icon tag and menu entry
+*Item,mf210_gfl,general fitting loss (K value)    # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,210,0,500,static,flow component index
 *flow,intg,-,-,2,0,2,static,fluid type
@@ -2919,7 +2764,7 @@ General flow conduit (MF210) component.
 *Attach,10,1
 *End_item
 # ----Item------
-*Item,bend,bend 45 deg. flanged # icon tag and menu entry
+*Item,bend-45,bend 45 deg. flanged # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,210,0,500,static,flow component index
 *flow,intg,-,-,2,0,2,static,fluid type
@@ -2965,7 +2810,7 @@ where k is the loss coefficient.
 *Attach,10,1
 *End_item
 # ----Item------
-*Item,bend,bend 90 deg. flanged # icon tag and menu entry
+*Item,bend-90,bend 90 deg. flanged # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,210,0,500,static,flow component index
 *flow,intg,-,-,2,0,2,static,fluid type
@@ -3011,7 +2856,7 @@ where k is the loss coefficient.
 *Attach,10,1
 *End_item
 # ----Item------
-*Item,bend,bend 180 deg. flanged # icon tag and menu entry
+*Item,bend-180,bend 180 deg. flanged # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,210,0,500,static,flow component index
 *flow,intg,-,-,2,0,2,static,fluid type
@@ -3057,7 +2902,7 @@ where k is the loss coefficient.
 *Attach,10,1
 *End_item
 # ----Item------
-*Item,bend,threaded pipe union # icon tag and menu entry
+*Item,bend-union,threaded pipe union # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,210,0,500,static,flow component index
 *flow,intg,-,-,2,0,2,static,fluid type
@@ -3103,7 +2948,7 @@ where k is the loss coefficient.
 *Attach,10,1
 *End_item
 # ----Item------
-*Item,expan,sudden expansion # icon tag and menu entry
+*Item,expan_se,sudden expansion # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,210,0,500,static,flow component index
 *flow,intg,-,-,2,0,2,static,fluid type
@@ -3151,7 +2996,7 @@ Referenced to upstream velocity.
 *Attach,10,1
 *End_item
 # ----Item------
-*Item,expan,conical expansion 15 deg. # icon tag and menu entry
+*Item,expan-c15,conical expansion 15 deg. # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,210,0,500,static,flow component index
 *flow,intg,-,-,2,0,2,static,fluid type
@@ -3199,7 +3044,7 @@ Referenced to upstream velocity.
 *Attach,10,1
 *End_item
 # ----Item------
-*Item,expan,conical expansion 30 deg. # icon tag and menu entry
+*Item,expan-c30,conical expansion 30 deg. # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,210,0,500,static,flow component index
 *flow,intg,-,-,2,0,2,static,fluid type
@@ -3247,7 +3092,7 @@ Referenced to upstream velocity.
 *Attach,10,1
 *End_item
 # ----Item------
-*Item,expan,sudden contraction # icon tag and menu entry
+*Item,expan_sc,sudden contraction # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,210,0,500,static,flow component index
 *flow,intg,-,-,2,0,2,static,fluid type
@@ -3295,7 +3140,7 @@ Referenced to downstream velocity.
 *Attach,10,1
 *End_item
 # ----Item------
-*Item,expan,conical contraction 30 deg. # icon tag and menu entry
+*Item,expan-cc30,conical contraction 30 deg. # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,210,0,500,static,flow component index
 *flow,intg,-,-,2,0,2,static,fluid type
@@ -3343,7 +3188,7 @@ Referenced to downstream velocity.
 *Attach,10,1
 *End_item
 # ----Item------
-*Item,expan,conical contraction 60 deg. # icon tag and menu entry
+*Item,expan-cc60,conical contraction 60 deg. # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,210,0,500,static,flow component index
 *flow,intg,-,-,2,0,2,static,fluid type
@@ -3391,7 +3236,7 @@ Referenced to downstream velocity.
 *Attach,10,1
 *End_item
 # ----Item------
-*Item,entry,re-entrant pipe entry # icon tag and menu entry
+*Item,entry-re,re-entrant pipe entry # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,210,0,500,static,flow component index
 *flow,intg,-,-,2,0,2,static,fluid type
@@ -3437,7 +3282,7 @@ where k is the loss coefficient.
 *Attach,10,1
 *End_item
 # ----Item------
-*Item,entry,sharp edged pipe entry # icon tag and menu entry
+*Item,entry-se,sharp edged pipe entry # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,210,0,500,static,flow component index
 *flow,intg,-,-,2,0,2,static,fluid type
@@ -3526,11 +3371,12 @@ where k is the loss coefficient.
 *Edge,5 6,black,solid
 *Edge,7 8,black,solid
 *Edge,8 1,grey50,solid
+*Label,11,black,210
 *Attach,9,1
 *Attach,10,1
 *End_item
 # ----Item------
-*Item,entry,well-rounded pipe entry # icon tag and menu entry
+*Item,entry-wrp,well-rounded pipe entry # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,210,0,500,static,flow component index
 *flow,intg,-,-,2,0,2,static,fluid type
@@ -3576,7 +3422,7 @@ where k is the loss coefficient.
 *Attach,10,1
 *End_item
 # ----Item------
-*Item,exit,pipe exit # icon tag and menu entry
+*Item,exit-pipe,pipe exit # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,210,0,500,static,flow component index
 *flow,intg,-,-,2,0,2,static,fluid type
@@ -3623,15 +3469,14 @@ where k is the loss coefficient.
 *End_item
 *End_category
 # ----Category------
-*Category,window,windows  # category and associated icons
+*Category,window,air flow opening df=0.65  # category and associated icons
 # ----Item------
-*Item,mf110,window (monodirectional) (MF110)    # icon tag and menu entry
+*Item,mf110_0.2,small window monodirectional MF110    # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,110,0,500,static,flow component index
 *flow,intg,-,-,1,0,1,static,fluid type
 *flow,real,-,-,0.20,0.0,1000.0,user,opening area (m)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control
 *End_attribute
 *Text
 Type 110 is an air flow opening (type 40) with the
@@ -3650,7 +3495,7 @@ control law.
 *Vertex,0.15,0.70
 *Vertex,0.65,0.95 
 *Vertex,0.65,0.4 
-*Vertex,0.0 0.5
+*Vertex,0.5 0.5
 *Vertex,1.0 0.5
 *Vertex,0.7,0.01
 *Edge,1 2,black,solid
@@ -3662,12 +3507,11 @@ control law.
 *Edge,3 7,black,solid
 *Edge,2 8,black,solid
 *Attach,9,1
-*Attach,10,1
 *End_item
 *End_category
 # ----Category------
-*Category,door,doors  # category and associated icons
-*Item,door,door component (MF130)    # icon tag and menu entry
+*Category,door,doors & bi-directional flow  # category and associated icons
+*Item,door0821,door 0.8mx2.1m MF130    # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,130,0,500,static,flow component index
 *flow,intg,-,-,1,0,1,static,fluid type
@@ -3676,13 +3520,12 @@ control law.
 *flow,real,-,-,1.50,0.0,100.0,user,dist from base to air node(m)
 *flow,real,-,-,0.60,0.0,1.0,user,discharge coef. (-)
 *location,real,-,-,1.00,-10.0,99.0,user,height @ base (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
-Door allowing two way flow.
-Type 130 is an air flow door component which is '
-applicable to vertical opening where bi-directional'
-flow may exist. Based on an expression by Cockroft.'
+Door or opening allowing two way flow.
+Type 130 is an air flow door component which is
+applicable to vertical opening where bi-directional
+flow may exist. Based on an expression by Cockroft.
 Equation: m = rho.f(W,H,dP)
 Supplemental data:
  (1) fluid type (air only)
@@ -3709,8 +3552,69 @@ Supplemental data:
 *Vertex,0.58 0.6  
 *Vertex,0.46 0.7  
 *Vertex,0.46 0.5  
-*Vertex,0.6 0.2  
-*Vertex,0.0 0.5  
+*Vertex,0.6 0.1  
+*Vertex,0.1 0.5  
+*Vertex,1.0 0.5  
+*Edge,1,2,black,solid
+*Edge,2,3,black,solid
+*Edge,3,4,black,solid
+*Edge,4,5,black,solid
+*Edge,5,6,black,solid
+*Edge,2,5,grey50,solid
+*Edge,7,8,red,solid
+*Edge,7,9,red,solid
+*Edge,7,10,red,solid
+*Edge,11,12,red,solid
+*Edge,12,13,red,solid
+*Edge,12,14,red,solid
+*Label,15,black,door
+*Attach,16,1
+*Attach,17,1
+*End_item
+*Item,door0221,door slightly open 0.2mx2.1m    # icon tag and menu entry
+*Attribute   # nb attributes and data
+*flow,intg,-,-,130,0,500,static,flow component index
+*flow,intg,-,-,1,0,1,static,fluid type
+*flow,real,-,-,0.20,0.0,20.0,user,door width(m)
+*flow,real,-,-,2.10,0.0,100.0,user,door height(m)
+*flow,real,-,-,1.50,0.0,100.0,user,dist from base to air node(m)
+*flow,real,-,-,0.60,0.0,1.0,user,discharge coef. (-)
+*location,real,-,-,1.00,-10.0,99.0,user,height @ base (m)
+*End_attribute
+*Text
+Door or opening allowing two way flow which is only partly
+open (width 200mm and df=0.6).
+Type 130 is an air flow door component which is
+applicable to vertical opening where bi-directional
+flow may exist. Based on an expression by Cockroft.
+Equation: m = rho.f(W,H,dP)
+Supplemental data:
+ (1) fluid type (air only)
+ (2) door width (m)
+ (3) door height (m),
+ (4) vertical distance (m) between base of door and
+     adjacent air nodes (nodes should be at the same
+     height). Where this component type is required for
+     several locations with different vertical heights
+     you should create multiple door components.
+ (5) discharge factor (-)
+*End_Text
+*Vertex,0.24 0.06  
+*Vertex,0.4 0.18  
+*Vertex,0.4 0.8  
+*Vertex,0.62 0.94  
+*Vertex,0.62 0.35  
+*Vertex,0.88 0.56  
+*Vertex,0.2 0.4  
+*Vertex,0.58 0.4  
+*Vertex,0.3 0.5  
+*Vertex,0.3 0.3  
+*Vertex,0.3 0.6  
+*Vertex,0.58 0.6  
+*Vertex,0.46 0.7  
+*Vertex,0.46 0.5  
+*Vertex,0.5 0.0  
+*Vertex,0.1 0.5  
 *Vertex,1.0 0.5  
 *Edge,1,2,black,solid
 *Edge,2,3,black,solid
@@ -3730,16 +3634,15 @@ Supplemental data:
 *End_item
 *End_category
 # ----Category------
-*Category,miscel,grills louvres and cracks  # category and associated icons
+*Category,cracks,cracks @ doors and glazing  # category and associated icons
 # ----Item------
-*Item,crack,door crack (MF120)     # icon tag and menu entry
+*Item,crack-door,door crack 10mmx0.8m     # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,120,0,500,static,flow component index
 *flow,intg,-,-,1,0,1,static,fluid type
-*flow,real,-,-,0.005,0.0,0.10,user,crack width(m)
-*flow,real,-,-,1.00,0.0,100.0,user,crack length(m)
+*flow,real,-,-,0.01,0.0,0.10,user,crack width(m)
+*flow,real,-,-,0.80,0.0,100.0,user,crack length(m)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Type 120 is an air flow crack component.
@@ -3754,10 +3657,10 @@ Supplemental data:
 *Vertex,0.4 0.7
 *Vertex,0.5 0.3
 *Vertex,0.6 0.5
-*Vertex,0.9 0.5
-*Vertex,0.6 0.2
+*Vertex,0.8 0.5
+*Vertex,0.6 0.1
 *Vertex,0.0 0.5
-*Vertex,1.0 0.5
+*Vertex,0.9 0.5
 *Edge,1,2,black,solid
 *Edge,2,3,black,solid
 *Edge,3,4,black,solid
@@ -3768,14 +3671,13 @@ Supplemental data:
 *Attach,9,1
 *End_item
 # ----Item------
-*Item,crack,window crack (MF120)     # icon tag and menu entry
+*Item,crack-3mm2m,window crack 3mmx2m MF120     # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,120,0,500,static,flow component index
 *flow,intg,-,-,1,0,1,static,fluid type
 *flow,real,-,-,0.003,0.0,0.10,user,crack width(m)
 *flow,real,-,-,2.00,0.0,100.0,user,crack length(m)
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
 Type 120 is an air flow crack component.
@@ -3790,10 +3692,10 @@ Supplemental data:
 *Vertex,0.4 0.7
 *Vertex,0.5 0.3
 *Vertex,0.6 0.5
-*Vertex,0.9 0.5
-*Vertex,0.6 0.2
+*Vertex,0.8 0.5
+*Vertex,0.6 0.1
 *Vertex,0.0 0.5
-*Vertex,1.0 0.5
+*Vertex,0.9 0.5
 *Edge,1,2,black,solid
 *Edge,2,3,black,solid
 *Edge,3,4,black,solid
@@ -3803,17 +3705,19 @@ Supplemental data:
 *Attach,8,1
 *Attach,9,1
 *End_item
+*End_category
+# ----Category------
+*Category,miscel,grills & small openings  # category and associated icons
 # ----Item------
-*Item,misc_grill,grill     # icon tag and menu entry
+*Item,misc_grill,grill 0.2m^2     # icon tag and menu entry
 *Attribute   # nb attributes and data
 *flow,intg,-,-,110,0,500,user,flow component index (?)
 *flow,intg,-,-,1,0,1,static,fluid type
 *flow,real,-,-,0.20,0.0,100.0,user,area of opening
 *location,real,-,-,1.00,-10.0,99.0,user,height (m)
-*control,real,-,-,0.0,0.0,1.0,user,default control state
 *End_attribute
 *Text
-Exhaust grille or register. (? which component type ?)
+Exhaust grille or register. (MF110 with df=0.65)
 *End_Text
 *Vertex,0.2 0.2  
 *Vertex,0.2 0.8
@@ -3827,7 +3731,7 @@ Exhaust grille or register. (? which component type ?)
 *Vertex,0.9 0.5
 *Vertex,0.4 0.6
 *Vertex,0.4 0.4
-*Vertex,0.0 0.5
+*Vertex,0.5 0.5
 *Vertex,1.0 0.5
 *Edge,1,2,black,solid
 *Edge,3,4,black,solid
@@ -3839,7 +3743,6 @@ Exhaust grille or register. (? which component type ?)
 *Edge,5,11,black,solid
 *Edge,5,12,black,solid
 *Attach,13,1
-*Attach,14,1
 *End_item
 *End_category
 *End_domain
