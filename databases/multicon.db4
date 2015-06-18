@@ -1,7 +1,7 @@
 # composite construction db defined in multicon.db4
 # based on materials db material.db4.a
 # and based on CFClayers db CFClayers.db1.a
-   98     # no of composites 
+  104     # no of composites 
 # layers  description  type  optics name   symmetry tag
     4    extern_wall   OPAQ  OPAQUE        NONSYMMETRIC  
 # material ref thickness (m) description & air gap R
@@ -751,3 +751,35 @@
    78    0.0190  Plywood deck : Plywood/felt (UK code)
   290    0.1600  EPS k 0.05 : EPS k=0.05 (non-hygroscopic)
   110    0.0130  Plasterboard (wallboard) : Internal finish (UK code) (inorganic-porous)
+# layers  description  type  optics name   symmetry tag
+    3    tank_w_35mm   OPAQ  OPAQUE        tank_i_35mmi  
+# material ref thickness (m) description & air gap R
+   41    0.0030  copper : Copper
+  203    0.0350  UF foam : UF foam (non-hygroscopic)
+   45    0.0030  white ptd steel : White painted steel
+# layers  description  type  optics name   symmetry tag
+    3    tank_i_35mmi  OPAQ  OPAQUE        tank_w_35mm   
+# material ref thickness (m) description & air gap R
+   45    0.0030  white ptd steel : White painted steel
+  203    0.0350  UF foam : UF foam (non-hygroscopic)
+   41    0.0030  copper : Copper
+# layers  description  type  optics name   symmetry tag
+    3    tank_w_50mm   OPAQ  OPAQUE        tank_i_50mmi  
+# material ref thickness (m) description & air gap R
+   41    0.0030  copper : Copper
+  203    0.0500  UF foam : UF foam (non-hygroscopic)
+   45    0.0030  white ptd steel : White painted steel
+# layers  description  type  optics name   symmetry tag
+    3    tank_i_50mmi  OPAQ  OPAQUE        tank_w_50mm   
+# material ref thickness (m) description & air gap R
+   45    0.0030  white ptd steel : White painted steel
+  203    0.0500  UF foam : UF foam (non-hygroscopic)
+   41    0.0030  copper : Copper
+# layers  description  type  optics name   symmetry tag
+    1    steel_pl_3mm  OPAQ  OPAQUE        SYMMETRIC     
+# material ref thickness (m) description & air gap R
+   45    0.0030  white ptd steel : White painted steel
+# layers  description  type  optics name   symmetry tag
+    1    collector_pl  OPAQ  OPAQUE        SYMMETRIC     
+# material ref thickness (m) description & air gap R
+   50    0.0030  black_coated_copper : black_coated_copper coated for solar absorption e
