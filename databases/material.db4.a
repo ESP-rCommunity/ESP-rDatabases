@@ -117,7 +117,7 @@ Category ( 3) Metal has a range of metals, some are the same but are painted dif
 *item,black_steel, 53, 3,black_steel coated for absorption equiv Dampney Thurmalox 250 reduced 1:1 with Thurmalox 295 thinner.
 50.0000,7800.000,502.000,0.520,0.520,0.960,0.960,19200.000,3.0,-
 # class index |nb items|description (32 char)
-*class, 4,23,Wood
+*class, 4,24,Wood
 Category ( 4) Wood holds a range of wood types. Wood is considered organic-hygroscopic. Based on data traditionally distributed with ESP-r.
 *item,wood block, 61, 4,Block (wood)
 0.1600,800.000,2093.000,0.900,0.900,0.650,0.650,11.000,25.0,-
@@ -165,6 +165,8 @@ Category ( 4) Wood holds a range of wood types. Wood is considered organic-hygro
 0.1700,1000.000,1300.000,0.900,0.900,0.700,0.700,55.000,9.0,-
 *item,western larch, 92, 4,Wester Larch from simetric.co.uk and matbase specific ht via physical r prop and moisture relations of wood W Simpson and A TenWolde www.fs.d us/ccrc wood hanbook
 0.1400,590.000,1800.000,0.900,0.900,0.650,0.650,12.000,25.0,-
+*item,oak_light_stained, 93, 4,oak_light_stained (copy of oak)
+0.1900,700.000,2390.000,0.900,0.900,0.450,0.450,12.000,20.0,-
 # class index |nb items|description (32 char)
 *class, 5, 9,Stone
 Category ( 5) Stone includes building stone and gravels. Based on data traditionally distributed with ESP-r.
@@ -286,8 +288,8 @@ Category ( 8) Tiles includes both floor tiles, ceiling tiles and roof tile. Some
 *item,EDPM for facades,158, 8,EDPM used in facade framing data from IEBAU Muttenz CH (impermeable)
 0.2500,1050.000,1470.000,0.940,0.940,0.920,0.920,19200.000,3.0,-
 # class index |nb items|description (32 char)
-*class, 9,14,Asphalt and bitumen
-Category ( 9) Asphalt and bitumen also includes impermeable materials which use bitumen and asphalt like compositions. Based on data traditionally distributed with ESP-r.
+*class, 9,16,Bitumen and plastics
+Category ( 9) Asphalt and bitumen also includes impermeable materials which use asphalt and plastic compositions. Based on data traditionally distributed with ESP-r.
 *item,bitumen felt,161, 9,Bitumen felt (organic hygroscopic)
 0.5000,1700.000,1000.000,0.900,0.900,0.900,0.900,1000.000,6.0,-
 *item,roofing felt,162, 9,Roofing felt (impermeable)
@@ -316,6 +318,10 @@ Category ( 9) Asphalt and bitumen also includes impermeable materials which use 
 0.0400,160.000,1360.000,0.900,0.900,0.900,0.900,15.000,6.0,-
 *item,EDPM membrane,174, 9,EDPM membrane roofing or foundations data from Aquaflex aqua-flex.com (impermeable)
 0.1700,1180.000,1470.000,0.900,0.900,0.920,0.920,19200.000,2.0,-
+*item,ABS_case,175, 9,ABS case (Acrylonitrile Butadiene Styrene) (www.matweb.com) (impermeable)
+0.2500,1020.000,1400.000,0.900,0.900,0.600,0.600,19200.000,2.0,-
+*item,dark_abs_case,176, 9,dark_abs_case dark grey ABS (Acrylonitrile Butadiene Styrene www.matweb. .com
+0.2500,1020.000,1400.000,0.900,0.900,0.900,0.900,19200.000,2.0,-
 # class index |nb items|description (32 char)
 *class,10, 4,Asbestos
 Category (10) Asbestos is included for historic reasons, some regions still use asbestos in building products. Mostly inorganic porous. Based on data traditionally distributed with ESP-r.
@@ -499,7 +505,7 @@ Category (15) Insulation materials (2) is a second tranche of loose, batt and fo
 *item,rigid phenolic 35kgm3,307,15,rigid phenolic foam 35-40 kg/m^3 CFC and HCFC free class 0 fire
 0.0230,35.000,1181.000,0.900,0.900,0.650,0.650,100.000,25.0,-
 # class index |nb items|description (32 char)
-*class,16, 7,Board and Sheathing
+*class,16,10,Board and Sheathing
 Category (16) Board  and Sheathing includes a range of plaster and wood products many from the IBO PassivHaus book.
 *item,gypsum board,301,16,Gypsum board
 0.1600,800.000,1090.000,0.900,0.900,0.900,0.900,10.000,12.5,-
@@ -515,6 +521,12 @@ Category (16) Board  and Sheathing includes a range of plaster and wood products
 0.0550,290.000,1300.000,0.900,0.900,0.900,0.900,10.000,100.0,-
 *item,virtual_loft_space,323,16,for UK notional building loft space air 12mm
 0.1300,290.000,1300.000,0.900,0.900,0.900,0.900,10.000,39.0,-
+*item,pcb-board,307,16,pcb-board based on FR4 with a thin layer of copper from Solidworks tutorials site of printed circuit board thermal properties
+0.3230,1770.000,695.000,0.900,0.900,0.750,0.750,200.000,1.7,-
+*item,NiMH_battery,308,16,NiMH_battery electrolite and case from Journal Power Sources IEEE Wikipedia and other sources
+0.5700,3130.000,677.000,0.800,0.800,0.700,0.700,2000.000,14.0,-
+*item,corian,330,16,corian is a solid homogeneous non-porous surfacing of natural minerals and acrylic resin. Data from CBERD and MNRE India Thermo-Physical-c Optical Preperty DB March 2014
+1.0120,1750.000,771.400,0.800,0.800,0.400,0.400,1920.000,20.0,-
 # class index |nb items|description (32 char)
 *class,17, 6,Non-homogeneous
 Category (17) Non-homogeneous layers combine two existing materials properties to represent non-homogeneous constructions. Documentation should state percentage and base materials.

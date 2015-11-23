@@ -1,7 +1,7 @@
 # composite construction db defined in multicon.db4
 # based on materials db material.db4.a
 # and based on CFClayers db CFClayers.db1.a
-  104     # no of composites 
+  115     # no of composites 
 # layers  description  type  optics name   symmetry tag
     4    extern_wall   OPAQ  OPAQUE        NONSYMMETRIC  
 # material ref thickness (m) description & air gap R
@@ -776,6 +776,18 @@
   203    0.0500  UF foam : UF foam (non-hygroscopic)
    41    0.0030  copper : Copper
 # layers  description  type  optics name   symmetry tag
+    3    tank_w_100m   OPAQ  OPAQUE        tank_i_100mi  
+# material ref thickness (m) description & air gap R
+   41    0.0030  copper : Copper
+  203    0.1000  UF foam : UF foam (non-hygroscopic)
+   45    0.0030  white ptd steel : White painted steel
+# layers  description  type  optics name   symmetry tag
+    3    tank_i_100mi  OPAQ  OPAQUE        tank_w_100m   
+# material ref thickness (m) description & air gap R
+   45    0.0030  white ptd steel : White painted steel
+  203    0.1000  UF foam : UF foam (non-hygroscopic)
+   41    0.0030  copper : Copper
+# layers  description  type  optics name   symmetry tag
     1    steel_pl_3mm  OPAQ  OPAQUE        SYMMETRIC     
 # material ref thickness (m) description & air gap R
    45    0.0030  white ptd steel : White painted steel
@@ -783,3 +795,41 @@
     1    collector_pl  OPAQ  OPAQUE        SYMMETRIC     
 # material ref thickness (m) description & air gap R
    50    0.0030  black_coated_copper : black_coated_copper coated for solar absorption e
+# layers  description  type  optics name   symmetry tag
+    1    sensor_case   OPAQ  OPAQUE        SYMMETRIC     
+# material ref thickness (m) description & air gap R
+  175    0.0017  ABS_case : ABS case (Acrylonitrile Butadiene Styrene) (www.matweb.com)
+# layers  description  type  optics name   symmetry tag
+    1    circuit_bd    OPAQ  OPAQUE        SYMMETRIC     
+# material ref thickness (m) description & air gap R
+  307    0.0017  pcb-board : pcb-board based on FR4 with a thin layer of copper from Sol
+# layers  description  type  optics name   symmetry tag
+    1    NiMH_battery  OPAQ  OPAQUE        SYMMETRIC     
+# material ref thickness (m) description & air gap R
+  308    0.0140  NiMH_battery : NiMH_battery electrolite and case from Journal Power Sou
+# layers  description  type  optics name   symmetry tag
+    3    upholstery    OPAQ  OPAQUE        SYMMETRIC     
+# material ref thickness (m) description & air gap R
+  223    0.0050  wool felt underlay : Wool felt underlay (organic-hygroscopic)
+  222    0.0250  sheeps wool : Sheeps wool (simulated)
+  223    0.0050  wool felt underlay : Wool felt underlay (organic-hygroscopic)
+# layers  description  type  optics name   symmetry tag
+    1    corian_count  OPAQ  OPAQUE        SYMMETRIC     
+# material ref thickness (m) description & air gap R
+  330    0.0200  corian : corian is a solid homogeneous non-porous surfacing of natural
+# layers  description  type  optics name   symmetry tag
+    1    shelves_20mm  OPAQ  OPAQUE        SYMMETRIC     
+# material ref thickness (m) description & air gap R
+   93    0.0200  oak_light_stained : oak_light_stained (copy of oak)
+# layers  description  type  optics name   symmetry tag
+    1    IT_case       OPAQ  OPAQUE        SYMMETRIC     
+# material ref thickness (m) description & air gap R
+  176    0.0027  dark_abs_case : dark_abs_case dark grey ABS (Acrylonitrile Butadiene St
+# layers  description  type  optics name   symmetry tag
+    1    furn_wd10mm   OPAQ  OPAQUE        SYMMETRIC     
+# material ref thickness (m) description & air gap R
+   69    0.0100  oak : Oak (radial cut)
+# layers  description  type  optics name   symmetry tag
+    1    steel_gr_3mm  OPAQ  OPAQUE        SYMMETRIC     
+# material ref thickness (m) description & air gap R
+   44    0.0030  beige ptd steel : Beige painted steel

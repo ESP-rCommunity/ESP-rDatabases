@@ -1,0 +1,333 @@
+*PREDEFINED,1.0 # pre-defined entities
+*Text
+Tags are:
+- *Category ... *End_category markers for category
+- *item ... *end_item  markers for object start & end
+- *incat name of category for the item
+- *Text ... *End_text  markers for documentation
+- *origin  X Y Z of lower left corner of the object
+- *bounding_box  X Y Z extents of object used by preview
+- *vertex  X Y Z of a coordinate used by mass surfaces
+- *mass  followed by surf name, construction name, optical name,
+         nb of vertices followed by vertex list
+- *vis  visual block (same as in geometry file)
+- *visp visual general polygon (same as in geometry file)
+- *vobject compound visual object (same as in geometry file) 
+*End_text
+*date Tue Aug  4 16:54:01 2015  # latest file modification 
+*Category,visual+mass,Visual objects with mass
+*Text
+Pre-defined objects such as office chairs are represented by
+a set of primitive visual entities plus one or more pairs of
+back-to-back surfaces representing their mass.
+*End_text
+*item,swiv-chair,standard swivel office chair # tag name menu entry
+*incat,visual+mass
+*includes,visual,mass
+*origin,0.0,0.0,0.0              # local origin
+*bounding_box,0.665,0.650,1.060  # extents of object
+*Text
+A standard swivel office chair with upholstery mass for
+the seat and seat back. Visual entities are a mix of
+materials and the seat back reclines slightly.
+*End_text
+# 
+*vertex,0.09000,0.10000,0.50500  #   1
+*vertex,0.56000,0.10000,0.50500  #   2
+*vertex,0.56000,0.54000,0.50500  #   3
+*vertex,0.09000,0.54000,0.50500  #   4
+*vertex,0.09000,0.55000,0.56500  #   5
+*vertex,0.56000,0.55000,0.56500  #   6
+*vertex,0.56000,0.59900,1.05500  #   7
+*vertex,0.09000,0.59900,1.05500  #   8
+# 
+*mass,seat,upholstery,OPAQUE,4,1,2,3,4  #  1
+*mass,seat_,upholstery,OPAQUE,4,2,1,4,3  #  2
+*mass,stback,upholstery,OPAQUE,4,5,6,7,8  #  3
+*mass,stback_,upholstery,OPAQUE,4,6,5,8,7  #  4
+# 
+*vis,0.085,0.095,0.500,0.480,0.450,0.060,0.000,1.00,seat,upholstery  # visual   1
+*vis,0.015,0.145,0.720,0.090,0.230,0.025,0.000,1.00,r_arm,upholstery  # visual   2
+*vis,0.575,0.145,0.720,0.090,0.230,0.025,0.000,1.00,l_arm,upholstery  # visual   3
+*visp,8,6,0.00,seat_bk,upholstery  # visual   4 coords follow:
+0.085,0.545,0.560,0.565,0.545,0.560,0.565,0.585,0.560,0.085,0.585,0.560  # 1-4 
+0.083,0.595,1.060,0.563,0.595,1.060,0.563,0.635,1.060,0.083,0.635,1.060  # 5-8 
+*vis,0.000,0.325,0.080,0.650,0.030,0.050,0.000,1.00,cross_a,steel_gr_3mm  # visual   5
+*vis,0.325,0.000,0.080,0.650,0.030,0.050,90.000,1.00,cross_b,steel_gr_3mm  # visual   6
+*vis,0.305,0.305,0.100,0.080,0.080,0.400,0.000,1.00,post,PH_alu_frame  # visual   7
+*vis,0.085,0.275,0.500,0.025,0.050,0.230,0.000,1.00,r_arm_rest,steel_gr_3mm  # visual   8
+*vis,0.565,0.275,0.500,0.025,0.050,0.230,0.000,1.00,l_arm_rest,steel_gr_3mm  # visual   9
+*vis,0.000,0.325,0.000,0.060,0.030,0.060,0.000,1.00,roller_a,sensor_case  # visual  10
+*vis,0.605,0.325,0.000,0.060,0.030,0.060,0.000,1.00,roller_b,sensor_case  # visual  11
+*vis,0.325,0.000,0.000,0.030,0.060,0.060,90.000,1.00,roller_c,sensor_case  # visual  12
+*vis,0.325,0.645,0.000,0.030,0.060,0.060,90.000,1.00,roller_d,sensor_case  # visual  13
+# 
+*vobject,swiv-chair,standard office chair,12,seat,r_arm,l_arm,seat_bk,cross_a,cross_b,post,r_arm_rest,l_arm_rest,roller_a,roller_b,roller_c
+*end_item
+# 
+*item,office-dsk,office desk 0.6mx1.6m # tag name menu entry
+*incat,visual+mass
+*includes,visual,mass
+*origin,0.0,0.0,0.0
+*bounding_box,0.600,1.600,0.715
+*Text
+An office desk of corian with steel legs. The mass of the
+top is included.
+*End_text
+#
+*vertex,0.00500,0.00500,0.69500  #   1
+*vertex,0.59500,0.00500,0.69500  #   2
+*vertex,0.59500,1.59500,0.69500  #   3
+*vertex,0.00500,1.59500,0.69500  #   4
+# 
+*mass,desk_t,corian_count,OPAQUE,,4,1,2,3,4  #  1
+*mass,desk_t_,corian_count,OPAQUE,4,2,1,4,3  #  2
+# 
+*vis,0.000,0.000,0.690,0.600,1.600,0.025,0.000,1.00,desk_top,corian_count  # visual   1
+*vis,0.100,0.100,0.000,0.050,0.050,0.690,0.000,1.00,desk_leg_a,steel_pl_3mm  # visual   2
+*vis,0.500,0.100,0.000,0.050,0.050,0.690,0.000,1.00,desk_leg_b,steel_pl_3mm  # visual   3
+*vis,0.100,1.500,0.000,0.050,0.050,0.690,0.000,1.00,desk_leg_c,steel_pl_3mm  # visual   4
+*vis,0.500,1.500,0.000,0.050,0.050,0.690,0.000,1.00,desk_leg_d,steel_pl_3mm  # visual   5
+# 
+*vobject,office-dsk,office desk 0.6mx1.6m, 5,desk_top,desk_leg_a,desk_leg_b,desk_leg_c,desk_leg_d
+*end_item
+# 
+*item,4drawer-fc,four drawer file cabinet # tag name menu entry
+*incat,visual+mass
+*includes,visual,mass
+*origin,0.0,0.0,0.0
+*bounding_box,0.410,0.400,1.250
+*Text
+An office filing cabinet with four visible drawers. Composed of
+3mm steel with mass represented by two pairs of vertial steel
+mass at left and right edges.
+*End_text
+#
+*vertex,0.00500,0.00500,0.00500  #   1
+*vertex,0.39500,0.00500,0.00500  #   2
+*vertex,0.39500,0.00500,1.24500  #   3
+*vertex,0.00500,0.00500,1.24500  #   4
+*vertex,0.00500,0.39500,0.00500  #   5
+*vertex,0.39500,0.39500,0.00500  #   6
+*vertex,0.39500,0.39500,1.24500  #   7
+*vertex,0.00500,0.39500,1.24500  #   8
+# 
+*mass,cab_lf,steel_pl_3mm,OPAQUE,4,1,2,3,4  #  1
+*mass,cab_lf_,steel_pl_3mm,OPAQUE,4,2,1,4,3  #  2
+*mass,cab_rt,steel_pl_3mm,OPAQUE,4,5,6,7,8  #  3
+*mass,cab_rt_,steel_pl_3mm,OPAQUE,4,6,5,8,7  #  4
+# 
+*vis,0.000,0.000,0.000,0.400,0.400,1.250,0.000,1.00,f_cabinet,steel_pl_3mm  # visual   1
+*vis,0.400,0.030,0.050,0.010,0.340,0.293,0.000,1.00,drw_a,steel_pl_3mm  # visual   2
+*vis,0.400,0.030,0.348,0.010,0.340,0.293,0.000,1.00,drw_b,steel_pl_3mm  # visual   3
+*vis,0.400,0.030,0.646,0.010,0.340,0.293,0.000,1.00,drw_c,steel_pl_3mm  # visual   4
+*vis,0.400,0.030,0.944,0.010,0.340,0.293,0.000,1.00,drw_d,steel_pl_3mm  # visual   5
+# 
+*vobject,4drawer-fc,four drawer file cabinet, 5,f_cabinet,drw_a,drw_b,drw_c,drw_d
+*end_item
+# 
+*item,wood-box,small wood box 150x280x200mm # tag name menu entry
+*incat,visual+mass
+*includes,visual,mass
+*origin,0.0,0.0,0.0
+*bounding_box,0.290,0.150,0.075
+*Text
+Small open-top wooden box for holding stationery with horizontal
+mass placed in the base.
+*End_text
+#
+*vertex,0.00500,0.00500,0.00500  #   1
+*vertex,0.28500,0.00500,0.00500  #   2
+*vertex,0.28500,0.14500,0.00500  #   3
+*vertex,0.00500,0.14500,0.00500  #   4
+# 
+*mass,box_b,furn_wd10mm,OPAQUE,4,1,2,3,4  #  1
+*mass,box_b_,furn_wd10mm,OPAQUE,4,2,1,4,3  #  2
+# 
+*visp,8,6,0.00,box_lft,furn_wd10mm  # visual   1 coords follow:
+0.000,0.000,0.000,0.290,0.000,0.000,0.290,0.010,0.000,0.000,0.010,0.000  # 1-4 
+0.000,0.000,0.250,0.290,0.000,0.185,0.290,0.010,0.185,0.000,0.010,0.250  # 5-8 
+*visp,8,6,0.00,box_rt,furn_wd10mm  # visual   2 coords follow:
+0.000,0.140,0.000,0.290,0.140,0.000,0.290,0.150,0.000,0.000,0.150,0.000  # 1-4 
+0.000,0.140,0.250,0.290,0.140,0.185,0.290,0.150,0.185,0.000,0.150,0.250  # 5-8 
+*vis,0.000,0.000,0.000,0.010,0.150,0.250,0.000,1.00,box_bk,furn_wd10mm  # visual   3
+*vis,0.280,0.000,0.000,0.010,0.150,0.200,0.000,1.00,box_fr,furn_wd10mm  # visual   4
+# 
+*vobject,wood-box,small wood box 150x280x200mm, 4,box_lft,box_rt,box_bk,box_fr
+*end_item
+#
+*item,tv53cm,TV 53cm wide # tag name menu entry
+*incat,visual+mass
+*includes,visual,mass
+*origin,0.0,0.0,0.0
+*bounding_box,0.530,0.115,0.440
+*Text
+A 53cm wide digital TV with rear mounted DVD player. The mass of the
+cabinet as well as the circuit board is included.
+*End_text
+#
+*vertex,0.00500,0.03600,0.04500  #   1
+*vertex,0.52500,0.03600,0.04500  #   2
+*vertex,0.52500,0.03600,0.43500  #   3
+*vertex,0.00500,0.03600,0.43500  #   4
+*vertex,0.03500,0.08000,0.11500  #   5
+*vertex,0.50500,0.08000,0.11500  #   6
+*vertex,0.50500,0.08000,0.40500  #   7
+*vertex,0.03500,0.08000,0.40500  #   8
+# 
+*mass,case,IT_case,OPAQUE,4,1,2,3,4  #  1
+*mass,case_,IT_case,OPAQUE,,4,2,1,4,3  #  2
+*mass,circuit,circuit_bd,OPAQUE,,4,5,6,7,8  #  3
+*mass,circuit_,circuit_bd,OPAQUE,,4,6,5,8,7  #  4
+# 
+*vis,0.115,0.000,0.000,0.300,0.100,0.020,0.000,1.00,base,IT_case  # visual   1
+*vis,0.195,0.030,0.020,0.140,0.040,0.020,0.000,1.00,stand,steel_pl_3mm  # visual   2
+*vis,0.000,0.020,0.040,0.530,0.040,0.070,0.000,1.00,low_edge,steel_pl_3mm  # visual   3
+*vis,0.000,0.020,0.410,0.530,0.040,0.030,0.000,1.00,up_edge,IT_case  # visual   4
+*vis,0.000,0.020,0.110,0.030,0.040,0.300,0.000,1.00,lft_edge,IT_case  # visual   5
+*vis,0.500,0.020,0.110,0.030,0.040,0.300,0.000,1.00,rt_edge,IT_case  # visual   6
+*vis,0.030,0.035,0.110,0.480,0.080,0.300,0.000,1.00,component,sensor_case  # visual   7
+# 
+*vobject,tv53cm,TV 53cm wide, 7,base,stand,low_edge,up_edge,lft_edge,rt_edge,component
+*end_item
+#
+*item,dell55cm,55cm diag wide screen dell monitor # tag name menu entry
+*incat,visual+mass
+*includes,visual,mass
+*origin,0.0,0.0,0.0
+*bounding_box,0.520,0.100,0.510
+*Text
+A 55cm wide digital monitor on a stand. The mass of the
+cabinet as well as the circuit board is included.
+*End_text
+#
+*vertex,0.00500,0.03600,0.20500  #   1
+*vertex,0.51500,0.03600,0.20500  #   2
+*vertex,0.51500,0.03600,0.49500  #   3
+*vertex,0.00500,0.03600,0.49500  #   4
+*vertex,0.03000,0.06000,0.22500  #   5
+*vertex,0.49500,0.06000,0.22500  #   6
+*vertex,0.49500,0.06000,0.49000  #   7
+*vertex,0.03000,0.06000,0.49000  #   8
+# 
+*mass,case,IT_case,OPAQUE,4,1,2,3,4  #  1
+*mass,case_,IT_case,OPAQUE,4,2,1,4,3  #  2
+*mass,circuit,circuit_bd,OPAQUE,4,5,6,7,8  #  3
+*mass,circuit_,circuit_bd,OPAQUE,4,6,5,8,7  #  4
+# 
+*vis,0.115,0.000,0.000,0.300,0.100,0.020,0.000,1.00,dbase,IT_case  # visual   1
+*vis,0.195,0.050,0.020,0.140,0.025,0.250,0.000,1.00,dstand,steel_pl_3mm  # visual   2
+*vis,0.000,0.020,0.200,0.520,0.030,0.020,0.000,1.00,dlow_edge,IT_case  # visual   3
+*vis,0.000,0.020,0.490,0.520,0.030,0.020,0.000,1.00,dup_edge,IT_case  # visual   4
+*vis,0.000,0.020,0.220,0.020,0.020,0.270,0.000,1.00,dlft_edge,IT_case  # visual   5
+*vis,0.500,0.020,0.220,0.020,0.030,0.270,0.000,1.00,drt_edge,IT_case  # visual   6
+*vis,0.020,0.035,0.220,0.480,0.040,0.270,0.000,1.00,dscreen,collector_pl  # visual   7
+# 
+*vobject,dell55cm,Dell monitor 55cm diag, 7,dbase,dstand,dlow_edge,dup_edge,dlft_edge,drt_edge,dscreem
+*end_item
+*item,rubish-bskt,square rubbish basket 0.4x0.4x0.4xm # tag name menu entry
+*incat,visual+mass
+*includes,visual,mass
+*origin,0.0,0.0,0.0
+*bounding_box,0.395,0.245,0.395
+*Text
+A square rubbish bin made of wood 400mm wide x 250mm deep x 400mm high with
+mass for sides.
+*End_text
+#
+*vertex,0.00500,0.00500,0.00500  #   1
+*vertex,0.39500,0.00500,0.00500  #   2
+*vertex,0.39500,0.00500,0.39500  #   3
+*vertex,0.00500,0.00500,0.39500  #   4
+*vertex,0.00500,0.24500,0.00500  #   5
+*vertex,0.39500,0.24500,0.00500  #   6
+*vertex,0.39500,0.24500,0.39500  #   7
+*vertex,0.00500,0.24500,0.39500  #   8
+# 
+# tag, number of vertices followed by list of associated vert
+*mass,bask_lf,furn_wd10mm,OPAQUE,4,1,2,3,4  #  1
+*mass,bask_lf_,furn_wd10mm,OPAQUE,4,2,1,4,3  #  2
+*mass,bask_rt,furn_wd10mm,OPAQUE,4,5,6,7,8  #  3
+*mass,bask_rt_,furn_wd10mm,OPAQUE,4,6,5,8,7  #  4
+#
+*vis,0.000,0.001,0.000,0.010,0.250,0.400,0.000,1.00,basket_bk,furn_wd10mm  # visual   1
+*vis,0.399,0.000,0.000,0.010,0.250,0.400,0.000,1.00,basket_fr,furn_wd10mm  # visual   2
+*vis,0.000,0.001,0.000,0.400,0.010,0.400,0.000,1.00,basket_lf,furn_wd10mm  # visual   3
+*vis,0.000,0.240,0.000,0.400,0.010,0.400,0.000,1.00,basket_rt,furn_wd10mm  # visual   4
+#
+*vobject,rubish-bskt,square wood rubish bin, 4,basket_bk,basket_fr,basket_lf,basket_rt
+*end_item
+#
+*item,coffee_tbl,coffee table 0.50x1.05x0.32m # tag name menu entry
+*incat,visual+mass
+*includes,visual,mass
+*origin,0.0,0.0,0.0
+*bounding_box,0.510,1.020,0.330
+*Text
+A wooden coffee table with a shelf on 4 wooden legs including
+mass for the top and shelf.
+*End_text
+#
+*vertex,0.00500,0.00500,0.32500  #   1
+*vertex,0.50500,0.00500,0.32500  #   2
+*vertex,0.50500,1.03500,0.32500  #   3
+*vertex,0.00500,1.03500,0.32500  #   4
+*vertex,0.09500,0.11500,0.10500  #   5
+*vertex,0.42500,0.11500,0.10500  #   6
+*vertex,0.42500,0.93500,0.10500  #   7
+*vertex,0.09500,0.93500,0.10500  #   8
+# 
+*mass,t_top,shelves_20mm,OPAQUE,4,1,2,3,4  #  1
+*mass,t_top_,shelves_20mm,OPAQUE,4,2,1,4,3  #  2
+*mass,ct_shelf,furn_wd10mm,OPAQUE,4,5,6,7,8  #  3
+*mass,ct_shelf_,furn_wd10mm,OPAQUE,4,6,5,8,7  #  4
+# 
+*vis,0.0000,0.0000,0.3200,0.5100,1.0400,0.0200,0.0000,1.00,tbl_top,shelves_20mm  # visual   1
+*vis,0.0900,0.1100,0.1000,0.3400,0.8300,0.0200,0.0000,1.00,tbl_shelf,furn_wd10mm  # visual   2
+*vis,0.0500,0.1100,0.0000,0.0400,0.0400,0.3200,0.0000,1.00,leg_a,shelves_20mm  # visual   3
+*vis,0.4200,0.1100,0.0000,0.0400,0.0400,0.3200,0.0000,1.00,leg_b,shelves_20mm  # visual   4
+*vis,0.0500,0.9000,0.0000,0.0400,0.0400,0.3200,0.0000,1.00,leg_c,shelves_20mm  # visual   5
+*vis,0.4200,0.9000,0.0000,0.0400,0.0400,0.3200,0.0000,1.00,leg_d,shelves_20mm  # visual   6
+# 
+*vobject,coffee_tbl,coffee table with shelf, 6,tbl_top,tbl_shelf,leg_a,leg_b,leg_c,leg_d
+*end_item
+# 
+*item,book_case,Ikea book case 0.38x0.28x2.02m # tag name menu entry
+*incat,visual+mass
+*includes,visual,mass
+*origin,0.0,0.0,0.0
+*bounding_box,0.370,0.280,2.020
+*Text
+An Ikea Billy bookcase with shelves. 38cm wide x 202cm tall with mass for case only.
+*End_text
+#
+*vertex,0.00500,0.00500,0.00500  #   1
+*vertex,0.00500,0.25500,0.00500  #   2
+*vertex,0.00500,0.25500,2.00500  #   3
+*vertex,0.00500,0.00500,2.00500  #   4
+*vertex,0.37500,0.00500,0.00500  #   5
+*vertex,0.37500,0.25500,0.00500  #   6
+*vertex,0.37500,0.25500,2.00500  #   7
+*vertex,0.37500,0.00500,2.00500  #   8
+# 
+*mass,bil_lft,furn_wd10mm,OPAQUE,4,1,2,3,4  #  1
+*mass,bil_lft_,furn_wd10mm,OPAQUE,4,2,1,4,3  #  2
+*mass,bil_rt,furn_wd10mm,OPAQUE,4,5,6,7,8  #  3
+*mass,bil_rt_,furn_wd10mm,OPAQUE,4,6,5,8,7  #  4
+# 
+*vis,0.0000,0.0000,0.0000,0.0100,0.2800,2.0200,0.0000,1.00,left_ver,furn_wd10mm  # visual   1
+*vis,0.3600,0.0000,0.0000,0.0100,0.2800,2.0200,0.0000,1.00,right_ver,furn_wd10mm  # visual   2
+*vis,0.0000,0.2700,0.0000,0.3600,0.0100,2.0050,0.0000,1.00,bil_bk,furn_wd10mm  # visual   3
+*vis,0.0100,0.0050,0.0750,0.3600,0.2700,0.0100,0.0000,1.00,shelf_a,furn_wd10mm  # visual   4
+*vis,0.0100,0.0050,0.5150,0.3600,0.2700,0.0100,0.0000,1.00,shelf_b,furn_wd10mm  # visual   5
+*vis,0.0100,0.0050,0.9150,0.3600,0.2700,0.0100,0.0000,1.00,shelf_c,furn_wd10mm  # visual   6
+*vis,0.0100,0.0050,1.4050,0.3600,0.2700,0.0100,0.0000,1.00,shelf_d,furn_wd10mm  # visual   7
+*vis,0.0100,0.0050,1.6950,0.3600,0.2700,0.0100,0.0000,1.00,shelf_e,furn_wd10mm  # visual   8
+*vis,0.0100,0.0050,2.0050,0.3600,0.2700,0.0100,0.0000,1.00,bil_top,furn_wd10mm  # visual   9
+*vis,0.0100,0.0350,0.0050,0.3600,0.0100,0.0600,0.0000,1.00,kick,furn_wd10mm  # visual  10
+# 
+*vobject,ikea_billy,A Billy bookcase from Ikea,10,left_ver,right_ver,bil_bk,shelf_a,shelf_b,shelf_c,shelf_d,shelf_e,bil_top,kick
+*end_item
+# 
+*End_category
+*End_predefined

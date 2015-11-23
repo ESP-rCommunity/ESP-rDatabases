@@ -88,7 +88,7 @@ Category ( 2) Concrete includes a mix of concrete types from heavy weight to lig
 *item,Concrete med density (1800), 40, 2,Blockwork (UK code)
 1.130,1800.000,1008.000,0.900,0.900,0.700,0.700,13.000,100.0,-
 # class index |nb items|description (32 char)
-*class, 3,11,Metal
+*class, 3,13,Metal
 Category ( 3) Metal has a range of metals, some are the same but are painted differently. Based on data traditionally distributed with ESP-r.
 *item,copper, 41, 3,Copper
 200.000,8900.000,418.000,0.720,0.720,0.650,0.650,19200.000,5.0,-
@@ -112,6 +112,10 @@ Category ( 3) Metal has a range of metals, some are the same but are painted dif
 60.000,7800.000,502.000,0.120,0.120,0.200,0.200,19200.000,1.0,-
 *item,synthetic_magnetite, 52, 3,Synthetic magnetite bricks Fe3O4 used in electric storage heatersr
 3.500,5000.000,1000.000,0.800,0.800,0.800,0.800,19200.000,100.0,-
+*item,black_coated_copper, 50, 3,black_coated_copper coated for solar absorption equiv Dampney Thurmalox 250 reduced with Thermalox 295 thinner.
+200.0000,8900.000,418.000,0.520,0.520,0.960,0.960,19200.000,3.0,-
+*item,black_steel, 53, 3,black_steel coated for absorption equiv Dampney Thurmalox 250 reduced 1:1 with Thurmalox 295 thinner.
+50.0000,7800.000,502.000,0.520,0.520,0.960,0.960,19200.000,3.0,-
 # class index |nb items|description (32 char)
 *class, 4,23,Wood
 Category ( 4) Wood holds a range of wood types. Wood is considered organic-hygroscopic. Based on data traditionally distributed with ESP-r.
@@ -282,7 +286,7 @@ Category ( 8) Tiles includes both floor tiles, ceiling tiles and roof tile. Some
 *item,EDPM for facades,158, 8,EDPM used in facade framing data from IEBAU Muttenz CH (impermeable)
 0.250,1050.000,1470.000,0.940,0.940,0.920,0.920,19200.000,3.0,-
 # class index |nb items|description (32 char)
-*class, 9,14,Asphalt and bitumen
+*class, 9,15,Asphalt and bitumen
 Category ( 9) Asphalt and bitumen also includes impermeable materials which use bitumen and asphalt like compositions. Based on data traditionally distributed with ESP-r.
 *item,bitumen felt,161, 9,Bitumen felt (organic hygroscopic)
 0.500,1700.000,1000.000,0.900,0.900,0.900,0.900,1000.000,6.0,-
@@ -312,6 +316,8 @@ Category ( 9) Asphalt and bitumen also includes impermeable materials which use 
 0.040,160.000,1360.000,0.900,0.900,0.900,0.900,15.000,6.0,-
 *item,EDPM membrane,174, 9,EDPM membrane roofing or foundations data from Aquaflex aqua-flex.com (impermeable)
 0.170,1180.000,1470.000,0.900,0.900,0.920,0.920,19200.000,2.0,-
+*item,ABS_case,175, 9,ABS case (Acrylonitrile Butadiene Styrene) (www.matweb.com) (impermeable)
+0.2500,1020.000,1400.000,0.320,0.320,0.800,0.800,19200.000,2.0,-
 # class index |nb items|description (32 char)
 *class,10, 4,Asbestos
 Category (10) Asbestos is included for historic reasons, some regions still use asbestos in building products. Mostly inorganic porous. Based on data traditionally distributed with ESP-r.
