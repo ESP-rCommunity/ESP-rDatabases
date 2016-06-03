@@ -1,7 +1,7 @@
 # composite construction db defined in multicon.db4
 # based on materials db material.db4.a
 # and based on CFClayers db CFClayers.db1.a
-  115     # no of composites 
+  117     # no of composites 
 # layers  description  type  optics name   symmetry tag
     4    extern_wall   OPAQ  OPAQUE        NONSYMMETRIC  
 # material ref thickness (m) description & air gap R
@@ -91,6 +91,14 @@
    22    0.1000  aerated conc block : Aerated concrete block (inorganic-porous)
   101    0.0130  dense plaster : Dense plaster (inorganic-porous)
   102    0.0125  light plaster : Light weight plaster (inorganic-porous)
+# layers  description  type  optics name   symmetry tag
+    5    brk_blk_2012  OPAQ  OPAQUE        NONSYMMETRIC  
+# material ref thickness (m) description & air gap R
+    4    0.1000  outer leaf brick : Outer leaf brick (inorganic-porous)
+    0    0.0250  gap  0.170 0.170 0.170
+  216    0.1500  mineral fibre : Mineral fibre (non-hygroscopic)
+   37    0.1400  aerated_concrete : Aerated concrete autoclaved  .8 g/cc (www.matweb.com
+  117    0.0200  White_RK38_baumat_lime_plaster : White_RK38_baumat_lime_plaster
 # layers  description  type  optics name   symmetry tag
     8    Brk_sip2013   OPAQ  OPAQUE        NONSYMMETRIC  
 # material ref thickness (m) description & air gap R
@@ -299,6 +307,18 @@
     0    0.0080  gap  0.170 0.170 0.170
   170    0.0030  PVC_pipe : Polyvinylchloride pipe estimated from CIBSE data (impermeabl
 # layers  description  type  optics name   symmetry tag
+    9    PVC_fr_1.0u   OPAQ  OPAQUE        NONSYMMETRIC  
+# material ref thickness (m) description & air gap R
+  170    0.0030  PVC_pipe : Polyvinylchloride pipe estimated from CIBSE data (impermeabl
+    0    0.0080  gap  0.170 0.170 0.170
+  174    0.0040  EDPM membrane : EDPM membrane roofing or foundations data from Aquaflex
+    0    0.0080  gap  0.170 0.170 0.170
+  170    0.0030  PVC_pipe : Polyvinylchloride pipe estimated from CIBSE data (impermeabl
+    0    0.0080  gap  0.170 0.170 0.170
+  170    0.0030  PVC_pipe : Polyvinylchloride pipe estimated from CIBSE data (impermeabl
+    0    0.0080  gap  0.170 0.170 0.170
+  170    0.0030  PVC_pipe : Polyvinylchloride pipe estimated from CIBSE data (impermeabl
+# layers  description  type  optics name   symmetry tag
     3    frame_notion  OPAQ  OPAQUE        SYMMETRIC     
 # material ref thickness (m) description & air gap R
    43    0.1000  aluminium : Aluminium
@@ -312,6 +332,10 @@
     1    sash_fr74mm   OPAQ  OPAQUE        SYMMETRIC     
 # material ref thickness (m) description & air gap R
    71    0.0740  softwood : Softwood (generic)
+# layers  description  type  optics name   symmetry tag
+    1    sash_fr92mm   OPAQ  OPAQUE        SYMMETRIC     
+# material ref thickness (m) description & air gap R
+   71    0.0920  softwood : Softwood (generic)
 # layers  description  type  optics name   symmetry tag
     4    roof          OPAQ  OPAQUE        NONSYMMETRIC  
 # material ref thickness (m) description & air gap R
@@ -529,36 +553,6 @@
 # material ref thickness (m) description & air gap R
    69    0.0220  oak : Oak (radial cut)
   232    0.0050  linoleum_CSTC : linoleum as per CSTC Belgium 1980 (impermeable)
-# layers  description  type  optics name   symmetry tag
-    4    cptlintgcrl   OPAQ  OPAQUE        cptlnotg_flr  
-# material ref thickness (m) description & air gap R
-  221    0.0150  Wilton : Wilton weave wool carpet (organic-hygroscopic)
-  224    0.0110  cellular rub underlay : Cellular rubber carpet underlay (non-hygroscopi
-  232    0.0050  linoleum_CSTC : linoleum as per CSTC Belgium 1980 (impermeable)
-   69    0.0220  oak : Oak (radial cut)
-# layers  description  type  optics name   symmetry tag
-    4    cptlnotg_flr  OPAQ  OPAQUE        cptlintgcrl   
-# material ref thickness (m) description & air gap R
-   69    0.0220  oak : Oak (radial cut)
-  232    0.0050  linoleum_CSTC : linoleum as per CSTC Belgium 1980 (impermeable)
-  224    0.0110  cellular rub underlay : Cellular rubber carpet underlay (non-hygroscopi
-  221    0.0150  Wilton : Wilton weave wool carpet (organic-hygroscopic)
-# layers  description  type  optics name   symmetry tag
-    5    cpttginscrl   OPAQ  OPAQUE        cpttgins_flr  
-# material ref thickness (m) description & air gap R
-  221    0.0150  Wilton : Wilton weave wool carpet (organic-hygroscopic)
-  224    0.0110  cellular rub underlay : Cellular rubber carpet underlay (non-hygroscopi
-  232    0.0050  linoleum_CSTC : linoleum as per CSTC Belgium 1980 (impermeable)
-   69    0.0220  oak : Oak (radial cut)
-  211    0.1000  glasswool : Glasswool (generic) (non-hygroscopic)
-# layers  description  type  optics name   symmetry tag
-    5    cpttgins_flr  OPAQ  OPAQUE        cpttginscrl   
-# material ref thickness (m) description & air gap R
-  211    0.1000  glasswool : Glasswool (generic) (non-hygroscopic)
-   69    0.0220  oak : Oak (radial cut)
-  232    0.0050  linoleum_CSTC : linoleum as per CSTC Belgium 1980 (impermeable)
-  224    0.0110  cellular rub underlay : Cellular rubber carpet underlay (non-hygroscopi
-  221    0.0150  Wilton : Wilton weave wool carpet (organic-hygroscopic)
 # layers  description  type  optics name   symmetry tag
     2    ceiling_2013  OPAQ  OPAQUE        ceil2013_rev  
 # material ref thickness (m) description & air gap R
@@ -833,3 +827,17 @@
     1    steel_gr_3mm  OPAQ  OPAQUE        SYMMETRIC     
 # material ref thickness (m) description & air gap R
    44    0.0030  beige ptd steel : Beige painted steel
+# layers  description  type  optics name   symmetry tag
+    3    file_papers   OPAQ  OPAQUE        SYMMETRIC     
+# material ref thickness (m) description & air gap R
+  309    0.1000  book_paper : book_paper .72 g/cc from paperonweb.com and engineering to
+  310    0.1000  news_paper : news_paper .62g/cc on paperonweb.com engineering toolbox o
+  309    0.1000  book_paper : book_paper .72 g/cc from paperonweb.com and engineering to
+# layers  description  type  optics name   symmetry tag
+    1    booksonshlf   OPAQ  OPAQUE        SYMMETRIC     
+# material ref thickness (m) description & air gap R
+  309    0.2100  book_paper : book_paper .72 g/cc from paperonweb.com and engineering to
+# layers  description  type  optics name   symmetry tag
+    1    stuffonshelf  OPAQ  OPAQUE        SYMMETRIC     
+# material ref thickness (m) description & air gap R
+  311    0.2100  shelf_clutter : shelf_clutter mix of books magazines papers on typical

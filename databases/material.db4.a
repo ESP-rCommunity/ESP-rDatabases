@@ -189,7 +189,7 @@ Category ( 5) Stone includes building stone and gravels. Based on data tradition
 *item,lime cement mortar, 90, 5,lime cement mortar from IBO PassivHaus (inorganic-porous)
 0.8000,1800.000,1120.000,0.900,0.900,0.600,0.600,75.000,10.0,-
 # class index |nb items|description (32 char)
-*class, 6,15,Plaster
+*class, 6,17,Plaster
 Category ( 6) Plaster includes both tranditional plaster and gypsum plaster boards. Most are inorganic-porous. Based on data traditionally distributed with ESP-r.
 *item,dense plaster,101, 6,Dense plaster (inorganic-porous)
 0.5000,1300.000,1000.000,0.910,0.910,0.500,0.500,11.000,12.5,-
@@ -221,6 +221,10 @@ Category ( 6) Plaster includes both tranditional plaster and gypsum plaster boar
 0.8000,1800.000,1100.000,0.910,0.910,0.700,0.700,75.000,12.0,-
 *item,gypsum_fibreboard,115, 6,Fermacell gypsum fibreboard IBR report 3001-100 gypsum + 18% paper fibre compressed and kiln cured. Kiwa K25203-02
 0.3600,1150.000,1000.000,0.910,0.910,0.220,0.220,310.000,20.0,-
+*item,RK38_baumat_lime_plaster,116, 6,RK38_baumat_lime_plaster Baumat Kalkin RK 38 lime plaster for interior use as base or top coat assumed density spec ht
+0.8300,1400.000,920.000,0.910,0.910,0.700,0.700,10.000,10.0,-
+*item,White_RK38_baumat_lime_plaster,117, 6,White_RK38_baumat_lime_plaster same as RK38_baumat_lime_plaster but with white paint (inorganic-porous)
+0.8300,1400.000,920.000,0.910,0.910,0.400,0.400,10.000,10.0,-
 # class index |nb items|description (32 char)
 *class, 7,12,Screeds and renders
 Category ( 7) Screeds are products typically used horizontally and renders are used on walls. Most are inorganic-porous. Based on data traditionally distributed with ESP-r.
@@ -505,7 +509,7 @@ Category (15) Insulation materials (2) is a second tranche of loose, batt and fo
 *item,rigid phenolic 35kgm3,307,15,rigid phenolic foam 35-40 kg/m^3 CFC and HCFC free class 0 fire
 0.0230,35.000,1181.000,0.900,0.900,0.650,0.650,100.000,25.0,-
 # class index |nb items|description (32 char)
-*class,16,10,Board and Sheathing
+*class,16,13,Board and Sheathing
 Category (16) Board  and Sheathing includes a range of plaster and wood products many from the IBO PassivHaus book.
 *item,gypsum board,301,16,Gypsum board
 0.1600,800.000,1090.000,0.900,0.900,0.900,0.900,10.000,12.5,-
@@ -527,6 +531,12 @@ Category (16) Board  and Sheathing includes a range of plaster and wood products
 0.5700,3130.000,677.000,0.800,0.800,0.700,0.700,2000.000,14.0,-
 *item,corian,330,16,corian is a solid homogeneous non-porous surfacing of natural minerals and acrylic resin. Data from CBERD and MNRE India Thermo-Physical-c Optical Preperty DB March 2014
 1.0120,1750.000,771.400,0.800,0.800,0.400,0.400,1920.000,20.0,-
+*item,book_paper,309,16,book_paper .72 g/cc from paperonweb.com engineering toolbox other attributes approximate
+0.1000,720.000,1300.000,0.900,0.900,0.650,0.650,12.000,105.0,-
+*item,news_paper,310,16,news_paper .62g/cc on paperonweb.com engineering toolbox other attributes approximate
+0.0600,620.000,1300.000,0.900,0.900,0.600,0.600,12.000,10.0,-
+*item,shelf_clutter,311,16,shelf_clutter mix of books magazines papers on typical shelf (measured density)
+0.1000,480.000,1300.000,0.900,0.900,0.600,0.600,12.000,105.0,-
 # class index |nb items|description (32 char)
 *class,17, 6,Non-homogeneous
 Category (17) Non-homogeneous layers combine two existing materials properties to represent non-homogeneous constructions. Documentation should state percentage and base materials.
