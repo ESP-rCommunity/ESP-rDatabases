@@ -375,7 +375,7 @@ Tags are:
 *end_item
 *item,insul_frame,aluminium insulated frame # tag name menu entry
 *itemdoc,grey aluminium frame with 80mm of fibre insulation to yield U value of ??.
-*incat,frame
+*incat,frames
 *type,OPAQ,OPAQUE,SYMMETRIC
 *layer,46,0.0040,grey cotd alum : Grey coated aluminium
 *layer,281,0.0800,glass fibre quilt : Glass Fibre Quilt (non-hygroscopic)
@@ -383,7 +383,7 @@ Tags are:
 *end_item
 *item,drei3holz,wood Passive House frame U=0.73 # tag name menu entry
 *itemdoc,A composite wood & cork Passive House grade window frame with air gap resistance set to give U of 0.73
-*incat,frame
+*incat,frames
 *type,OPAQ,OPAQUE,NONSYMMETRIC
 *layer,92,0.0250,western larch : Wester Larch from simetric.co.uk and matbase specific h
 *layer,217,0.0240,cork insulation : Cork insulation (organic-hygroscopic)
@@ -392,7 +392,7 @@ Tags are:
 *end_item
 *item,PH_alu_frame,alum Passive House frame U=0.87 # tag name menu entry
 *itemdoc,A composite aluminium Passive House grade window frame with air gap resistances set to give U of 0.87
-*incat,frame
+*incat,frames
 *type,OPAQ,OPAQUE,NONSYMMETRIC
 *layer,46,0.0030,grey cotd alum : Grey coated aluminium
 *layer,0,0.0080,gap  0.060 0.060 0.060
@@ -406,7 +406,7 @@ Tags are:
 *end_item
 *item,PVC_fr_1.8u,PVC window frame U=1.8 # tag name menu entry
 *itemdoc,A PVC window frame with a thin EDPM thermal break yielding a Uvalue of 1.8
-*incat,frame
+*incat,frames
 *type,OPAQ,OPAQUE,SYMMETRIC
 *layer,170,0.0030,PVC_pipe : Polyvinylchloride pipe estimated from CIBSE data (impermeabl
 *layer,0,0.0080,gap  0.170 0.170 0.170
@@ -416,7 +416,7 @@ Tags are:
 *end_item
 *item,PVC_fr_1.0u,PVC window frame U=1.0 # tag name menu entry
 *itemdoc,A PVC window frame with multiple cells and a thin EDPM thermal break yielding a Uvalue of 1.0
-*incat,frame
+*incat,frames
 *type,OPAQ,OPAQUE,NONSYMMETRIC
 *layer,170,0.0030,PVC_pipe : Polyvinylchloride pipe estimated from CIBSE data (impermeabl
 *layer,0,0.0080,gap  0.170 0.170 0.170
@@ -438,19 +438,19 @@ Tags are:
 *end_item
 *item,sash_fr55mm,sash window frame 55m thick # tag name menu entry
 *itemdoc,A wood frame for traditional windows 55mm thick made from generic softwood.
-*incat,frame
+*incat,frames
 *type,OPAQ,OPAQUE,SYMMETRIC
 *layer,71,0.0550,softwood : Softwood (generic)
 *end_item
 *item,sash_fr74mm,sash window frame 74m thick # tag name menu entry
 *itemdoc,A wood frame for traditional windows 74mm thick made from generic softwood.
-*incat,frame
+*incat,frames
 *type,OPAQ,OPAQUE,SYMMETRIC
 *layer,71,0.0740,softwood : Softwood (generic)
 *end_item
 *item,sash_fr92mm,sash window frame 92m thick # tag name menu entry
 *itemdoc,A wood frame for traditional windows 92mm thick made from generic softwood.
-*incat,frame
+*incat,frames
 *type,OPAQ,OPAQUE,SYMMETRIC
 *layer,71,0.0920,softwood : Softwood (generic)
 *end_item
