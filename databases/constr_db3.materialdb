@@ -43,7 +43,7 @@ Category ( 1) Brick includes a range of brick types. Based on data traditionally
 *item,Brick (UK code), 10, 1,Brick (UK code)
 0.700,1700.000,1000.000,0.900,0.900,0.930,0.930,12.000,100.0,-
 # class index |nb items|description (32 char)
-*class, 2,19,Concrete
+*class, 2,20,Concrete
 Category ( 2) Concrete includes a mix of concrete types from heavy weight to lightweight insulating types. Based on data traditionally distributed with ESP-r.
 *item,Light mix concrete, 21, 2,Light mix concrete
 0.380,1200.000,653.000,0.900,0.900,0.650,0.650,6.000,100.0,-
@@ -83,6 +83,8 @@ Category ( 2) Concrete includes a mix of concrete types from heavy weight to lig
 1.930,2400.000,1000.000,0.900,0.900,0.700,0.700,13.000,100.0,-
 *item,Cast concrete 100 mm (UK code), 39, 2,Cast concrete 100 mm (UK code)
 1.350,2000.000,1000.000,0.900,0.900,0.700,0.700,13.000,100.0,-
+*item,Concrete med density (1800), 40, 2,Blockwork (UK code)
+1.130,1800.000,1008.000,0.900,0.900,0.700,0.700,13.000,100.0,-
 # class index |nb items|description (32 char)
 *class, 3,10,Metal
 Category ( 3) Metal has a range of metals, some are the same but are painted differently. Based on data traditionally distributed with ESP-r.
