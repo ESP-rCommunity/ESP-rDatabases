@@ -1103,6 +1103,12 @@ Tags are:
 *type,OPAQ,OPAQUE,SYMMETRIC
 *layer,50,0.0030,black_coated_copper : black_coated_copper coated for solar absorption e
 *end_item
+*item,exch_plate,aluminium heat exch plate # tag name menu entry
+*itemdoc,exch_plate is a 4mm aluminum plate for use in a heat exchanger.
+*incat,fittings
+*type,OPAQ,OPAQUE,SYMMETRIC
+*layer,43,0.0040,aluminium : Aluminium
+*end_item
 *item,sensor_case,ABS shell for control equipment # tag name menu entry
 *itemdoc,Used for thermostat shell or furniture or other office equipment.
 *incat,fittings
