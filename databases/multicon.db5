@@ -43,6 +43,14 @@ Tags are:
 *layer,281,0.0800,glass fibre quilt : Glass Fibre Quilt (non-hygroscopic)
 *layer,47,0.0040,wt cotd alum : White coated aluminium
 *end_item
+*item,dummy_pnls,insulated alum wall panel # tag name menu entry
+*itemdoc,insulated bright aluminium panel wall with 80mm insulation (legacy construction used in some training models)
+*incat,legacy
+*type,OPAQ,OPAQUE,NONSYMMETRIC
+*layer,43,0.0030,aluminium : Aluminium
+*layer,281,0.0800,glass fibre quilt : Glass Fibre Quilt (non-hygroscopic)
+*layer,43,0.0030,aluminium : Aluminium
+*end_item
 *item,Wall_NI_noti,UK notional wall for N Ireland # tag name menu entry
 *itemdoc,Code compliant wall used for Northern Ireland SBEM equivalent
 *incat,UK_code
@@ -84,6 +92,38 @@ Tags are:
 *layer,294,0.0635,Mineral wool batt : Insulation (Mineral wool batt k=0.04) (non-hygrosco
 *layer,40,0.1000,Concrete med density (1800) : Blockwork (UK code)
 *layer,0,0.0250,gap  0.180 0.180 0.180
+*layer,112,0.0130,Plasterboard (UK code) : Plasterboard (UK code)
+*end_item
+*item,Wall_EW_1975,EngWls brick block circa 1975 # tag name menu entry
+*itemdoc,Wall_EW_1975 is a typical 1975 brick uninsulated cavity block wall with plasterboard on battons
+*incat,walls
+*type,OPAQ,OPAQUE,NONSYMMETRIC
+*layer,10,0.1020,Brick outer leaf : Brick (UK code)
+*layer,0,0.0900,gap  0.180 0.180 0.180
+*layer,28,0.1000,block inner : Block inner (3% mc)
+*layer,0,0.0220,gap  0.180 0.180 0.180
+*layer,112,0.0130,Plasterboard (UK code) : Plasterboard (UK code)
+*end_item
+*item,Wall_EW_1990,EngWls brick block circa 1990 # tag name menu entry
+*itemdoc,Wall_EW_1990 is a typical 1990 brick insulated (60mm) cavity block wall with plasterboard on battons
+*incat,walls
+*type,OPAQ,OPAQUE,NONSYMMETRIC
+*layer,10,0.1020,Brick outer leaf : Brick (UK code)
+*layer,0,0.0220,gap  0.170 0.170 0.170
+*layer,294,0.0600,Mineral wool batt 100mm : Insulation (Mineral wool batt default 100mm)
+*layer,36,0.1000,concrete block : concrete block (milton keynes)
+*layer,0,0.0220,gap  0.170 0.170 0.170
+*layer,112,0.0130,Plasterboard (UK code) : Plasterboard (UK code)
+*end_item
+*item,Wall_EW_2002,EngWls brick block circa 2002 # tag name menu entry
+*itemdoc,Wall_EW_2002 is a typical 2002 brick insulated (100mm) cavity block wall with plasterboard on battons.
+*incat,walls
+*type,OPAQ,OPAQUE,NONSYMMETRIC
+*layer,10,0.1020,Brick outer leaf : Brick (UK code)
+*layer,0,0.0220,gap  0.170 0.170 0.170
+*layer,294,0.1000,Mineral wool batt 100mm : Insulation (Mineral wool batt default 100mm)
+*layer,36,0.1000,concrete block : concrete block (milton keynes)
+*layer,0,0.0220,gap  0.170 0.170 0.170
 *layer,112,0.0130,Plasterboard (UK code) : Plasterboard (UK code)
 *end_item
 *item,AWI_06,AWI_06 wall from IBO book # tag name menu entry
@@ -427,6 +467,12 @@ Tags are:
 *layer,170,0.0030,PVC_pipe : Polyvinylchloride pipe estimated from CIBSE data (impermeabl
 *layer,0,0.0080,gap  0.170 0.170 0.170
 *layer,170,0.0030,PVC_pipe : Polyvinylchloride pipe estimated from CIBSE data (impermeabl
+*end_item
+*item,Doorfrm_ext,Larch architrave for ext door # tag name menu entry
+*itemdoc,Doorfrm_ext is 94mm thick larch frame for an exterior door.
+*incat,frames
+*type,OPAQ,OPAQUE,SYMMETRIC
+*layer,92,0.0940,western larch : Wester Larch from simetric.co.uk and matbase specific h
 *end_item
 *item,frame_notion,UK notional metal window frame # tag name menu entry
 *itemdoc,An aluminium window frame with adjusted gap resistance to comply with UK nominal performance requirements.

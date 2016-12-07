@@ -1,6 +1,6 @@
 # composite construction db defined in /usr/esru/esp-r/databases/multicon.db2
 # based on materials db /usr/esru/esp-r/databases/material.db3.a
-   38     # no of composites 
+   41     # no of composites 
 # layers  description   optics name   symmetry tag
     4    extern_wall   OPAQ  OPAQUE        NONSYMMETRIC  
 # mat ref thickness (m) mat descr & air gap R
@@ -8,12 +8,27 @@
   211    0.0750  Glasswool : Glasswool (generic)
     0    0.0500  air  0.170 0.170 0.170
     2    0.1000  breeze block : Breeze block
+# layers  description  type  optics name   symmetry tag
+    6    ext_wall      OPAQ  OPAQUE        NONSYMMETRIC  
+# material ref thickness (m) description & air gap R
+   43    0.0030  Aluminium : Aluminium
+    0    0.0250  gap  0.170 0.170 0.170
+  281    0.0800  Glass Fibre Quilt : Glass Fibre Quilt
+   43    0.0030  Aluminium : Aluminium
+    0    0.0500  gap  0.170 0.170 0.170
+  104    0.0130  Gypsum plaster : Gypsum plaster
 # layers  description   optics name   symmetry tag
     3    insul_mtl_p   OPAQ  OPAQUE        NONSYMMETRIC  
 # mat ref thickness (m) mat descr & air gap R
    46    0.0040  grey cotd alum : Grey coated aluminium
   281    0.0800  glass fibre quilt : Glass Fibre Quilt
    47    0.0040  wt cotd alum : White coated aluminium
+# layers  description  type  optics name   symmetry tag
+    3    dummy_pnls    OPAQ  OPAQUE        SYMMETRIC     
+# material ref thickness (m) description & air gap R
+   43    0.0030  Aluminium : Aluminium
+  281    0.0800  Glass Fibre Quilt : Glass Fibre Quilt
+   43    0.0030  Aluminium : Aluminium
 # layers  description   optics name   symmetry tag
     2    intern_wall   OPAQ  OPAQUE        NONSYMMETRIC  
 # mat ref thickness (m) mat descr & air gap R
@@ -57,6 +72,10 @@
   242    0.0060  plate glass : Plate glass with placeholder single layer optics
     0    0.0120  air  0.170 0.170 0.170
   242    0.0060  plate glass : Plate glass with placeholder single layer optics
+# layers  description  type  optics name   symmetry tag
+    1    sgl_glz       TRAN  SC_8985_04nb  SYMMETRIC     
+# material ref thickness (m) description & air gap R
+  243    0.0040  4mm clear float : 4mm clear float with placeholder single layer optics
 # layers  description   optics name   symmetry tag
     4    roof_1        OPAQ  OPAQUE        NONSYMMETRIC  
 # mat ref thickness (m) mat descr & air gap R

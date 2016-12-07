@@ -1,7 +1,7 @@
 # composite construction db defined in multicon.db4
 # based on materials db material.db4.a
 # and based on CFClayers db CFClayers.db1.a
-  117     # no of composites 
+  118     # no of composites 
 # layers  description  type  optics name   symmetry tag
     4    extern_wall   OPAQ  OPAQUE        NONSYMMETRIC  
 # material ref thickness (m) description & air gap R
@@ -15,6 +15,12 @@
    46    0.0040  grey cotd alum : Grey coated aluminium
   281    0.0800  glass fibre quilt : Glass Fibre Quilt (non-hygroscopic)
    47    0.0040  wt cotd alum : White coated aluminium
+# layers  description  type  optics name   symmetry tag
+    3    dummy_pnls    OPAQ  OPAQUE        SYMMETRIC     
+# material ref thickness (m) description & air gap R
+   43    0.0030  Aluminium : Aluminium
+  281    0.0800  Glass Fibre Quilt : Glass Fibre Quilt
+   43    0.0030  Aluminium : Aluminium
 # layers  description  type  optics name   symmetry tag
     5    Wall_NI_noti  OPAQ  OPAQUE        NONSYMMETRIC  
 # material ref thickness (m) description & air gap R
