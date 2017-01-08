@@ -3535,7 +3535,7 @@ Type :   0    Init suppl dat :   0    Tot suppl dat :   0    No. of conns :   0
     Variable type    :  20,
 
  Miscellaneous Data
-    Adata items   :   9    Bdata items   :   0    Cdata items   :   0
+    Adata items   :   14    Bdata items   :   0    Cdata items   :   0
  ADATA variables:
     1 Number of circuits (integer)
       Value =    1.0000        Range (Min Max):     1.0000        99.000
@@ -3555,6 +3555,16 @@ Type :   0    Init suppl dat :   0    Tot suppl dat :   0    No. of conns :   0
       Value =    6.0000        Range (Min Max):     1.0000        99.000
     9 Injection node number (integer)
       Value =    7.0000        Range (Min Max):     1.0000        99.000
+   10 Relaxation factor (setting to 0.5 usually results in both speed and stability)
+      Value =    0.5000        Range (Min Max):     0.0010        1.0000 
+   11 Maximum number of iterations (integer)
+      Value =    100.00        Range (Min Max):     10.00        1000.0  
+   12 Flag for model. 1 = Laouadi Model Tube-and-plate model (e.g. Warmboard, Roth radiant panels)
+      Value =    1.0000        Range (Min Max):     1.0000        2.0000  
+   13 Amount of finite difference nodes for pipe-in-subfloor model (20 is recommended for accurate results)
+      Value =    20.0000        Range (Min Max):     10.0000        100.0000
+   14 Insulation layer (for Laouadi Model, 0 means no insulation layer is present)
+      Value =    0.0        Range (Min Max):     0.0000        100.0000
 
  Number of additional output parameters:     5
  Additional output variables:
