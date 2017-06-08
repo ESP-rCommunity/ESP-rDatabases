@@ -1680,7 +1680,8 @@ the +-Y axis.
 *bounding_box,  1.250  0.150  0.25  # extents of object
 *Text
 susp_fit1.25 describes a suspended light fitting for t8 tubes
-which should be associated with an IESNA lighitng distribution.                        
+which should be associated with an IESNA lighitng distribution
+defined in 77-4-232.ies.                        
 *End_text
 # 
 *vertex,0.08000,0.02000,0.01500  #   1
@@ -1726,6 +1727,107 @@ see www.thorlux.co.uk and iesna file RAD16723.ies, 38W
 *vis,0.0000,0.0000,0.0000,0.5900,0.0100,0.0100,0.0000,1.00,base_bb,steel_pl_3mm  # visual   4
 *vis,0.0000,0.0000,0.0100,0.6000,0.6000,0.0100,0.0000,1.00,upper,steel_pl_3mm  # visual   5
 *end_item
+# 
+*item,strlmp_6EW-S,6m LED street lamp south edge of E-W street # tag name menu entry
+*incat,lighting           
+*sourced,Derived from an ESP-r geometry file.
+*origin,0.0,0.0,0.0  # local origin
+*bounding_box,  0.3  1.430  6.200  # extents of object
+*Text
+6m LED streetlamp south edge of E-W street. On a 6m steel pole with
+an angled support with LED fitting based on ArranP25.IES. Associate
+the LED with lens_low.           
+*End_text
+# 
+*vertex,-0.10000,0.73000,6.10000  #   1
+*vertex,0.10000,0.73000,6.10000  #   2
+*vertex,0.10000,1.43000,6.17000  #   3
+*vertex,-0.10000,1.43000,6.17000  #   4
+# 
+*mass,lens_up6s,single_glaz,SCF8783_06nb,4,1,2,3,4  #   1
+*mass,lens_lw6s,single_glaz,SCF8783_06nb,4,2,1,4,3  #   2
+# 
+*vis,0.0000,0.0000,0.0000,0.1400,0.1400,1.0000,0.00,1.00,lmp_b6s steel_pl_3mm  # block   1
+*vis,0.0350,0.0350,1.0000,0.0700,0.0700,5.0000,0.00,1.00,lmp_col6s steel_pl_3mm  # block   2
+*vis3,0.0950,0.0350,6.0000,0.7000,0.0600,0.0600,90.00,5.00,0.00,1.00,lmp_angl6s steel_pl_3mm  # block   3
+*vis3,0.0950,0.7350,6.1200,0.7000,0.2000,0.0600,90.00,5.00,0.00,1.00,lmp_case6s steel_pl_3mm  # block   4
+*end_item
+# 
+*item,strlmp_6EW-N,6m LED street lamp north edge of E-W street # tag name menu entry
+*incat,lighting           
+*sourced,Derived from an ESP-r geometry file.
+*origin,0.0,0.0,0.0  # local origin
+*bounding_box,  0.3  1.430  6.200  # extents of object
+*Text
+6m LED street lamp north edge of E-W street. On a 6m steel pole with
+an angled support with LED fitting based on ArranP25.IES. Associate
+the LED with lens_low. Double check radiance !xform for lamp           
+*End_text
+# 
+*vertex,0.10000,0.70000,6.10000  #   1
+*vertex,-0.10000,0.70000,6.10000  #   2
+*vertex,-0.10000,0.00000,6.17000  #   3
+*vertex,0.10000,0.00000,6.17000  #   4
+# 
+*mass,lens_up6n,single_glaz,SCF8783_06nb,4,1,2,3,4  #   1
+*mass,lens_low6n,single_glaz,SCF8783_06nb,4,2,1,4,3  #   2
+# 
+*vis,0.0000,1.4300,0.0000,0.1400,0.1400,1.0000,-180.00,1.00,lmp_b6n steel_pl_3mm  # block   1
+*vis,-0.0350,1.3950,1.0000,0.0700,0.0700,5.0000,-180.00,1.00,lmp_col6n steel_pl_3mm  # block   2
+*vis3,-0.0950,1.3950,6.0000,0.7000,0.0600,0.0600,-90.00,5.00,0.00,1.00,lmp_angl6n steel_pl_3mm  # block   3
+*vis3,-0.0950,0.6950,6.1200,0.7000,0.2000,0.0600,-90.00,5.00,0.00,1.00,lmp_case6n steel_pl_3mm  # block   4
+*end_item
+# 
+*item,strlmp_8EW-S,8m LED street lamp south edge of E-W street # tag name menu entry
+*incat,lighting           
+*sourced,Derived from an ESP-r geometry file.
+*origin,0.0,0.0,0.0  # local origin
+*bounding_box,  0.3  1.430  8.200  # extents of object
+*Text
+6m LED streetlamp south edge of E-W street. On a 8m steel pole with
+an angled support with LED fitting based on ArranP25.IES. Associate
+the LED with lens_low.  Double check radiance !xform for lamp          
+*End_text
+# 
+*vertex,-0.10000,0.73000,8.10000  #   1
+*vertex,0.10000,0.73000,8.10000  #   2
+*vertex,0.10000,1.43000,8.17000  #   3
+*vertex,-0.10000,1.43000,8.17000  #   4
+# 
+*mass,lens_up8s,single_glaz,SCF8783_06nb,4,1,2,3,4  #   1
+*mass,lens_low8s,single_glaz,SCF8783_06nb,4,2,1,4,3  #   2
+# 
+*vis,0.0000,0.0000,0.0000,0.1400,0.1400,1.0000,0.00,1.00,lmp_base8s steel_pl_3mm  # block   1
+*vis,0.0350,0.0350,1.0000,0.0700,0.0700,7.0000,0.00,1.00,lmp_col8s steel_pl_3mm  # block   2
+*vis3,0.0950,0.0350,8.0000,0.7000,0.0600,0.0600,90.00,5.00,0.00,1.00,lmp_angl8s steel_pl_3mm  # block   3
+*vis3,0.0950,0.7350,8.1200,0.7000,0.2000,0.0600,90.00,5.00,0.00,1.00,lmp_case8s steel_pl_3mm  # block   4
+*end_item
+# 
+*item,strlmp_8EW-N,8m LED street lamp north edge of E-W street # tag name menu entry
+*incat,lighting           
+*sourced,Derived from an ESP-r geometry file.
+*origin,0.0,0.0,0.0  # local origin
+*bounding_box,  0.3  1.430  8.200  # extents of object
+*Text
+8m LED street lamp north edge of E-W street. On a 8m steel pole with
+an angled support with LED fitting based on ArranP25.IES. Associate
+the LED with lens_low. Double check radiance !xform for lamp           
+*End_text
+# 
+*vertex,0.10000,0.70000,8.10000  #   1
+*vertex,-0.10000,0.70000,8.10000  #   2
+*vertex,-0.10000,0.00000,8.17000  #   3
+*vertex,0.10000,0.00000,8.17000  #   4
+# 
+*mass,lens_up8n,single_glaz,SCF8783_06nb,4,1,2,3,4  #   1
+*mass,lens_low8n,single_glaz,SCF8783_06nb,4,2,1,4,3  #   2
+# 
+*vis,0.0000,1.4300,0.0000,0.1400,0.1400,1.0000,-180.00,1.00,lmp_b8n steel_pl_3mm  # block   1
+*vis,-0.0350,1.3950,1.0000,0.0700,0.0700,7.0000,-180.00,1.00,lmp_col8n steel_pl_3mm  # block   2
+*vis3,-0.0950,1.3950,8.0000,0.7000,0.0600,0.0600,-90.00,5.00,0.00,1.00,lmp_angl8n steel_pl_3mm  # block   3
+*vis3,-0.0950,0.6950,8.1200,0.7000,0.2000,0.0600,-90.00,5.00,0.00,1.00,lmp_case8n steel_pl_3mm  # block   4
+*end_item
+# 
 # 
 *End_category
 # 
