@@ -126,6 +126,34 @@ top is included.
 *vobject,office-dsk,office desk 0.6mx1.6m, 5,desk_top,desk_leg_a,desk_leg_b,desk_leg_c,desk_leg_d
 *end_item
 # 
+*item,work-desk,workstation desk 1.8mx0.9m # tag name menu entry
+*incat,office_furn
+*includes,visual,mass
+*sourced,Based on measurements of a desk. Composition assumed.
+*origin,0.0,0.0,0.0
+*bounding_box,1.8,0.900,0.715
+*Text
+An engineering workstation desk of corian with steel legs. The mass of
+the top is included.
+*End_text
+#
+*vertex,0.00500,0.00500,0.69500  #   1
+*vertex,1.79500,0.00500,0.69500  #   2
+*vertex,1.79500,0.79500,0.69500  #   3
+*vertex,0.00500,0.79500,0.69500  #   4
+# 
+*mass,wkdsk_t,corian_count,OPAQUE,,4,1,2,3,4  #  1
+*mass,wkdsk_t_,corian_count,OPAQUE,4,2,1,4,3  #  2
+# 
+*vis,0.000,0.000,0.690,1.800,0.800,0.025,0.000,1.00,wkdsk_top,corian_count  # visual   1
+*vis,0.100,0.100,0.000,0.050,0.050,0.690,0.000,1.00,wkdsk_lega,steel_pl_3mm  # visual   2
+*vis,1.700,0.100,0.000,0.050,0.050,0.690,0.000,1.00,wkdsk_legb,steel_pl_3mm  # visual   3
+*vis,0.100,0.700,0.000,0.050,0.050,0.690,0.000,1.00,wkdsk_legc,steel_pl_3mm  # visual   4
+*vis,1.700,0.700,0.000,0.050,0.050,0.690,0.000,1.00,wkdsk_legd,steel_pl_3mm  # visual   5
+# 
+*vobject,work-desk,workstation desk 1.8x0.9m, 5,wkdsk_top,wkdsk_lega,wkdsk_legb,wkdsk_legc,wkdsk_legd
+*end_item
+# 
 *item,worksta-desk,workstation desk 0.9mx1.8m # tag name menu entry
 *incat,office_furn
 *includes,visual,mass
@@ -401,25 +429,19 @@ at left right and front edges plus magazines and paper inside.
 *vertex,1.9800,0.01500,0.00500  #  10
 *vertex,1.9800,0.01500,1.54500  #  11
 *vertex,0.01500,0.01500,1.54500  #  12
-*vertex,1.00500,0.50500,0.00500  #   13
-*vertex,1.00500,0.01500,0.00500  #   14
-*vertex,1.00500,0.01500,1.54500  #   15
-*vertex,1.00500,0.50500,1.54500  #   16
-*vertex,0.01500,0.41500,0.00500  #   17
-*vertex,1.9800,0.41500,0.00500  #  18
-*vertex,1.9800,0.41500,1.54500  #  19
-*vertex,0.01500,0.41500,1.54500  #  20
+*vertex,0.01500,0.41500,0.00500  #   13
+*vertex,1.9800,0.41500,0.00500  #  14
+*vertex,1.9800,0.41500,1.54500  #  15
+*vertex,0.01500,0.41500,1.54500  #  16
 # 
-*mass,h2cab_lf,steel_pl_3mm,OPAQUE, 4,  1  2  3  4  #   1
-*mass,h2cab_lf_,steel_pl_3mm,OPAQUE, 4,  2  1  4  3  #   2
-*mass,h2cab_rt,steel_pl_3mm,OPAQUE, 4,  5  6  7  8  #   3
-*mass,h2cab_rt_,steel_pl_3mm,OPAQUE, 4,  6  5  8  7  #   4
-*mass,h2cab_fr,steel_gr_3mm,OPAQUE, 4,  9 10 11 12  #   5
-*mass,h2cab_fr_,steel_gr_3mm,OPAQUE, 4, 10  9 12 11  #   6
-*mass,h2cab_mt,steel_pl_3mm,OPAQUE, 4,  13  14  15  16  #   7
-*mass,h2cab_mt_,steel_pl_3mm,OPAQUE, 4,  14  13  16  15  #   8
-*mass,h2cabpa_fr,file_papers,OPAQUE, 4, 17 18 19 20  #  9
-*mass,h2cabpa_fr_,file_papers,OPAQUE, 4, 18 17 20 19  #  10
+*mass,h2cab_lf,steel_pl_3mm,OPAQUE,4,1,2,3,4  #   1
+*mass,h2cab_lf_,steel_pl_3mm,OPAQUE,4,2,1,4,3  #   2
+*mass,h2cab_rt,steel_pl_3mm,OPAQUE,4,5,6,7,8  #   3
+*mass,h2cab_rt_,steel_pl_3mm,OPAQUE,4,6,5,8,7  #   4
+*mass,h2cab_fr,steel_gr_3mm,OPAQUE,4,9,10,11,12  #   5
+*mass,h2cab_fr_,steel_gr_3mm,OPAQUE,4,10,9,12,11  #   6
+*mass,h2cabpa_fr,file_papers,OPAQUE,4,13,14,15,16  #  7
+*mass,h2cabpa_fr_,file_papers,OPAQUE,4,14,13,16,15  #  8
 # 
 *vis,0.0000,0.5000,0.0000,0.5000,2.0000,1.5500,-90.0000,1.00,h2f_cab,steel_pl_3mm  # visual   1
 *vis,0.0500,0.0000,0.0500,0.0100,0.9000,0.4500,-90.0000,1.00,h2drw_a,steel_gr_3mm  # visual   2
@@ -455,25 +477,19 @@ at left right and front edges plus magazines and paper inside.
 *vertex,1.9800,0.01500,0.00500  #  10
 *vertex,1.9800,0.01500,1.14500  #  11
 *vertex,0.01500,0.01500,1.14500  #  12
-*vertex,1.00500,0.50500,0.00500  #   13
-*vertex,1.00500,0.01500,0.00500  #   14
-*vertex,1.00500,0.01500,1.14500  #   15
-*vertex,1.00500,0.50500,1.14500  #   16
-*vertex,0.01500,0.41500,0.00500  #   17
-*vertex,1.9800,0.41500,0.00500  #  18
-*vertex,1.9800,0.41500,1.14500  #  19
-*vertex,0.01500,0.41500,1.14500  #  20
+*vertex,0.01500,0.41500,0.00500  #   17 13
+*vertex,1.9800,0.41500,0.00500  #  18 14
+*vertex,1.9800,0.41500,1.14500  #  19 15
+*vertex,0.01500,0.41500,1.14500  #  20 16
 # 
-*mass,h4cab_lf,steel_pl_3mm,OPAQUE, 4,  1  2  3  4  #   1
-*mass,h4cab_lf_,steel_pl_3mm,OPAQUE, 4,  2  1  4  3  #   2
-*mass,h4cab_rt,steel_pl_3mm,OPAQUE, 4,  5  6  7  8  #   3
-*mass,h4cab_rt_,steel_pl_3mm,OPAQUE, 4,  6  5  8  7  #   4
-*mass,h4cab_fr,steel_gr_3mm,OPAQUE, 4,  9 10 11 12  #   5
-*mass,h4cab_fr_,steel_gr_3mm,OPAQUE, 4, 10  9 12 11  #   6
-*mass,h4cab_mt,steel_pl_3mm,OPAQUE, 4,  13  14  15  16  #   7
-*mass,h4cab_mt_,steel_pl_3mm,OPAQUE, 4,  14  13  16  15  #   8
-*mass,h4cabpa_fr,file_papers,OPAQUE, 4, 17 18 19 20  #  9
-*mass,h4cabpa_fr_,file_papers,OPAQUE, 4, 18 17 20 19  #  10
+*mass,h4cab_lf,steel_pl_3mm,OPAQUE,4,1,2,3,4  #   1
+*mass,h4cab_lf_,steel_pl_3mm,OPAQUE,4,2,1,4,3  #   2
+*mass,h4cab_rt,steel_pl_3mm,OPAQUE,4,5,6,7,8  #   3
+*mass,h4cab_rt_,steel_pl_3mm,OPAQUE,4,6,5,8,7  #   4
+*mass,h4cab_fr,steel_gr_3mm,OPAQUE,4,9,10,11,12  #   5
+*mass,h4cab_fr_,steel_gr_3mm,OPAQUE,4,10,9,12,11  #   6
+*mass,h4cabpa_fr,file_papers,OPAQUE,4,13,14,15,16  #  7
+*mass,h4cabpa_fr_,file_papers,OPAQUE,4,14,13,16,15  #  8
 # 
 *vis,0.0000,0.5000,0.0000,0.5000,2.0000,1.1500,-90.0000,1.00,h4f_cab,steel_pl_3mm  # visual   1
 *vis,0.0500,0.0000,0.0500,0.0100,0.9000,0.4500,-90.0000,1.00,h4drw_a,steel_gr_3mm  # visual   2
@@ -507,25 +523,19 @@ at left right and front edges plus magazines and paper inside.
 *vertex,1.9800,0.01500,0.00500  #  10
 *vertex,1.9800,0.01500,0.79500  #  11
 *vertex,0.01500,0.01500,0.79500  #  12
-*vertex,1.00500,0.50500,0.00500  #   13
-*vertex,1.00500,0.01500,0.00500  #   14
-*vertex,1.00500,0.01500,0.79500  #   15
-*vertex,1.00500,0.50500,0.79500  #   16
-*vertex,0.01500,0.41500,0.00500  #   17
-*vertex,1.9800,0.41500,0.00500  #  18
-*vertex,1.9800,0.41500,0.79500  #  19
-*vertex,0.01500,0.41500,0.79500  #  20
+*vertex,0.01500,0.41500,0.00500  #   13
+*vertex,1.9800,0.41500,0.00500  #  14
+*vertex,1.9800,0.41500,0.79500  #  15
+*vertex,0.01500,0.41500,0.79500  #  16
 # 
-*mass,h4dcab_lf,steel_pl_3mm,OPAQUE, 4,  1  2  3  4  #   1
-*mass,h4dcab_lf_,steel_pl_3mm,OPAQUE, 4,  2  1  4  3  #   2
-*mass,h4dcab_rt,steel_pl_3mm,OPAQUE, 4,  5  6  7  8  #   3
-*mass,h4dcab_rt_,steel_pl_3mm,OPAQUE, 4,  6  5  8  7  #   4
-*mass,h4dcab_fr,steel_gr_3mm,OPAQUE, 4,  9 10 11 12  #   5
-*mass,h4dcab_fr_,steel_gr_3mm,OPAQUE, 4, 10  9 12 11  #   6
-*mass,h4dcab_mt,steel_pl_3mm,OPAQUE, 4,  13  14  15  16  #   7
-*mass,h4dcab_mt_,steel_pl_3mm,OPAQUE, 4,  14  13  16  15  #   8
-*mass,h4dcbpa_fr,file_papers,OPAQUE, 4, 17 18 19,20  #  9
-*mass,h4dcbpa_fr_,file_papers,OPAQUE, 4, 18 17 20 19  #  10
+*mass,h4dcab_lf,steel_pl_3mm,OPAQUE,4,1,2,3,4  #   1
+*mass,h4dcab_lf_,steel_pl_3mm,OPAQUE,4,2,1,4,3  #   2
+*mass,h4dcab_rt,steel_pl_3mm,OPAQUE,4,5,6,7,8  #   3
+*mass,h4dcab_rt_,steel_pl_3mm,OPAQUE,4,6,5,8,7  #   4
+*mass,h4dcab_fr,steel_gr_3mm,OPAQUE,4,9,10,11,12  #   5
+*mass,h4dcab_fr_,steel_gr_3mm,OPAQUE,4,10,9,12,11  #   6
+*mass,h4dcbpa_fr,file_papers,OPAQUE,4,13,14,15,16  #  7
+*mass,h4dcbpa_fr_,file_papers,OPAQUE,4,14,13,16,15  #  8
 # 
 *vis,0.0000,0.5000,0.0000,0.5000,2.0000,0.8000,-90.0000,1.00,h4df_cab,steel_pl_3mm  # visual   1
 *vis,0.0500,0.0000,0.0500,0.0100,0.4500,0.7000,-90.0000,1.00,h4dr_a,steel_gr_3mm  # visual   2
@@ -559,25 +569,19 @@ at left right and front edges plus magazines and paper inside.
 *vertex,1.9800,0.01500,0.00500  #  10
 *vertex,1.9800,0.01500,1.14500  #  11
 *vertex,0.01500,0.01500,1.14500  #  12
-*vertex,1.00500,0.99500,0.00500  #   13
-*vertex,1.00500,0.01500,0.00500  #   14
-*vertex,1.00500,0.01500,1.14500  #   15
-*vertex,1.00500,0.99500,1.14500  #   16
-*vertex,0.01500,0.91500,0.00500  #   17
-*vertex,1.8800,0.91500,0.00500  #  18
-*vertex,1.8800,0.91500,1.14500  #  19
-*vertex,0.01500,0.91500,1.14500  #  20
+*vertex,0.01500,0.91500,0.00500  #   13
+*vertex,1.8800,0.91500,0.00500  #  14
+*vertex,1.8800,0.91500,1.14500  #  15
+*vertex,0.01500,0.91500,1.14500  #  16
 # 
-*mass,h24cab_lf,steel_pl_3mm,OPAQUE, 4,  1  2  3  4  #   1
-*mass,h24cab_lf_,steel_pl_3mm,OPAQUE, 4,  2  1  4  3  #   2
-*mass,h24cab_rt,steel_pl_3mm,OPAQUE, 4,  5  6  7  8  #   3
-*mass,h24cab_rt_,steel_pl_3mm,OPAQUE, 4,  6  5  8  7  #   4
-*mass,h24cab_fr,steel_gr_3mm,OPAQUE, 4,  9 10 11 12  #   5
-*mass,h24cab_fr_,steel_gr_3mm,OPAQUE, 4, 10  9 12 11  #   6
-*mass,h24cab_mt,steel_pl_3mm,OPAQUE, 4,  13  14  15  16  #   7
-*mass,h24cab_mt_,steel_pl_3mm,OPAQUE, 4,  14  13  16  15  #   8
-*mass,h24cbpa_fr,file_papers,OPAQUE, 4, 17 18 19,20  #  9
-*mass,h24cbpa_fr_,file_papers,OPAQUE, 4, 18 17 20 19  #  10
+*mass,h24cab_lf,steel_pl_3mm,OPAQUE,4,1,2,3,4  #   1
+*mass,h24cab_lf_,steel_pl_3mm,OPAQUE,4,2,1,4,3  #   2
+*mass,h24cab_rt,steel_pl_3mm,OPAQUE,4,5,6,7,8  #   3
+*mass,h24cab_rt_,steel_pl_3mm,OPAQUE,4,6,5,8,7  #   4
+*mass,h24cab_fr,steel_gr_3mm,OPAQUE,4,9,10,11,12  #   5
+*mass,h24cab_fr_,steel_gr_3mm,OPAQUE,4,10,9,12,11  #   6
+*mass,h24cbpa_fr,file_papers,OPAQUE,4,13,14,15,16  #  7
+*mass,h24cbpa_fr_,file_papers,OPAQUE,4,14,13,16,15  #  8
 # 
 *vis,0.0000,0.5000,0.0000,0.4950,2.0000,1.1500,-90.0000,1.00,h24f_cab,steel_pl_3mm  # visual   1
 *vis,0.0000,1.0000,0.0000,0.5000,2.0000,1.1500,-90.0000,1.00,h24f_cab_,steel_pl_3mm  # visual   1
@@ -645,9 +649,9 @@ cabinet as well as the circuit board is included.
 *vertex,0.03500,0.08000,0.40500  #   8
 # 
 *mass,case,IT_case,OPAQUE,4,1,2,3,4  #  1
-*mass,case_,IT_case,OPAQUE,,4,2,1,4,3  #  2
-*mass,circuit,circuit_bd,OPAQUE,,4,5,6,7,8  #  3
-*mass,circuit_,circuit_bd,OPAQUE,,4,6,5,8,7  #  4
+*mass,case_,IT_case,OPAQUE,4,2,1,4,3  #  2
+*mass,circuit,circuit_bd,OPAQUE,4,5,6,7,8  #  3
+*mass,circuit_,circuit_bd,OPAQUE,4,6,5,8,7  #  4
 # 
 *vis,0.115,0.000,0.000,0.300,0.100,0.020,0.000,1.00,base,IT_case  # visual   1
 *vis,0.195,0.030,0.020,0.140,0.040,0.020,0.000,1.00,stand,steel_pl_3mm  # visual   2
@@ -694,6 +698,100 @@ cabinet as well as the circuit board is included.
 *vis,0.020,0.035,0.220,0.480,0.040,0.270,0.000,1.00,dscreen,collector_pl  # visual   7
 # 
 *vobject,dell55cm,Dell monitor 55cm diag, 7,dbase,dstand,dlow_edge,dup_edge,dlft_edge,drt_edge,dscreem
+*end_item
+# 
+*item,photocopy,a Ricoh A4 A3 photocopier (zone) # tag name menu entry
+*incat,office_furn            
+*includes,visual,mass,boundary
+*sourced,Measurements of unit & geo import.
+*origin,0.0,0.0,0.0  # local origin
+*bounding_box,  0.900  0.670  1.020  # extents of object
+*Text
+photocopy describes a Ricoh A4 & A3 office printer with sorter
+and multiple input trays. Internal gains should be defined to
+represent its electrical use (60W-2kW diversified). Optional to add
+to a flow network to exhaust its internal heat. Weight 100+kg.
+*End_text
+*vertex,0.00000,0.00000,0.02000  #   1
+*vertex,0.31000,0.00000,0.02000  #   2
+*vertex,0.90000,0.00000,0.02000  #   3
+*vertex,0.90000,0.67000,0.02000  #   4
+*vertex,0.31000,0.67000,0.02000  #   5
+*vertex,0.31000,0.60000,0.02000  #   6
+*vertex,0.00000,0.60000,0.02000  #   7
+*vertex,0.00000,0.00000,1.00000  #   8
+*vertex,0.31000,0.17000,1.04000  #   9
+*vertex,0.90000,0.17000,1.04000  #  10
+*vertex,0.90000,0.67000,1.04000  #  11
+*vertex,0.31000,0.67000,1.04000  #  12
+*vertex,0.31000,0.60000,1.04000  #  13
+*vertex,0.00000,0.60000,1.00000  #  14
+*vertex,0.31000,0.00000,0.80000  #  15
+*vertex,0.31000,0.60000,0.80000  #  16
+*vertex,0.10000,0.00000,1.00000  #  17
+*vertex,0.10000,0.60000,1.00000  #  18
+*vertex,0.31000,0.17000,0.95000  #  19
+*vertex,0.31000,0.60000,0.95000  #  20
+*vertex,0.65000,0.00000,0.80000  #  21
+*vertex,0.65000,0.17000,0.95000  #  22
+*vertex,0.65000,0.67000,0.95000  #  23
+*vertex,0.65000,0.67000,0.80000  #  24
+*vertex,0.90000,0.00000,0.80000  #  25
+*vertex,0.90000,0.00000,0.95000  #  26
+*vertex,0.90000,0.67000,0.95000  #  27
+*vertex,0.31000,0.67000,0.95000  #  28
+*vertex,0.65000,0.00000,0.95000  #  29
+*vertex,0.31000,0.67000,0.80000  #  30
+*vertex,0.65000,0.17000,1.04000  #  31
+*vertex,0.10000,0.02000,0.12000  #  32
+*vertex,0.82000,0.02000,0.12000  #  33
+*vertex,0.82000,0.52000,0.12000  #  34
+*vertex,0.10000,0.52000,0.12000  #  35
+*vertex,0.12000,0.02000,0.32000  #  36
+*vertex,0.82000,0.02000,0.32000  #  37
+*vertex,0.82000,0.52000,0.32000  #  38
+*vertex,0.12000,0.52000,0.32000  #  39
+*vertex,0.32000,0.02000,0.52000  #  40
+*vertex,0.82000,0.02000,0.52000  #  41
+*vertex,0.82000,0.52000,0.52000  #  42
+*vertex,0.32000,0.52000,0.52000  #  43
+# 
+*mass,tray_a,steel_gr_5mm,OPAQUE,4,32 33 34 35  #   1
+*mass,tray_a_,steel_gr_5mm,OPAQUE,4,33 32 35 34  #   2
+*mass,tray_b,steel_gr_5mm,OPAQUE,4,36 37 38 39  #   3
+*mass,tray_b_,steel_gr_5mm,OPAQUE,4,37 36 39 38  #   4
+*mass,tray_c,steel_gr_5mm,OPAQUE,4,40 41 42 43  #   5
+*mass,tray_c_,steel_gr_5mm,OPAQUE,4,41 40 43 42  #   6
+# 
+*surf,sort_front,IT_case_4mm,OPAQUE,5,1,2,15,17,8  #   1
+*surf,machine_fr,IT_case_4mm,OPAQUE,7,2,3,25,26,29,21,15  #   2
+*surf,machine_rt,IT_case_4mm,OPAQUE,7,3,4,27,11,10,26,25  #   3
+*surf,machine_bk,IT_case_4mm,OPAQUE,6,4,5,30,24,23,27  #   4
+*surf,vents,steel_gr_3mm,OPAQUE,4,5,6,16,30  #   5
+*surf,sort_back,steel_gr_5mm,OPAQUE,5,6,7,14,18,16  #   6
+*surf,sort_left,IT_case_4mm,OPAQUE,4,7,1,8,14  #   7
+*surf,lid_top,IT_case_4mm,OPAQUE,6,9,31,10,11,12,13  #   8
+*surf,base,steel_gr_5mm,OPAQUE,7,1,7,6,5,4,3,2  #   9
+*surf,lid_front,IT_case_4mm,OPAQUE,4,19,22,31,9  #  10
+*surf,display,collector_pl,OPAQUE,4,29,26,10,31  #  11
+*surf,lid_left,IT_case,OPAQUE,6,28,20,19,9,13,12  #  12
+*surf,lid_back,IT_case,OPAQUE,5,27,23,28,12,11  #  13
+*surf,sort_top,IT_case,OPAQUE,4,14,8,17,18  #  14
+*surf,sort_right,IT_case,OPAQUE,4,1,16,18,17  #  15
+*surf,open_left,steel_pl_3mm,OPAQUE,6,24,21,29,31,22,23  #  16
+*surf,paper_output,IT_case,OPAQUE,5,15,21,24,30,16  #  17
+*surf,lid_base,steel_gr_5mm,OPAQUE,5,22,19,20,28,23  #  18
+# 
+*vis,0.3200,0.1800,1.0400,0.5500,0.4600,0.0500,0.0000,1.00,lid_lift   # visual   1
+*vis3,-0.1000,0.0500,0.5200,0.1400,0.5500,0.0400,0.0000,-30.0000,0.0000,1.00,tray_a,IT_case  # visual block   2
+*vis3,-0.1000,0.0500,0.7200,0.1400,0.5500,0.0400,0.0000,-30.0000,0.0000,1.00,tray_b,IT_case  # visual block   3
+*vis3,-0.1000,0.0500,0.9200,0.1400,0.5500,0.0400,0.0000,-30.0000,0.0000,1.00,tray_c,IT_case  # visual block   4
+*vis3,0.6900,0.0200,0.9600,0.0250,0.0250,0.0100,90.0000,20.0000,0.0000,1.00,but_a,corian_count  # visual block   5
+*vis3,0.7300,0.0200,0.9600,0.0250,0.0250,0.0100,90.0000,20.0000,0.0000,1.00,but_b,corian_count  # visual block   6
+*vis3,0.7700,0.0200,0.9600,0.0250,0.0250,0.0100,90.0000,20.0000,0.0000,1.00,but_c,corian_count  # visual block   7
+*vis,0.3400,0.0100,0.5600,0.0500,0.0100,0.0700,0.0000,1.00,logo corian_count  # visual   8
+# 
+*vobject,photocopy,large office photocopier,7,lid_lift,tray_a,tray_b,tray_c,but_a,but_b,but_c
 *end_item
 # 
 *item,rubish-bskt,square rubbish basket 0.4x0.4x0.4xm # tag name menu entry
@@ -750,8 +848,8 @@ main screen is included.
 # 
 *mass,pscreen,upholstery,OPAQUE,4,1,2,3,6  #  1
 *mass,pscreen_,upholstery,OPAQUE,4,2,1,6,3  #  2
-*mass,low_trns,single_glaz,SCF8783_06nb, 4,  6  3  4  5  #   1
-*mass,low_trns_,single_glaz,SCF8783_06nb, 4,  3  6  5  4  #   2
+*mass,low_trns,single_glaz,SCF8783_06nb,4,6,3,4,5  #   1
+*mass,low_trns_,single_glaz,SCF8783_06nb,4,3,6,5,4  #   2
 # 
 *vis,0.000,0.000,0.005,2.500,0.030,1.300,0.000,1.00,screen,upholstery  # visual   1
 *vis,0.000,0.000,1.685,2.500,0.040,0.040,0.000,1.00,upfrm,steel_pl_3mm  # visual   2
@@ -1566,6 +1664,148 @@ surfaces to the parent zone.
 *vis,0.0000,0.0100,0.6400,0.0400,0.0100,0.0100,0.0000,1.00,inlet_b,steel_pl_3mm  # visual   4
 *end_item
 # 
+*item,vrfcase,vrfcase zonal LG ARNU24BG # tag name menu entry
+*incat,system_comp           
+*includes,boundary
+*sourced,Derived from an ESP-r geometry file.
+*origin,0.0,0.0,0.0  # local origin
+*bounding_box,  0.900  1.600  0.260  # extents of object
+*Text
+vrfcase represents case of a LG ARNU24BG VRF ceiling unit
+with inlet filter & outlet manifold. Made of an insulated
+steel enclosure. Associate a zone & flow control and flow
+network with this to enable. Nominal cap 8kW ht 7.1kW cool
+with 870-1140m^3/hr flow.                
+*End_text
+# 
+*vertex,0.10000,0.00000,0.06000  #   1
+*vertex,0.80000,0.00000,0.06000  #   2
+*vertex,0.90000,0.60000,0.00000  #   3
+*vertex,0.90000,1.05000,0.00000  #   4
+*vertex,0.80000,1.60000,0.06000  #   5
+*vertex,0.10000,1.60000,0.06000  #   6
+*vertex,0.00000,1.05000,0.00000  #   7
+*vertex,0.00000,0.60000,0.00000  #   8
+*vertex,0.10000,0.00000,0.26000  #   9
+*vertex,0.80000,0.00000,0.26000  #  10
+*vertex,0.80000,0.60000,0.26000  #  11
+*vertex,0.90000,0.60000,0.26000  #  12
+*vertex,0.90000,1.05000,0.26000  #  13
+*vertex,0.80000,1.05000,0.26000  #  14
+*vertex,0.80000,1.60000,0.26000  #  15
+*vertex,0.10000,1.60000,0.26000  #  16
+*vertex,0.10000,1.05000,0.26000  #  17
+*vertex,0.00000,1.05000,0.26000  #  18
+*vertex,0.00000,0.60000,0.26000  #  19
+*vertex,0.10000,0.60000,0.26000  #  20
+*vertex,0.10000,1.05000,0.06000  #  21
+*vertex,0.80000,1.05000,0.06000  #  22
+*vertex,0.10000,0.60000,0.06000  #  23
+*vertex,0.80000,0.60000,0.06000  #  24
+# 
+*surf,manif_a,steel_gr_3mm,OPAQUE,4,1,2,10,9  #   1
+*surf,manif_d,duct_w_35mm,OPAQUE,4,2,24,11,10  #   2
+*surf,handlr_a,duct_w_35mm,OPAQUE,8,8,3,12,11,24,23,20,19  #   3
+*surf,handlr_b,duct_w_35mm,OPAQUE,4,3,4,13,12  #   4
+*surf,handlr_c,duct_w_35mm,OPAQUE,8,4,7,18,17,21,22,14,13  #   5
+*surf,filt_a,duct_w_35mm,OPAQUE,4,22,5,15,14  #   6
+*surf,filt_d,steel_gr_3mm,OPAQUE,4,5,6,16,15  #   7
+*surf,filt_g,duct_w_35mm,OPAQUE,4,6,21,17,16  #   8
+*surf,handlr_e,duct_w_35mm,OPAQUE,4,7,8,19,18  #   9
+*surf,manif_e,duct_w_35mm,OPAQUE,4,23,1,9,20  #  10
+*surf,manif_top,duct_w_35mm,OPAQUE,12,9,10,11,12,13,14,15,16,17,18,19,20  #  11
+*surf,manif_bas,duct_w_35mm,OPAQUE,4,1,23,24,2  #  12
+*surf,filt_ba,duct_w_35mm,OPAQUE,4,5,22,21,6  #  13
+*surf,handlr_ba,duct_w_35mm,OPAQUE,4,4,3,8,7  #  14
+*end_item
+#
+*mzitem,combiboiler,combustion & water jacket & case # tag name menu entry
+*incat,system_comp
+*includes,visual,mass,boundary,zones
+*origin,0.0,0.0,0.0              # local origin
+*sourced,Measured a CM707 thermostat plus web search for case & board properties.
+*bounding_box,0.300,0.445,0.800  # extents of object
+*Text
+A multi-zone combi gas boiler - outer case & water jacket & 
+combustion chamber. Jacket is water filled with X litres. Combustion
+chamber is where control actuation should occur and the jacket should
+have a temperature over-ride. ?? piping ?? air for combustion ??
+This item is work-in-progress. Preview almost works.
+*End_text
+#  tag zone name - filled with - zone documentation
+*zone,boilercase,air,case for gas boiler
+*zone,jacket,water,water jacket 10 litres
+*zone,combustion,air,combustion chamber
+# 
+*vertex,0.00000,0.00000,0.00000  #   1 case
+*vertex,0.32000,0.00000,0.00000  #   2
+*vertex,0.32000,0.44500,0.00000  #   3
+*vertex,0.00000,0.44500,0.00000  #   4
+*vertex,0.00000,0.00000,0.80000  #   5
+*vertex,0.32000,0.00000,0.80000  #   6
+*vertex,0.32000,0.44500,0.80000  #   7
+*vertex,0.00000,0.44500,0.80000  #   8
+*vertex,0.01000,0.01000,0.11000  #   9
+*vertex,0.30000,0.01000,0.11000  #  10
+*vertex,0.30000,0.43000,0.11000  #  11
+*vertex,0.30000,0.43000,0.79000  #  12
+*vertex,0.30000,0.01000,0.79000  #  13
+*vertex,0.01000,0.43000,0.11000  #  14
+*vertex,0.01000,0.43000,0.79000  #  15
+*vertex,0.01000,0.01000,0.79000  #  16
+#
+*vertex,0.02000,0.04000,0.20000  #   9   17
+*vertex,0.27000,0.04000,0.20000  #  10   18
+*vertex,0.27000,0.04000,0.70000  #  11   19
+*vertex,0.02000,0.04000,0.70000  #  12   20
+*vertex,0.27000,0.40000,0.20000  #  13   21
+*vertex,0.27000,0.40000,0.70000  #  14   22
+*vertex,0.02000,0.40000,0.20000  #  15   23
+*vertex,0.02000,0.40000,0.70000  #  16   24
+#
+*vertex,0.02000,0.00000,0.04000  #   25 circuit
+*vertex,0.30000,0.00000,0.04000  #   26
+*vertex,0.30000,0.44000,0.04000  #   27
+*vertex,0.02000,0.44000,0.04000  #   28
+# tag zone name - surface name - commposition - optics - bound zn - surf - nb verts - list
+*surf,boilercase,left,steel_pl_3mm,OPAQUE,-,-,4,1,2,6,5  #   1
+*surf,boilercase,front,steel_pl_3mm,OPAQUE,-,-,4,2,3,7,6  #   2
+*surf,boilercase,right,steel_pl_3mm,OPAQUE,-,-,4,3,4,8,7  #   3
+*surf,boilercase,back,steel_pl_3mm,OPAQUE,-,-,4,4,1,5,8  #   4
+*surf,boilercase,top,steel_pl_3mm,OPAQUE,-,-,4,5,6,7,8  #   5
+*surf,boilercase,base,steel_pl_3mm,OPAQUE,-,-,4,1,4,3,2  #   6
+*surf,boilercase,j_left,tank_w_50mm,OPAQUE,-,-,4,10,9,16,13  #   7
+*surf,boilercase,j_front,tank_w_50mm,OPAQUE,-,-,4,11,10,13,12  #   8
+*surf,boilercase,j_right,tank_w_50mm,OPAQUE,-,-,4,14,11,12,15  #   9
+*surf,boilercase,j_back,tank_w_50mm,OPAQUE,-,-,4,9,14,15,16  #  10
+*surf,boilercase,j_top,tank_w_50mm,OPAQUE,-,-,4,13,16,15,12  #  11
+*surf,boilercase,j_base,tank_w_50mm,OPAQUE,-,-,4,14,9,10,11  #  12
+# tag zone name - surface name - composition - optics ?? do we need *mass as a type ??
+*mass,boilercase,sen_a,circuit_bd,OPAQUE,boilercase,sen_a_,4,25,26,27,28  # 12
+*mass,boilercase,sen_a_,circuit_bd,OPAQUE,boilercase,sen_a,4,26,25,28,27  # 13
+*surf,jacket,j_left,tank_i_50mmi,OPAQUE,boilercase,j_left,4,9,10,13,16  #   1     j_left:boiler_case
+*surf,jacket,j_front,tank_i_50mmi,OPAQUE,boilercase,j_front,4,10,11,12,13  #   2  j_front:boiler_case
+*surf,jacket,j_right,tank_i_50mmi,OPAQUE,boilercase,j_right,4,11,14,15,12  #   3  j_right:boiler_case
+*surf,jacket,j_back,tank_i_50mmi,OPAQUE,boilercase,j_back,4,14,9,16,15  #   4     j_back:boiler_case
+*surf,jacket,j_top,tank_i_50mmi,OPAQUE,boilercase,j_top,4,16,13,12,15   #   5     j_top:boiler_case
+*surf,jacket,j_base,tank_i_50mmi,OPAQUE,boilercase,j_base,4,9,14,11,10  #   6     j_base:boiler_case
+*surf,jacket,c-left,steel_pl_3mm,OPAQUE,combustion,c-left,4,18,17,20,19  #   7    c-left:gas
+*surf,jacket,c_front,steel_pl_3mm,OPAQUE,combustion,c_front,4,21,18,19,22  #   8   c_front:gas
+*surf,jacket,c_right,steel_pl_3mm,OPAQUE,combustion,c_right,4,23,21,22,24  #   9   c_right:gas
+*surf,jacket,c_back,steel_pl_3mm,OPAQUE,combustion,c_back,4,17,23,24,20  #  10    c_back:gas
+*surf,jacket,c_top,steel_pl_3mm,OPAQUE,combustion,c_top,4,19,20,24,22  #  11     c_top:gas
+*surf,jacket,c_base,steel_pl_3mm,OPAQUE,combustion,c_base,4,23,17,18,21  #  12    c_base:gas
+*surf,combustion,c-left,steel_pl_3mm,OPAQUE,jacket,c-left,4,17,18,19,20  #   1
+*surf,combustion,c_front,steel_pl_3mm,OPAQUE,jacket,c_front,4,18,21,22,19  #   2
+*surf,combustion,c_right,steel_pl_3mm,OPAQUE,jacket,c_right,4,21,23,24,22  #   3
+*surf,combustion,c_back,steel_pl_3mm,OPAQUE,jacket,c_back,4,23,17,20,24  #   4
+*surf,combustion,c_top,steel_pl_3mm,OPAQUE,jacket,c_top,4,20,19,22,24  #   5
+*surf,combustion,c_base,steel_pl_3mm,OPAQUE,jacket,c_base,4,17,23,21,18  #   6
+# 
+*vis,0.015,-0.003,0.008,0.010,0.005,0.010,0.000,1.00,boilercase,button,circuit_bd  # visual   1
+*vis,0.035,-0.003,0.008,0.010,0.005,0.010,0.000,1.00,boilercase,button-off,circuit_bd  # visual   2
+*end_item
+# 
 *item,PVCwin18x12,PVC_1.8 framed window 1.8mx1.2m # tag name menu entry
 *incat,facade     
 *includes,visual,boundary
@@ -1747,10 +1987,10 @@ the LED with lens_low.
 *mass,lens_up6s,single_glaz,SCF8783_06nb,4,1,2,3,4  #   1
 *mass,lens_lw6s,single_glaz,SCF8783_06nb,4,2,1,4,3  #   2
 # 
-*vis,0.0000,0.0000,0.0000,0.1400,0.1400,1.0000,0.00,1.00,lmp_b6s steel_pl_3mm  # block   1
-*vis,0.0350,0.0350,1.0000,0.0700,0.0700,5.0000,0.00,1.00,lmp_col6s steel_pl_3mm  # block   2
-*vis3,0.0950,0.0350,6.0000,0.7000,0.0600,0.0600,90.00,5.00,0.00,1.00,lmp_angl6s steel_pl_3mm  # block   3
-*vis3,0.0950,0.7350,6.1200,0.7000,0.2000,0.0600,90.00,5.00,0.00,1.00,lmp_case6s steel_pl_3mm  # block   4
+*vis,0.0000,0.0000,0.0000,0.1400,0.1400,1.0000,0.00,1.00,lmp_b6s,steel_pl_3mm  # block   1
+*vis,0.0350,0.0350,1.0000,0.0700,0.0700,5.0000,0.00,1.00,lmp_col6s,steel_pl_3mm  # block   2
+*vis3,0.0950,0.0350,6.0000,0.7000,0.0600,0.0600,90.00,5.00,0.00,1.00,lmp_angl6s,steel_pl_3mm  # block   3
+*vis3,0.0950,0.7350,6.1200,0.7000,0.2000,0.0600,90.00,5.00,0.00,1.00,lmp_case6s,steel_pl_3mm  # block   4
 *end_item
 # 
 *item,strlmp_6EW-N,6m LED street lamp north edge of E-W street # tag name menu entry
@@ -1772,10 +2012,10 @@ the LED with lens_low. Double check radiance !xform for lamp
 *mass,lens_up6n,single_glaz,SCF8783_06nb,4,1,2,3,4  #   1
 *mass,lens_low6n,single_glaz,SCF8783_06nb,4,2,1,4,3  #   2
 # 
-*vis,0.0000,1.4300,0.0000,0.1400,0.1400,1.0000,-180.00,1.00,lmp_b6n steel_pl_3mm  # block   1
-*vis,-0.0350,1.3950,1.0000,0.0700,0.0700,5.0000,-180.00,1.00,lmp_col6n steel_pl_3mm  # block   2
-*vis3,-0.0950,1.3950,6.0000,0.7000,0.0600,0.0600,-90.00,5.00,0.00,1.00,lmp_angl6n steel_pl_3mm  # block   3
-*vis3,-0.0950,0.6950,6.1200,0.7000,0.2000,0.0600,-90.00,5.00,0.00,1.00,lmp_case6n steel_pl_3mm  # block   4
+*vis,0.0000,1.4300,0.0000,0.1400,0.1400,1.0000,-180.00,1.00,lmp_b6n,steel_pl_3mm  # block   1
+*vis,-0.0350,1.3950,1.0000,0.0700,0.0700,5.0000,-180.00,1.00,lmp_col6n,steel_pl_3mm  # block   2
+*vis3,-0.0950,1.3950,6.0000,0.7000,0.0600,0.0600,-90.00,5.00,0.00,1.00,lmp_angl6n,steel_pl_3mm  # block   3
+*vis3,-0.0950,0.6950,6.1200,0.7000,0.2000,0.0600,-90.00,5.00,0.00,1.00,lmp_case6n,steel_pl_3mm  # block   4
 *end_item
 # 
 *item,strlmp_8EW-S,8m LED street lamp south edge of E-W street # tag name menu entry
@@ -1797,10 +2037,10 @@ the LED with lens_low.  Double check radiance !xform for lamp
 *mass,lens_up8s,single_glaz,SCF8783_06nb,4,1,2,3,4  #   1
 *mass,lens_low8s,single_glaz,SCF8783_06nb,4,2,1,4,3  #   2
 # 
-*vis,0.0000,0.0000,0.0000,0.1400,0.1400,1.0000,0.00,1.00,lmp_base8s steel_pl_3mm  # block   1
-*vis,0.0350,0.0350,1.0000,0.0700,0.0700,7.0000,0.00,1.00,lmp_col8s steel_pl_3mm  # block   2
-*vis3,0.0950,0.0350,8.0000,0.7000,0.0600,0.0600,90.00,5.00,0.00,1.00,lmp_angl8s steel_pl_3mm  # block   3
-*vis3,0.0950,0.7350,8.1200,0.7000,0.2000,0.0600,90.00,5.00,0.00,1.00,lmp_case8s steel_pl_3mm  # block   4
+*vis,0.0000,0.0000,0.0000,0.1400,0.1400,1.0000,0.00,1.00,lmp_base8s,steel_pl_3mm  # block   1
+*vis,0.0350,0.0350,1.0000,0.0700,0.0700,7.0000,0.00,1.00,lmp_col8s,steel_pl_3mm  # block   2
+*vis3,0.0950,0.0350,8.0000,0.7000,0.0600,0.0600,90.00,5.00,0.00,1.00,lmp_angl8s,steel_pl_3mm  # block   3
+*vis3,0.0950,0.7350,8.1200,0.7000,0.2000,0.0600,90.00,5.00,0.00,1.00,lmp_case8s,steel_pl_3mm  # block   4
 *end_item
 # 
 *item,strlmp_8EW-N,8m LED street lamp north edge of E-W street # tag name menu entry
@@ -1822,12 +2062,11 @@ the LED with lens_low. Double check radiance !xform for lamp
 *mass,lens_up8n,single_glaz,SCF8783_06nb,4,1,2,3,4  #   1
 *mass,lens_low8n,single_glaz,SCF8783_06nb,4,2,1,4,3  #   2
 # 
-*vis,0.0000,1.4300,0.0000,0.1400,0.1400,1.0000,-180.00,1.00,lmp_b8n steel_pl_3mm  # block   1
-*vis,-0.0350,1.3950,1.0000,0.0700,0.0700,7.0000,-180.00,1.00,lmp_col8n steel_pl_3mm  # block   2
-*vis3,-0.0950,1.3950,8.0000,0.7000,0.0600,0.0600,-90.00,5.00,0.00,1.00,lmp_angl8n steel_pl_3mm  # block   3
-*vis3,-0.0950,0.6950,8.1200,0.7000,0.2000,0.0600,-90.00,5.00,0.00,1.00,lmp_case8n steel_pl_3mm  # block   4
+*vis,0.0000,1.4300,0.0000,0.1400,0.1400,1.0000,-180.00,1.00,lmp_b8n,steel_pl_3mm  # block   1
+*vis,-0.0350,1.3950,1.0000,0.0700,0.0700,7.0000,-180.00,1.00,lmp_col8n,steel_pl_3mm  # block   2
+*vis3,-0.0950,1.3950,8.0000,0.7000,0.0600,0.0600,-90.00,5.00,0.00,1.00,lmp_angl8n,steel_pl_3mm  # block   3
+*vis3,-0.0950,0.6950,8.1200,0.7000,0.2000,0.0600,-90.00,5.00,0.00,1.00,lmp_case8n,steel_pl_3mm  # block   4
 *end_item
-# 
 # 
 *End_category
 # 
