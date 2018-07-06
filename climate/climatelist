@@ -4,7 +4,7 @@
 *item
 *name	Default UK clm Climate
 *aide	Climate data as distributed with ESP-r for testing purposes.
-*dbfl	/usr/esru/esp-r/climate/clm67
+*dbfl	/opt/esp-r/climate/clm67
 *winter_s 1  1  12  3  30  10  31 12
 *spring_s 13 3  14  5   4   9  29 10
 *summer_s 15 5   3  9
@@ -37,7 +37,7 @@ Location is 52.0N and 0.0E. The solar radiation is Direct Normal.
 *item
 *name	Aberdeen - Dyce  GBR
 *aide	Aberdeen - Dyce (030910) was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/GBR_Aberdeen.Dyce
+*dbfl	/opt/esp-r/climate/GBR_Aberdeen.Dyce
 *avail	ONLINE
 *winter_s  1  1  6  3  7 11 31 12 # seasons Sat-01-Jan--Sun-06-Mar & Mon-07-Nov--Sat-31-Dec
 *spring_s  7  3  8  5 29  8  6 11 # seasons Mon-07-Mar--Sun-08-May & Mon-29-Aug--Sun-06-Nov
@@ -77,7 +77,7 @@ Typical winter week begins Mon-21-Nov
 *item
 *name	ARE Abu Dhabi iwec 412170
 *aide	ARE Abu dhabi IWEC 412170 was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/ARE_Abu_Dhabi
+*dbfl	/opt/esp-r/climate/ARE_Abu_Dhabi
 *avail	ONLINE
 *winter_s  1  1  2  3 17 11 31 12 # seasons Wed-01-Jan--Sun-02-Mar & Mon-17-Nov--Wed-31-Dec
 *spring_s  3  3 18  5 29  9 16 11 # seasons Mon-03-Mar--Sun-18-May & Mon-29-Sep--Sun-16-Nov
@@ -117,7 +117,7 @@ Typical winter week begins Mon-01-Dec
 *item
 *name	ALBUQUERQUE NM USA iwec 723650
 *aide	ALBUQUERQUE NM USA iwec 723650 was sourced from US DoE web Sep 2005
-*dbfl	/usr/esru/esp-r/climate/USA_NM_Albuquerque_iwec
+*dbfl	/opt/esp-r/climate/USA_NM_Albuquerque_iwec
 *avail	ONLINE
 *winter_s  1  1 25  3  5 11 31 12
 *spring_s 26  3 13  5  3  9  4 11
@@ -157,7 +157,7 @@ Typical winter week begins Mon 26 Nov
 *item
 *name	Aughton - GBR (033220)
 *aide	Aughton - GBR (033220) was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/GBR_Aughton
+*dbfl	/opt/esp-r/climate/GBR_Aughton
 *avail	ONLINE
 *winter_s  1  1  5  3 30 10 31 12 # seasons Sun-01-Jan--Sun-05-Mar & Mon-30-Oct--Sun-31-Dec
 *spring_s  6  3 28  5 18  9 29 10 # seasons Mon-06-Mar--Sun-28-May & Mon-18-Sep--Sun-29-Oct
@@ -197,7 +197,7 @@ Typical winter week begins Mon-20-Nov
 *item
 *name	Aswan EGY 624140
 *aide	EGY Aswan was sourced from US DoE site number 624140
-*dbfl	/usr/esru/esp-r/climate/EGY_Aswan
+*dbfl	/opt/esp-r/climate/EGY_Aswan
 *avail	ONLINE
 *winter_s  1  1 22  3 21 12 31 12 # seasons Wed-01-Jan--Sat-22-Mar & Sun-21-Dec--Wed-31-Dec
 *spring_s 23  3 21  6 21  9 20 12 # seasons Sun-23-Mar--Sat-21-Jun & Sun-21-Sep--Sat-20-Dec
@@ -238,7 +238,7 @@ Typical winter week begins Sun-21-Dec
 *item
 *name	Baltimore MD USA iwec 724060
 *aide	Baltimore MD USA iwec 724060 was sourced from DoE web site Sep 2005
-*dbfl	/usr/esru/esp-r/climate/USA_MD_Baltimore_iwec
+*dbfl	/opt/esp-r/climate/USA_MD_Baltimore_iwec
 *avail	ONLINE
 *winter_s  1  1 25  3 19 11 31 12
 *spring_s 26  3 27  5 17  9 18 11
@@ -278,7 +278,7 @@ Typical winter week begins Mon  3 Dec
 *item
 *name	Belfast NI GBR
 *aide	Belfast NI GBR (039170) was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/GBR_Belfast
+*dbfl	/opt/esp-r/climate/GBR_Belfast
 *avail	ONLINE
 *winter_s  1  1  6  3  7 11 31 12 # seasons Sat-01-Jan--Sun-06-Mar & Mon-07-Nov--Sat-31-Dec
 *spring_s  7  3 22  5 29  8  6 11 # seasons Mon-07-Mar--Sun-22-May & Mon-29-Aug--Sun-06-Nov
@@ -318,7 +318,7 @@ Typical winter week begins Mon-05-Dec
 *item
 *name	BESTEST drycold Denver USA
 *aide	BESTEST drycold Denver was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/drycold.esp
+*dbfl	/opt/esp-r/climate/drycold.esp
 *avail	ONLINE
 *winter_s  1  1 14  4 28 10 31 12 # seasons Tue-01-Jan--Sun-14-Apr & Mon-28-Oct--Tue-31-Dec
 *spring_s 15  4 16  6  9  9 27 10 # seasons Mon-15-Apr--Sun-16-Jun & Mon-09-Sep--Sun-27-Oct
@@ -358,7 +358,7 @@ Typical winter week begins Mon-18-Nov
 *item
 *name	Berlin DEU IWEC 103840
 *aide	Berlin Germany IWEC 103840 was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/DEU_Berlin
+*dbfl	/opt/esp-r/climate/DEU_Berlin
 *avail	ONLINE
 *winter_s  1  1 25  2  5 11 31 12 # seasons Mon-01-Jan--Sun-25-Feb & Mon-05-Nov--Mon-31-Dec
 *spring_s 26  2 13  5  3  9  4 11 # seasons Mon-26-Feb--Sun-13-May & Mon-03-Sep--Sun-04-Nov
@@ -398,7 +398,7 @@ Typical winter week begins Mon-03-Dec
 *item
 *name	Birmingham - GBR
 *aide	Brimingham - GBR (03540) was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/GBR_Birmingham
+*dbfl	/opt/esp-r/climate/GBR_Birmingham
 *avail	ONLINE
 *winter_s  1  1  5  3 30 10 31 12 # seasons Sun-01-Jan--Sun-05-Mar & Mon-30-Oct--Sun-31-Dec
 *spring_s  6  3 14  5 28  8 29 10 # seasons Mon-06-Mar--Sun-14-May & Mon-28-Aug--Sun-29-Oct
@@ -438,7 +438,7 @@ Typical winter week begins Mon-04-Dec
 *item
 *name	Boulder Colorado USA
 *aide	Boulder Colorado USA TMY2 data was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/USA_CO_Boulder_TMY2
+*dbfl	/opt/esp-r/climate/USA_CO_Boulder_TMY2
 *avail	ONLINE
 *winter_s  1  1  8  3 16 11 31 12 # seasons Thu-01-Jan--Sun-08-Mar & Mon-16-Nov--Thu-31-Dec
 *spring_s  9  3 17  5 14  9 15 11 # seasons Mon-09-Mar--Sun-17-May & Mon-14-Sep--Sun-15-Nov
@@ -478,7 +478,7 @@ Typical winter week begins Mon-14-Dec
 *item
 *name	Brescia-Ghedi - ITA
 *aide	Brescia-Ghedi - ITA was sourced from us DoE
-*dbfl	/usr/esru/esp-r/climate/ITA_Brescia-Ghedi
+*dbfl	/opt/esp-r/climate/ITA_Brescia-Ghedi
 *avail	ONLINE
 *winter_s  1  1 20  3 12 12 31 12 # seasons Sat-01-Jan--Sun-20-Mar & Mon-12-Dec--Sat-31-Dec
 *spring_s 21  3 19  6 25  9 11 12 # seasons Mon-21-Mar--Sun-19-Jun & Sun-25-Sep--Sun-11-Dec
@@ -518,7 +518,7 @@ Typical winter week begins Mon-19-Dec
 *item
 *name	Brussels Belgium IWEC WMO 064510
 *aide	Brussels (sourced from IWEC/DoE)
-*dbfl	/usr/esru/esp-r/climate/bel_brussels_iwec
+*dbfl	/opt/esp-r/climate/bel_brussels_iwec
 *avail	ONLINE
 *winter_s 1  1  11  3  29  10  31 12
 *spring_s 12 3  29  4  17  9  28 10
@@ -552,7 +552,7 @@ radiation is Direct Normal.  Dry bulb temperatures:
 *item
 *name	Burlington VT USA iwec 726170
 *aide	Burlington VT USA iwec 726170 was sourced from US DoE web site Sep 2005
-*dbfl	/usr/esru/esp-r/climate/USA_VT_Burlington_iwec
+*dbfl	/opt/esp-r/climate/USA_VT_Burlington_iwec
 *avail	ONLINE
 *winter_s  1  1 22  4 29 10 31 12
 *spring_s 23  4  1  7 20  8 28 10
@@ -592,7 +592,7 @@ Typical winter week begins Mon 19 Nov
 *item
 *name	CAIRO - EGY
 *aide	CAIRO - EGY was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/EGY_Cairo
+*dbfl	/opt/esp-r/climate/EGY_Cairo
 *avail	ONLINE
 *winter_s  1  1 20  3 21 12 31 12 # seasons Fri-01-Jan--Sun-20-Mar & Wed-21-Dec--Sat-31-Dec
 *spring_s 21  3 20  6 23  9 20 12 # seasons Mon-21-Mar--Mon-20-Jun & Fri-23-Sep--Tue-20-Dec
@@ -632,7 +632,7 @@ Typical winter week begins Wed-21-Dec
 *item
 *name	Calgary Intl AB CAN
 *aide	Calgary Intl AB CAN was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/CAN_AB_Calgary_CWEC
+*dbfl	/opt/esp-r/climate/CAN_AB_Calgary_CWEC
 *avail	ONLINE
 *winter_s  1  1  1  4 29 10 31 12
 *spring_s  2  4 13  5 27  8 28 10
@@ -672,7 +672,7 @@ Typical winter week begins Mon 24 Dec
 *item
 *name	Chicago IL USA iwec 725300
 *aide	Chicago IL USA iwec 725300 was sourced from US DoE web site Sep 2005
-*dbfl	/usr/esru/esp-r/climate/USA_IL_Chicago_iwec
+*dbfl	/opt/esp-r/climate/USA_IL_Chicago_iwec
 *avail	ONLINE
 *winter_s  1  1 25  3 29 10 31 12
 *spring_s 26  3 20  5 24  9 28 10
@@ -712,7 +712,7 @@ Typical winter week begins Mon 26 Nov
 *item
 *name	Copenhagen Denmark IWEC 0618800
 *aide	Copenhagen Denmark IWEC 0618800 was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/dnk_copenhagen_iwec
+*dbfl	/opt/esp-r/climate/dnk_copenhagen_iwec
 *avail	ONLINE
 *winter_s  1  1  1  4 12 11 31 12
 *spring_s  2  4  3  6  3  9 11 11
@@ -751,7 +751,7 @@ Typical winter week begins Mon 26 Nov
 *item
 *name	Dijon - FRA (47.27N 5.08E)
 *aide	Dijon - FRA (47.27N 5.08E) was sourced from USA DoE EPW file.
-*dbfl	/usr/esru/esp-r/climate/FRA_Dijon
+*dbfl	/opt/esp-r/climate/FRA_Dijon
 *avail	ONLINE
 *winter_s  1  1 25  2 12 11 31 12
 *spring_s 26  2 20  5 10  9 11 11
@@ -791,7 +791,7 @@ Typical winter week begins Mon-19-Nov
 *item
 *name	Dublin Ireland (039690)
 *aide	Dublin Ireland (039690) was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/IRL_Dublin
+*dbfl	/opt/esp-r/climate/IRL_Dublin
 *avail	ONLINE
 *winter_s  1  1  8  3  2 11 31 12 # seasons Thu-01-Jan--Sun-08-Mar & Mon-02-Nov--Thu-31-Dec
 *spring_s  9  3 24  5 31  8  1 11 # seasons Mon-09-Mar--Sun-24-May & Mon-31-Aug--Sun-01-Nov
@@ -831,7 +831,7 @@ Typical winter week begins Mon-30-Nov
 *item
 *name	Dundee 1980
 *aide	Dundee 1980 (sourced from Oscar Faber)
-*dbfl	/usr/esru/esp-r/climate/dundee80
+*dbfl	/opt/esp-r/climate/dundee80
 *avail	ONLINE
 *winter_s  1  1 17  3  4 11 31 12
 *spring_s 18  3 19  5  9  9  3 11
@@ -871,7 +871,7 @@ Typical winter week begins Tue-23-Dec
 *item
 *name	Duluth MN USA iwec 727450
 *aide	Duluth MN USA iwec 727450  was sourced from US DoE web site Sep 2005
-*dbfl	/usr/esru/esp-r/climate/USA_MN_Duluth_iwec
+*dbfl	/opt/esp-r/climate/USA_MN_Duluth_iwec
 *avail	ONLINE
 *winter_s  1  1 29  4 15 10 31 12
 *spring_s 30  4 24  6 27  8 14 10
@@ -911,7 +911,7 @@ Typical winter week begins Mon 19 Nov
 *item
 *name	El Paso TX USA iwec 722700
 *aide	El Paso TX USA iwec 722700 was sourced from DoE web Sep 2005
-*dbfl	/usr/esru/esp-r/climate/USA_TX_El_Paso_iwec
+*dbfl	/opt/esp-r/climate/USA_TX_El_Paso_iwec
 *avail	ONLINE
 *winter_s  1  1 11  2 19 11 31 12
 *spring_s 12  2 20  5 10  9 18 11
@@ -951,7 +951,7 @@ Typical winter week begins Mon 17 Dec
 *item
 *name	Guantanamo Bay CUBA
 *aide	Guantanamo Bay CUBA sourced from DoE web Mar 2008
-*dbfl	/usr/esru/esp-r/climate/CUB_Guantanamo.Bay.NAS_TMY
+*dbfl	/opt/esp-r/climate/CUB_Guantanamo.Bay.NAS_TMY
 *avail	ONLINE
 *winter_s  1  1 28  2  1 11 31 12
 *spring_s  1  3 30  4  1  9 31 10
@@ -991,7 +991,7 @@ Typical winter week begins Sat-20-Nov
 *item
 *name	Jersey Channel Isles (038950)
 *aide	Jersey Channel Islands (038950) GBR was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/GBR_Channel_Islands
+*dbfl	/opt/esp-r/climate/GBR_Channel_Islands
 *avail	ONLINE
 *winter_s  1  1 24  3 11 11 31 12 # seasons Mon-01-Jan--Sun-24-Mar & Mon-11-Nov--Tue-31-Dec
 *spring_s 25  3 12  5  2  9 10 11 # seasons Mon-25-Mar--Sun-12-May & Mon-02-Sep--Sun-10-Nov
@@ -1031,7 +1031,7 @@ Typical winter week begins Mon-09-Dec
 *item
 *name	Fairbanks AK USA 702610
 *aide	Fairbanks AK USA was sourced from US DoE web site Sept 2005
-*dbfl	/usr/esru/esp-r/climate/USA_AK_Fairbanks_iwec
+*dbfl	/opt/esp-r/climate/USA_AK_Fairbanks_iwec
 *avail	ONLINE
 *winter_s  1  1 29  4  8 10 31 12
 *spring_s 30  4  3  6  4  9  7 10
@@ -1071,7 +1071,7 @@ Typical winter week begins Mon  5 Nov
 *item
 *name	Finningley GBR IWEC WMO 033600
 *aide	Finningley GBR (sourced from IWEC/DoE)
-*dbfl	/usr/esru/esp-r/climate/uk_finningley_iwec
+*dbfl	/opt/esp-r/climate/uk_finningley_iwec
 *avail	ONLINE
 *winter_s 1  1  19  3  30  10  31 12
 *spring_s 20 3  14  5  18  9  29 10
@@ -1105,7 +1105,7 @@ The solar radiation is Direct Normal. Dry bulb temperatures:
 *item
 *name	Firenze-Peretola - ITA
 *aide	Firenze-Peretola - ITA was sourced from US DoE weather site
-*dbfl	/usr/esru/esp-r/climate/ITA_Firenze-Peretola_IGDG
+*dbfl	/opt/esp-r/climate/ITA_Firenze-Peretola_IGDG
 *avail	ONLINE
 *winter_s  1  1 25  2  3 12 31 12
 *spring_s 26  2 27  5  1 10  2 12
@@ -1145,7 +1145,7 @@ Typical winter week begins Mon-17-Dec
 *item
 *name	Lerwick in Shetland UK
 *aide	Lerwick in Shetland converted from Entrak 1978 data set
-*dbfl	/usr/esru/esp-r/climate/GBR_lerwick
+*dbfl	/opt/esp-r/climate/GBR_lerwick
 *avail	ONLINE
 *winter_s  1  1 19  3 13 11 31 12 # seasons Sat-01-Jan--Sun-19-Mar & Mon-13-Nov--Sun-31-Dec
 *spring_s 20  3 21  5 14  8 12 11 # seasons Mon-20-Mar--Sun-21-May & Mon-14-Aug--Sun-12-Nov
@@ -1185,7 +1185,7 @@ Typical winter week begins Mon-27-Nov
 *item
 *name	London Gatwick (037769) GBR
 *aide	London Gatwick (037760) was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/GBR_London_Gatwick
+*dbfl	/opt/esp-r/climate/GBR_London_Gatwick
 *avail	ONLINE
 *winter_s  1  1  3  3 28 10 31 12 # seasons Tue-01-Jan--Sun-03-Mar & Mon-28-Oct--Tue-31-Dec
 *spring_s  4  3 12  5 26  8 27 10 # seasons Mon-04-Mar--Sun-12-May & Mon-26-Aug--Sun-27-Oct
@@ -1225,7 +1225,7 @@ Typical winter week begins Mon-18-Nov
 *item
 *name	London Heathrow GBR (037720)
 *aide	London Heathrow GBR (037720) TRY was sourced from CIBSE
-*dbfl	/usr/esru/esp-r/climate/GBR_London-Heathrow
+*dbfl	/opt/esp-r/climate/GBR_London-Heathrow
 *avail	ONLINE
 *winter_s  1  1 13  3 24 10 31 12 # seasons Fri-01-Jan--Sun-13-Mar & Mon-24-Oct--Sat-31-Dec
 *spring_s 14  3 29  5 22  8 23 10 # seasons Mon-14-Mar--Sun-29-May & Mon-22-Aug--Sun-23-Oct
@@ -1265,7 +1265,7 @@ Typical winter week begins Mon-21-Nov
 *item
 *name	Geneva - CHE
 *aide	Geneva - CHE was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/CHE_Geneva_IWEC	
+*dbfl	/opt/esp-r/climate/CHE_Geneva_IWEC	
 *avail	ONLINE
 *winter_s  1  1 11  3 19 11 31 12
 *spring_s 12  3 24  6 27  8 18 11
@@ -1305,7 +1305,7 @@ Typical winter week begins Mon 17 Dec
 *item
 *name	Glasgow-Abbotsinch Scotland GB
 *aide	Glasgow-Abbotsinch Scotland (031400) TRY was sourced from CIBSE
-*dbfl	/usr/esru/esp-r/climate/GBR_Glasgow_Abbotsinch
+*dbfl	/opt/esp-r/climate/GBR_Glasgow_Abbotsinch
 *avail	ONLINE
 *winter_s  1  1 23  3 27 10 31 12 # seasons Wed-01-Jan--Sun-23-Mar & Mon-27-Oct--Wed-31-Dec
 *spring_s 24  3 18  5 18  8 26 10 # seasons Mon-24-Mar--Sun-18-May & Mon-18-Aug--Sun-26-Oct
@@ -1345,7 +1345,7 @@ Typical winter week begins Mon-17-Nov
 *item
 *name	GuangZhou - CHN
 *aide	GuangZhou - CHN was sourced from US DoE web site
-*dbfl	/usr/esru/esp-r/climate/CHN_Guangzhou
+*dbfl	/opt/esp-r/climate/CHN_Guangzhou
 *avail	ONLINE
 *winter_s  1  1  1  4  5 11 31 12
 *spring_s  2  4 29  4  8 10  4 11
@@ -1385,7 +1385,7 @@ Typical winter week begins Tue-19-Nov
 *item
 *name	Hemsby - GBR (034960)
 *aide	Hemsby - GBR (034960) was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/GBR_Hemsby
+*dbfl	/opt/esp-r/climate/GBR_Hemsby
 *avail	ONLINE
 *winter_s  1  1 19  3  6 11 31 12 # seasons Sun-01-Jan--Sun-19-Mar & Mon-06-Nov--Sun-31-Dec
 *spring_s 20  3 21  5 28  8  5 11 # seasons Mon-20-Mar--Sun-21-May & Mon-28-Aug--Sun-05-Nov
@@ -1425,7 +1425,7 @@ Typical winter week begins Mon-04-Dec
 *item
 *name	Hong Kong SAR CHN
 *aide	Hong Kong SAR CHN was sourced from US DoE web site
-*dbfl	/usr/esru/esp-r/climate/CHN_Hong_Kong_CityUHK
+*dbfl	/opt/esp-r/climate/CHN_Hong_Kong_CityUHK
 *avail	ONLINE
 *winter_s  1  1  2  4 20 11 31 12
 *spring_s  3  4 30  4  9 10 19 11
@@ -1465,7 +1465,7 @@ Typical winter week begins Mon-04-Dec
 *item
 *name	Houston TX USA iwec 722430
 *aide	Houston TX USA iwec 722430 was sourced from US DoE web site Sep 2005
-*dbfl	/usr/esru/esp-r/climate/USA_TX_Houston_iwec
+*dbfl	/opt/esp-r/climate/USA_TX_Houston_iwec
 *avail	ONLINE
 *winter_s  1  1 11  2 26 11 31 12
 *spring_s 12  2  6  5  1 10 25 11
@@ -1505,7 +1505,7 @@ Typical winter week begins Mon 17 Dec
 *item
 *name	Inchon Korea IWEC 471120
 *aide	Inchon Korea IWEC 471120 was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/KOR_Inchon_IWEC
+*dbfl	/opt/esp-r/climate/KOR_Inchon_IWEC
 *avail	ONLINE
 *winter_s  1  1 17  3 11 11 31 12 # seasons Mon-01-Jan--Sun-17-Mar & Mon-11-Nov--Tue-31-Dec
 *spring_s 18  3  5  5 16  9 10 11 # seasons Mon-18-Mar--Sun-05-May & Mon-16-Sep--Sun-10-Nov
@@ -1545,7 +1545,7 @@ Typical winter week begins Mon-02-Dec
 *item
 *name	Kagoshima JPN
 *aide	Kagoshima JPN 1987 was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/JPN_Kagoshima
+*dbfl	/opt/esp-r/climate/JPN_Kagoshima
 *avail	ONLINE
 *winter_s  1  1  1  3 30 11 31 12 # seasons Thu-01-Jan--Sun-01-Mar & Mon-30-Nov--Thu-31-Dec
 *spring_s  2  3 14  6 14  9 29 11 # seasons Mon-02-Mar--Sun-14-Jun & Mon-14-Sep--Sun-29-Nov
@@ -1585,7 +1585,7 @@ Typical winter week begins Mon-07-Dec
 *item
 *name	Kangnung - KOR IWEC 471050
 *aide	Kangnung - KOR IWEC 471050 was sourced from US DoE ASHRAE
-*dbfl	/usr/esru/esp-r/climate/KOR_Kangnung_IWEC
+*dbfl	/opt/esp-r/climate/KOR_Kangnung_IWEC
 *avail	ONLINE
 *winter_s  1  1 10  3 19 11 31 12
 *spring_s 11  3 20  5  3  9 18 11
@@ -1625,7 +1625,7 @@ Typical winter week begins Mon 24 Dec
 *item
 *name	Kwangju - KOR IWEC 471560
 *aide	Kwangju - KOR IWEC 471560 was sourced from US DoE ASHRAE
-*dbfl	/usr/esru/esp-r/climate/KOR_Kwangju_IWEC
+*dbfl	/opt/esp-r/climate/KOR_Kwangju_IWEC
 *avail	ONLINE
 *winter_s  1  1  4  3 19 11 31 12
 *spring_s  5  3 27  5 17  9 18 11
@@ -1665,7 +1665,7 @@ Typical winter week begins Mon 17 Dec
 *item
 *name	Seoul AB - from Kier
 *aide	Seoul AB - from KIER in Seoul probably the Seoul AB
-*dbfl	/usr/esru/esp-r/climate/KOR_SeoulAB
+*dbfl	/opt/esp-r/climate/KOR_SeoulAB
 *avail	ONLINE
 *winter_s  1  1 11  3 12 11 31 12
 *spring_s 12  3 17  6 27  8 10 11
@@ -1705,7 +1705,7 @@ Typical winter week begins Mon-24-Dec
 *item
 *name	Lexington KY USA IWEC 724220
 *aide	Lexington KY USA IEWC 724220 was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/USA_KY_Lexington
+*dbfl	/opt/esp-r/climate/USA_KY_Lexington
 *avail	ONLINE
 *winter_s  1  1  7  3 22 11 31 12 # seasons Thu-01-Jan--Sun-07-Mar & Mon-22-Nov--Fri-31-Dec
 *spring_s  8  3 23  5 20  9 21 11 # seasons Mon-08-Mar--Sun-23-May & Mon-20-Sep--Sun-21-Nov
@@ -1745,7 +1745,7 @@ Typical winter week begins Mon-20-Dec
 *item
 *name	London Heathrow (TM33 testing)
 *aide	A London Heatrow Airport climate set used for TM33 testing
-*dbfl	/usr/esru/esp-r/climate/london_try
+*dbfl	/opt/esp-r/climate/london_try
 *avail	ONLINE
 *winter_s  1  1  7  3  1 11 31 12 # seasons Fri-01-Jan--Sun-07-Mar & Mon-01-Nov--Fri-31-Dec
 *spring_s  8  3 23  5 23  8 31 10 # seasons Mon-08-Mar--Sun-23-May & Mon-23-Aug--Sun-31-Oct
@@ -1785,7 +1785,7 @@ Typical winter week begins Mon-15-Nov
 *item
 *name	Madrid - ESP from IWEC
 *aide	Madrid - ESP from IWEC was sourced from USA DoE weather site
-*dbfl	/usr/esru/esp-r/climate/ESP_Madrid_IWEC
+*dbfl	/opt/esp-r/climate/ESP_Madrid_IWEC
 *avail	ONLINE
 *winter_s  1  1 29  4 12 11 31 12
 *spring_s 30  4 10  6 10  9 11 11
@@ -1825,7 +1825,7 @@ Typical winter week begins Mon-03-Dec
 *item
 *name	Malin Ireland (039800)
 *aide	Malin Ireland (039800) sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/IRL_Malin
+*dbfl	/opt/esp-r/climate/IRL_Malin
 *avail	ONLINE
 *winter_s  1  1 27  3 14 11 31 12 # seasons Sat-01-Jan--Sun-27-Mar & Mon-14-Nov--Sat-31-Dec
 *spring_s 28  3  5  6 22  8 13 11 # seasons Mon-28-Mar--Sun-05-Jun & Mon-22-Aug--Sun-13-Nov
@@ -1865,7 +1865,7 @@ Typical winter week begins Mon-19-Dec
 *item
 *name	Memphis TN USA iwec 723340
 *aide	Memphis TN USA iwec 723340 was sourced from US DoE web Sep 2005
-*dbfl	/usr/esru/esp-r/climate/USA_TN_Memphis_iwec
+*dbfl	/opt/esp-r/climate/USA_TN_Memphis_iwec
 *avail	ONLINE
 *winter_s  1  1 18  2 26 11 31 12
 *spring_s 19  2 13  5 24  9 25 11
@@ -1905,7 +1905,7 @@ Typical winter week begins Mon 17 Dec
 *item
 *name	Mexico-City-MEX iwec 766790
 *aide	MEXICO-CITY-IAP-MEX 1985 was sourced from Universidad Autonoma Metropolitana
-*dbfl	/usr/esru/esp-r/climate/MEX_Mexico-City_iwec
+*dbfl	/opt/esp-r/climate/MEX_Mexico-City_iwec
 *avail	ONLINE
 *winter_s  1  1 11  3 10 12 31 12 # seasons Tue-01-Jan--Mon-11-Mar & Tue-10-Dec--Tue-31-Dec
 *spring_s 12  3 10  7 23 10  9 12 # seasons Tue-12-Mar--Wed-10-Jul & Wed-23-Oct--Mon-09-Dec
@@ -1945,7 +1945,7 @@ Typical winter week begins Tue-24-Dec
 *item
 *name	Miami FL USA iwec 722020
 *aide	Miami FL USA iwec 722020 was sourced from US DoE web site Sep 2005
-*dbfl	/usr/esru/esp-r/climate/USA_FL_Miami_iwec
+*dbfl	/opt/esp-r/climate/USA_FL_Miami_iwec
 *avail	ONLINE
 *winter_s  1  1 25  2 19 11 31 12
 *spring_s 26  2 29  4 22 10 18 11
@@ -1985,7 +1985,7 @@ Typical winter week begins Mon  3 Dec
 *item
 *name	ITA Milan IWEC 160660
 *aide	ITA Milan IWEC 160660 was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/ITA_Milan
+*dbfl	/opt/esp-r/climate/ITA_Milan
 *avail	ONLINE
 *winter_s  1  1  3  3 11 11 31 12 # seasons Tue-01-Jan--Sun-03-Mar & Mon-11-Nov--Tue-31-Dec
 *spring_s  4  3 19  5  9  9 10 11 # seasons Mon-04-Mar--Sun-19-May & Mon-09-Sep--Sun-10-Nov
@@ -2025,7 +2025,7 @@ Typical winter week begins Mon-02-Dec
 *item
 *name	Minneapolis ST Paul IWEC 726580
 *aide	Minneapolis St Paul MN IWEC 726580 was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/USA_MN_Minneapolis
+*dbfl	/opt/esp-r/climate/USA_MN_Minneapolis
 *avail	ONLINE
 *winter_s  1  1 21  3  8 11 31 12 # seasons Thu-01-Jan--Sun-21-Mar & Mon-08-Nov--Fri-31-Dec
 *spring_s 22  3 16  5 30  8  7 11 # seasons Mon-22-Mar--Sun-16-May & Mon-30-Aug--Sun-07-Nov
@@ -2065,7 +2065,7 @@ Typical winter week begins Mon-13-Dec
 *item
 *name	Montreal CWEC 1965
 *aide	Montreal 1965 (sourced from NRCan/IWEC)
-*dbfl	/usr/esru/esp-r/climate/can_montreal
+*dbfl	/opt/esp-r/climate/can_montreal
 *avail	ONLINE
 *winter_s 1  1  28 2  1  11  31 12
 *spring_s 1  3  2  5  23  8  31 10
@@ -2099,7 +2099,7 @@ The solar radiation is Direct Normal. Dry bulb temperatures:
 *item
 *name	Munich DEU IWEC 108660
 *aide	DEU Munich IWEC 108660 was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/DEU_Munich
+*dbfl	/opt/esp-r/climate/DEU_Munich
 *avail	ONLINE
 *winter_s  1  1 11  3 29 10 31 12 # seasons Mon-01-Jan--Sun-11-Mar & Mon-29-Oct--Mon-31-Dec
 *spring_s 12  3 13  5 20  8 28 10 # seasons Mon-12-Mar--Sun-13-May & Mon-20-Aug--Sun-28-Oct
@@ -2139,7 +2139,7 @@ Typical winter week begins Mon-17-Dec
 *item
 *name	Oban - GBR (031140)
 *aide	Oban Scotland GBR (031140) was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/GBR_Oban
+*dbfl	/opt/esp-r/climate/GBR_Oban
 *avail	ONLINE
 *winter_s  1  1 20  3 31 10 31 12 # seasons Sat-01-Jan--Sun-20-Mar & Mon-31-Oct--Sat-31-Dec
 *spring_s 21  3 15  5 22  8 30 10 # seasons Mon-21-Mar--Sun-15-May & Mon-22-Aug--Sun-30-Oct
@@ -2179,7 +2179,7 @@ Typical winter week begins Mon-14-Nov
 *item
 *name	Osaka JPN
 *aide	Osaka JPN 1994 was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/JPN_Osaka
+*dbfl	/opt/esp-r/climate/JPN_Osaka
 *avail	ONLINE
 *winter_s  1  1 13  3  5 12 31 12 # seasons Sat-01-Jan--Sun-13-Mar & Mon-05-Dec--Sat-31-Dec
 *spring_s 14  3  5  6 19  9  4 12 # seasons Mon-14-Mar--Sun-05-Jun & Mon-19-Sep--Sun-04-Dec
@@ -2219,7 +2219,7 @@ Typical winter week begins Mon-19-Dec
 *item
 *name	Ottawa CWEC 1997 IWMO 716280
 *aide	Ottawa 1966 (sourced from NRCan/DoE)
-*dbfl	/usr/esru/esp-r/climate/can_ottawa
+*dbfl	/opt/esp-r/climate/can_ottawa
 *avail	ONLINE
 *winter_s 1  1   3  4  17 10  31 12
 *spring_s 4  4   8  5  29  8  16 10
@@ -2253,7 +2253,7 @@ The solar radiation is Direct Normal. Dry bulb temperatures:
 *item
 *name	Palermo Italy 2001 IWMO 164050
 *aide	Palermo Italy (sourced from ASHRAE/DoE)
-*dbfl	/usr/esru/esp-r/climate/ita_palermo_iwec
+*dbfl	/opt/esp-r/climate/ita_palermo_iwec
 *avail	ONLINE
 *winter_s 1  1  25  2  26 11  31 12
 *spring_s 26 2  13  5   8 10  25 11
@@ -2287,7 +2287,7 @@ The solar radiation is Direct Normal. Dry bulb temperatures:
 *item
 *name	Paris_Orly France IWEC 071490
 *aide	Paris_Orly France IWEC 071490 was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/fra_paris_orly_iwec
+*dbfl	/opt/esp-r/climate/fra_paris_orly_iwec
 *avail	ONLINE
 *winter_s  1  1 25  2  5 11 31 12
 *spring_s 26  2  6  5 10  9  4 11
@@ -2326,7 +2326,7 @@ Typical winter week begins Mon  5 Nov
 *item
 *name	Phoenix AZ USA iwec 722780
 *aide	Phoenix AZ USA iwec 722780 was sourced from DoE web site
-*dbfl	/usr/esru/esp-r/climate/USA_AZ_Phoenix_iwec
+*dbfl	/opt/esp-r/climate/USA_AZ_Phoenix_iwec
 *avail	ONLINE
 *winter_s  1  1 25  2  5 11 31 12
 *spring_s 26  2 29  4  1 10  4 11
@@ -2366,7 +2366,7 @@ Typical winter week begins Tue 20 Nov
 *item
 *name	Pinar del Rio - CUB
 *aide	Pinar del Rio - CUB was sourced from DoE website Mar 2008
-*dbfl	/usr/esru/esp-r/climate/CUB_Pinar.del.Rio_SWERA
+*dbfl	/opt/esp-r/climate/CUB_Pinar.del.Rio_SWERA
 *avail	ONLINE
 *winter_s  1  1 28  2  1 11 31 12
 *spring_s  1  3 30  4  1  9 31 10
@@ -2406,7 +2406,7 @@ Typical winter week begins Fri-20-Nov
 *item
 *name	Pisa Italy 2001 IWMO 161580
 *aide	Pisa Italy (sourced from ASHRAE/DoE)
-*dbfl	/usr/esru/esp-r/climate/ita_pisa_iwec
+*dbfl	/opt/esp-r/climate/ita_pisa_iwec
 *avail	ONLINE
 *winter_s 1  1  18  3  12 11  31 12
 *spring_s 19 3  13  5  24  9  11 11
@@ -2440,7 +2440,7 @@ The solar radiation is Direct Normal. Dry bulb temperatures:
 *item
 *name	Porto - PRT IWEC 085450
 *aide	Porto - PRT IWEC 085450 was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/prt_porto_iwec
+*dbfl	/opt/esp-r/climate/prt_porto_iwec
 *avail	ONLINE
 *winter_s  1  1  4  3  5 11 31 12
 *spring_s  5  3 27  5 10  9  4 11
@@ -2479,7 +2479,7 @@ Typical winter week begins Mon 10 Dec
 *item
 *name	Prague CZE IWEC 115180
 *aide	Prague CZE IWEC 115180 was sourced from US DoE web
-*dbfl	/usr/esru/esp-r/climate/CZE_Prague
+*dbfl	/opt/esp-r/climate/CZE_Prague
 *avail	ONLINE
 *winter_s  1  1 20  3 21 12 31 12
 *spring_s 21  3 20  6 21  9 20 12
@@ -2519,7 +2519,7 @@ Typical winter week begins Mon-25-Dec
 *item
 *name	Quebec PQ CAN
 *aide	Quebec PQ CAN was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/CAN_PQ_Quebec_CWEC
+*dbfl	/opt/esp-r/climate/CAN_PQ_Quebec_CWEC
 *avail	ONLINE
 *winter_s  1  1  1  4 19 11 31 12
 *spring_s  2  4 27  5 10  9 18 11
@@ -2559,7 +2559,7 @@ Typical winter week begins Mon 17 Dec
 *item
 *name	Rome Italy 1987 IWMO 162420
 *aide	Rome 1987 (sourced from IWMO/DoE)
-*dbfl	/usr/esru/esp-r/climate/ita_rome_iwec
+*dbfl	/opt/esp-r/climate/ita_rome_iwec
 *avail	ONLINE
 *winter_s 1  1   1  3   2 11  31 12
 *spring_s 2  3   3  5  21  9   1 11
@@ -2593,7 +2593,7 @@ The solar radiation is Direct Normal. Dry bulb temperatures:
 *item
 *name	San Francisco California USA)
 *aide	San Francisco Intl Airport California USA was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/USA_CA_San_Francisco_TMY3
+*dbfl	/opt/esp-r/climate/USA_CA_San_Francisco_TMY3
 *avail	ONLINE
 *winter_s  1  1 28  2 15 11 31 12 # seasons Fri-01-Jan--Sun-28-Feb & Mon-15-Nov--Fri-31-Dec
 *spring_s  1  3  9  5 20  9 14 11 # seasons Mon-01-Mar--Sun-09-May & Mon-20-Sep--Sun-14-Nov
@@ -2633,7 +2633,7 @@ Typical winter week begins Mon-06-Dec
 *item
 *name	San_Juan PR PRI
 *aide	San_Juan PR PRI was sourced from DoE website Mar 2008
-*dbfl	/usr/esru/esp-r/climate/PRI_San.Juan_TMY2
+*dbfl	/opt/esp-r/climate/PRI_San.Juan_TMY2
 *avail	ONLINE
 *winter_s  1  1 28  2  1 11 31 12
 *spring_s  1  3 30  4  1  9 31 10
@@ -2673,7 +2673,7 @@ Typical winter week begins Fri-20-Nov
 *item
 *name	Santiago CHL IWEC 855740
 *aide	Santiago CHL IWEC 855740 was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/CHL_Santiago
+*dbfl	/opt/esp-r/climate/CHL_Santiago
 *avail	ONLINE
 *winter_s  1  1 29  3  2 11 31 12 # seasons Thu-01-Jan--Sun-29-Mar & Mon-02-Nov--Thu-31-Dec
 *spring_s 30  3 17  5 31  8  1 11 # seasons Mon-30-Mar--Sun-17-May & Mon-31-Aug--Sun-01-Nov
@@ -2713,7 +2713,7 @@ Typical winter week begins Mon-16-Nov
 *item
 *name	Santiago de Cuba - CUB
 *aide	Santiago de Cuba - CUB was sourced from DoE website Mar 2008
-*dbfl	/usr/esru/esp-r/climate/CUB_Santiago.de.Cuba_SWERA
+*dbfl	/opt/esp-r/climate/CUB_Santiago.de.Cuba_SWERA
 *avail	ONLINE
 *winter_s  1  1 28  2  1 11 31 12
 *spring_s  1  3 30  4  1  9 31 10
@@ -2753,7 +2753,7 @@ Typical winter week begins Sun-20-Nov
 *item
 *name	Sapporo JPN 1988
 *aide	Sapporo JPN was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/JPN_Sapporo
+*dbfl	/opt/esp-r/climate/JPN_Sapporo
 *avail	ONLINE
 *winter_s  1  1  3  4 31 10 31 12 # seasons Fri-01-Jan--Sun-03-Apr & Mon-31-Oct--Sat-31-Dec
 *spring_s  4  4  3  7 15  8 30 10 # seasons Mon-04-Apr--Sun-03-Jul & Mon-15-Aug--Sun-30-Oct
@@ -2793,7 +2793,7 @@ Typical winter week begins Mon-21-Nov
 *item
 *name	Saskatoon SK CAN
 *aide	Saskatoon SK CAN was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/CAN_SK_Saskatoon_CWEC
+*dbfl	/opt/esp-r/climate/CAN_SK_Saskatoon_CWEC
 *avail	ONLINE
 *winter_s  1  1 15  4 29 10 31 12
 *spring_s 16  4 10  6 27  8 28 10
@@ -2833,7 +2833,7 @@ Typical winter week begins Mon 26 Nov
 *item
 *name	Singapore SGP
 *aide	Singapore SBP was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/SGP_Singapore_486980
+*dbfl	/opt/esp-r/climate/SGP_Singapore_486980
 *avail	ONLINE
 *winter_s  1  1 26  3 27 11 31 12 # seasons Sun-01-Jan--Sun-26-Mar & Mon-27-Nov--Sun-31-Dec
 *spring_s 27  3 28  5  4  9 26 11 # seasons Mon-27-Mar--Sun-28-May & Mon-04-Sep--Sun-26-Nov
@@ -2873,7 +2873,7 @@ Typical winter week begins Mon-18-Dec
 *item
 *name	Stuttgart DEU IWEC 107380
 *aide	DEU Stuttgart IWEC 107380 was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/DEU_Stuttgart
+*dbfl	/opt/esp-r/climate/DEU_Stuttgart
 *avail	ONLINE
 *winter_s  1  1  4  3 12 11 31 12 # seasons Mon-01-Jan--Sun-04-Mar & Mon-12-Nov--Mon-31-Dec
 *spring_s  5  3  6  5 27  8 11 11 # seasons Mon-05-Mar--Sun-06-May & Mon-27-Aug--Sun-11-Nov
@@ -2913,7 +2913,7 @@ Typical winter week begins Mon-24-Dec
 *item
 *name	Suwoon Korea MET 2009
 *aide	Suwoon Korea MET office 2009 actual data (Muneer solar)
-*dbfl	/usr/esru/esp-r/climate/KOR_Suwoon_kmet_2009
+*dbfl	/opt/esp-r/climate/KOR_Suwoon_kmet_2009
 *avail	ONLINE
 *winter_s  1  1  8  3  2 11 31 12 # seasons Thu-01-Jan--Sun-08-Mar & Mon-02-Nov--Thu-31-Dec
 *spring_s  9  3 31  5 31  8  1 11 # seasons Mon-09-Mar--Sun-31-May & Mon-31-Aug--Sun-01-Nov
@@ -2953,7 +2953,7 @@ Typical winter week begins Mon-30-Nov
 *item
 *name	Shearwater NS CAN
 *aide	Shearwater NS CAN was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/CAN_NS_Shearwater_CWEC
+*dbfl	/opt/esp-r/climate/CAN_NS_Shearwater_CWEC
 *avail	ONLINE
 *winter_s  1  1 25  3 12 11 31 12
 *spring_s 26  3 13  5  3  9 11 11
@@ -2993,7 +2993,7 @@ Typical winter week begins Mon 19 Nov
 *item
 *name	St Johns NF CAN
 *aide	St Johns NF CAN was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/CAN_NF_St.Johns_CWEC
+*dbfl	/opt/esp-r/climate/CAN_NF_St.Johns_CWEC
 *avail	ONLINE
 *winter_s  1  1 18  3 12 11 31 12
 *spring_s 19  3 20  5 27  8 11 11
@@ -3033,7 +3033,7 @@ Typical winter week begins Mon  3 Dec
 *item
 *name	Sydney Australia IWEC 947670
 *aide	Sydney Australia IWEC 947670 was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/aus_sydney_iwec
+*dbfl	/opt/esp-r/climate/aus_sydney_iwec
 *avail	ONLINE
 *winter_s  1  1 11  3  1 10 31 12
 *spring_s 12  3 13  5 27  8 30  9
@@ -3074,7 +3074,7 @@ Typical 2nd summer week begins Mon 12 Nov
 *item
 *name	Tampa Florida USA (Int Ap)
 *aide	Tampa International Airport Florida USA was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/USA_FL_Tampa_TMY3
+*dbfl	/opt/esp-r/climate/USA_FL_Tampa_TMY3
 *avail	ONLINE
 *winter_s  1  1 11  2 25 11 31 12 # seasons Mon-01-Jan--Sun-11-Feb & Mon-25-Nov--Tue-31-Dec
 *spring_s 12  2 28  4 30  9 24 11 # seasons Mon-12-Feb--Sun-28-Apr & Mon-30-Sep--Sun-24-Nov
@@ -3114,7 +3114,7 @@ Typical winter week begins Mon-09-Dec
 *item
 *name	Tokyo Hyakuri JPN
 *aide	Tokyo Hyakuri JPN 1983 was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/JPN_Tokyo.Hyakuri
+*dbfl	/opt/esp-r/climate/JPN_Tokyo.Hyakuri
 *avail	ONLINE
 *winter_s  1  1  3  4 24 10 31 12 # seasons Sat-01-Jan--Sun-03-Apr & Mon-24-Oct--Sat-31-Dec
 *spring_s  4  4 12  6 12  9 23 10 # seasons Mon-04-Apr--Sun-12-Jun & Mon-12-Sep--Sun-23-Oct
@@ -3154,7 +3154,7 @@ Typical winter week begins Mon-21-Nov
 *item
 *name	Toronto Int ON CAN
 *aide	Toronto Int ON CAN was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/CAN_ON_Toronto_CWEC
+*dbfl	/opt/esp-r/climate/CAN_ON_Toronto_CWEC
 *avail	ONLINE
 *winter_s  1  1 25  3 12 11 31 12
 *spring_s 26  3 27  5 24  9 11 11
@@ -3194,7 +3194,7 @@ Typical winter week begins Mon 12 Nov
 *item
 *name	Ulsan - Korea IWEC 471520
 *aide	Ulsan - Korea IWEC 471520 was sourced from US DoE ASHRAE
-*dbfl	/usr/esru/esp-r/climate/KOR_Ulsan_IWEC
+*dbfl	/opt/esp-r/climate/KOR_Ulsan_IWEC
 *avail	ONLINE
 *winter_s  1  1 17  3 11 11 31 12 # seasons Tue-01-Jan--Sun-17-Mar & Mon-11-Nov--Tue-31-Dec
 *spring_s 18  3  5  5 16  9 10 11 # seasons Mon-18-Mar--Sun-05-May & Mon-16-Sep--Sun-10-Nov
@@ -3234,7 +3234,7 @@ Typical winter week begins Mon-09-Dec
 *item
 *name	Vancouver Int BC CAN
 *aide	Vancouver Int BC CAN was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/CAN_BC_Vancouver_CWEC
+*dbfl	/opt/esp-r/climate/CAN_BC_Vancouver_CWEC
 *avail	ONLINE
 *winter_s  1  1 25  2 12 11 31 12
 *spring_s 26  2  3  6 17  9 11 11
@@ -3274,7 +3274,7 @@ Typical winter week begins Mon 24 Dec
 *item
 *name	Wellington New Zealand 934360
 *aide	Wellington New Zealand 934360 was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/nzl_wellington_iwec
+*dbfl	/opt/esp-r/climate/nzl_wellington_iwec
 *avail	ONLINE
 *winter_s  1  1  4  3 26 11 31 12
 *spring_s  5  3  6  5 17  9 25 11
@@ -3315,7 +3315,7 @@ Typical winter week begins Mon 17 Dec
 *item
 *name	Whitehorse YT CAN
 *aide	Whitehorse YT CAN was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/CAN_YT_Whitehorse_CWEC
+*dbfl	/opt/esp-r/climate/CAN_YT_Whitehorse_CWEC
 *avail	ONLINE
 *winter_s  1  1 22  4 29 10 31 12
 *spring_s 23  4 10  6 20  8 28 10
@@ -3355,7 +3355,7 @@ Typical winter week begins Mon 26 Nov
 *item
 *name	Winnipeg Int MB CAN
 *aide	Winnipeg Int MB CAN was sourced from US DoE
-*dbfl	/usr/esru/esp-r/climate/CAN_MB_Winnipeg_CWEC
+*dbfl	/opt/esp-r/climate/CAN_MB_Winnipeg_CWEC
 *avail	ONLINE
 *winter_s  1  1 18  3  5 11 31 12
 *spring_s 19  3 13  5 17  9  4 11
