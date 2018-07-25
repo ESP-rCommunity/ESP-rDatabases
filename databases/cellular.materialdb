@@ -1,7 +1,7 @@
 *Materials 1.1
 *date,Thu Aug  8 10:16:03 2013
 # materials database defined in cellular.materialdb
-*doc,ESP-r Materials based on materials constr_db3.materialdb. Used in a number of the cellular office exemplar models. Additional infomation and documentation uses standard assumptions which should be updated as required.
+*doc,ESP-r Materials evolved from legacy databases and additions. Also includes materials for UK code complience. Used in a number of the cellular office exemplar models. Additional infomation and documentation uses standard assumptions which should be updated as required.
 18  # number of classifications
 #  
 # Materials have the following attributes:

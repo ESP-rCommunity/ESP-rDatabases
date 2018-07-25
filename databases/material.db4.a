@@ -1,7 +1,7 @@
 *Materials 1.1
 *date,Sat Jun 23 12:15:16 2011
 # materials database defined in material.db4.a
-*doc,ESP-r Materials based on materials constr_db3.materialdb with required materials for UK code complience. Identification inorganic porous etc. to match CIBSE Guide. Additional infomation and documentation uses standard assumptions.
+*doc,ESP-r Materials evolved from legacy databases and additions. Also includes materials for UK code complience. Identification inorganic porous etc. to match CIBSE Guide. Additional infomation and documentation uses standard assumptions.
 18  # number of classifications
 #  
 # Materials have the following attributes:
@@ -87,6 +87,8 @@ Category ( 2) Concrete includes a mix of concrete types from heavy weight to lig
 1.3500,2000.000,1000.000,0.900,0.900,0.700,0.700,13.000,100.0,-
 *item,Concrete med density (1800), 40, 2,Blockwork (UK code)
 1.1300,1800.000,1008.000,0.900,0.900,0.700,0.700,13.000,100.0,-
+*item,solar_absorb concrete, 54, 2,Heavy mix concrete with dark surface for use in trombe-michelle wall
+1.400,2100.000,653.000,0.900,0.900,0.850,0.850,19.000,250.0,-
 # class index |nb items|description (32 char)
 *class, 3,13,Metal
 Category ( 3) Metal has a range of metals, some are the same but are painted differently. Based on data traditionally distributed with ESP-r.
